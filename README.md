@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Passing data throughprops is an important concept that is best understood by hands on practice. We'll use this exercise to help you solidify your understanding of props. 
+Passing data through props is an important React concept that is best understood by hands-on practice. We'll use this exercise to help you solidify your understanding of props. 
 
 We will be cloning an existing piece of UI from a popular app, Twitter. Let's get started!
 
@@ -19,7 +19,7 @@ We will be cloning an existing piece of UI from a popular app, Twitter. Let's ge
 
 ## Submission
 
-- Upon completion, run the following commands
+- Upon completion, run the following commands:
 
   ```
   git add .
@@ -63,7 +63,7 @@ We will be cloning an existing piece of UI from a popular app, Twitter. Let's ge
 
    
 
-6. We will use [Font Awesome ](https://fontawesome.com/v5.15/icons?d=gallery&p=1) for the icons in our app. Add the following stylesheet in the `head` of the `public/index.html` page:
+6. We will use [Font Awesome](https://fontawesome.com/v5.15/icons?d=gallery&p=1) for the icons in our app. Add the following stylesheet in the `head` of the `public/index.html` page:
   
   ```html
       <link
@@ -93,7 +93,7 @@ We will start by creating and setting up the files that we need for the exercise
 
 > Create a new folder `src/components/` and inside it a new file `Tweet.js`.
 >
-> As a starting point, we will provide you with the HTML structure for the `Tweet` component Paste the following code to the component `src/components/Tweet.js`:
+> As a starting point, we will provide you with the HTML structure for the `Tweet` component. Paste the following code to the component `src/components/Tweet.js`:
 
 > ```jsx
 > // src/compoenents/Tweet.js
@@ -225,7 +225,7 @@ We will start by creating and setting up the files that we need for the exercise
 
 <br>
 
->  To allow you to focus on React without having to worry about the styling, we will provide you with the CSS sytles. Paste the below code to your `src/index.css` file:
+>  To allow you to focus on React without having to worry about the styling, we will provide you with the CSS styles. Paste the below code to your `src/index.css` file:
 
 > ```css
 > /*   src/index.css   */
@@ -331,7 +331,7 @@ We will start by creating and setting up the files that we need for the exercise
 
 **Expected Result**
 
-When you are done setting up the above files, your app should display the `Tweet` component as show here:
+When done setting up the above files, your app should display the `Tweet` component as shown here:
 
 ![Tweet component after the initial setup](https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/labs/lab-react-tweets-1.png)
 
@@ -340,7 +340,7 @@ When you are done setting up the above files, your app should display the `Tweet
 
 ### Iteration 2 | Pass the Tweet as a Prop
 
-In the `App.js`  we have an array named `tweetsArray` that holds *tweet* objects.  We will use the `Tweet` component to display the content from the objects. In the `Tweet` we will display user's `name`, user's `image`, user's `handle`, tweet `timestamp` and the `message`. 
+In `App.js`, we have an array named `tweetsArray` that holds *tweet* objects.  We will use the `Tweet` component to display the content from the objects. In the `Tweet` we will display the user's `name`, user's `image`, user's `handle`, tweet `timestamp` and the `message`. 
 
 
 
@@ -358,13 +358,13 @@ Pass the first object from the `tweetsArray`  as a prop to the `Tweet` component
 
 **Display the tweet content in the `Tweet` component**
 
-Update the `Tweet` component to display the values coming from the `tweet` prop. Remember that  the value we passed is an object, so you may want to check the sturcture of the object.
+Update the `Tweet` component to display the values coming from the `tweet` prop. Remember that  the value we passed is an object, so you may want to check the object's structure.
 
 <br>
 
 **Expected Result**
 
-When you are finished, your `Tweet` component should display the following content:
+Once done, your `Tweet` component should display the following content:
 
 ![Tweet component after passing the "tweets" prop](https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/labs/lab-react-tweets-2.png)
 
@@ -400,11 +400,11 @@ We will now create new files for the components that we'll make in the following
 
 
 
-In the following iterations you will refactor the `Tweet` component. You will be asked to extract parts of the existing HTML structure into new components:
+In the following iterations, you will need to refactor the `Tweet` component. You will be asked to extract parts of the existing HTML structure into new components:
 
 ![Example - Refactoring the "Tweet" component](https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/labs/lab-react-tweets-3.png)<br>
 
-**When done with all iterations** the final version of your `Tweet` component will look like this:
+**When done with all of the iterations**, the final version of your `Tweet` component will look like this:
 
 <details>
 <summary>Click to see the code</summary>
@@ -461,7 +461,7 @@ Extract the existing `img` tag and render it through the `ProfileImage` componen
 
 **Render the component**
 
-Once you are done, import the `ProfileImage` component to `Tweet.js`.  After importing it, render the component inside of `Tweet` in the following way:
+Once done, import the `ProfileImage` component to `Tweet.js`.  After importing it, render the component inside of `Tweet` in the following way:
 
 ```jsx
 // ...
@@ -484,7 +484,7 @@ function Tweet(props) {
 
 <br>
 
-### Iteration 4 | User Component
+### Iteration 5 | User Component
 
 **Extract HTML**
 
@@ -529,7 +529,7 @@ We passed the object with the user information through the prop `userData`. Acce
 
 
 
-### Iteration 5 | Timestamp Component 
+### Iteration 6 | Timestamp Component 
 
 **Extract HTML**
 
@@ -576,7 +576,7 @@ function Tweet(props) {
 
 
 
-### Iteration 6 | Message Component
+### Iteration 7 | Message Component
 
 **Extract HTML**
 
@@ -623,7 +623,7 @@ function Tweet(props) {
 
 
 
-### Iteration 7 | Actions Component
+### Iteration 8 | Actions Component
 
 **Extract HTML**
 
@@ -677,7 +677,7 @@ The component doesn't take any props.
 
 
 
-### Iteration 7 |Render mutliple `Tweet`s
+### Iteration 9 |Render multiple `Tweet`s
 
 Once you are done refactoring the `Tweet` component, update `App.js` to display three `<Tweet />` components. Each `<Tweet />` should receive a separate *tweet object* from the `tweetsArray`. 
 
