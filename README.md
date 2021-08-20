@@ -10,10 +10,21 @@ We will be cloning an existing piece of UI from a popular app, Twitter. Let's ge
 
 <br>
 
-## Requirements
+## Setup
 
 - Fork this repo
+
 - Clone this repo
+
+- Open the LAB and start:
+
+  ```bash
+  $ cd lab-react-tweets
+  $ npm install
+  $ npm start
+  ```
+
+  
 
 <br>
 
@@ -21,29 +32,19 @@ We will be cloning an existing piece of UI from a popular app, Twitter. Let's ge
 
 - Upon completion, run the following commands:
 
-  ```
+  ```bash
   git add .
   git commit -m "done"
   git push origin master
   ```
 
-- Create Pull Request so that your TAs can check up your work.
+- Create a Pull Request so that your TAs can check your work.
 
   <br>
 
 ## Getting Started
 
-1. After forking and cloning, open the project in VS Code.
-
-2. In the terminal, navigate to the root folder of the LAB.
-
-3. Create a new React app _in the current directory_:
-
-   ```bash
-   $ npx create-react-app .
-   ```
-
-4. Clean the `App.js` component so that it has the following structure:
+1. Clean the `App.js` component so that it has the following structure:
 
    ```jsx
    // src/App.js
@@ -53,12 +54,6 @@ We will be cloning an existing piece of UI from a popular app, Twitter. Let's ge
      return <div className="App"></div>;
    }
    export default App;
-   ```
-
-5. Run the React app:
-
-   ```bash
-   $ npm start
    ```
 
    
@@ -80,267 +75,22 @@ We will be cloning an existing piece of UI from a popular app, Twitter. Let's ge
 
 ### Iteration 1 | Initial Content
 
-We will start by creating and setting up the files that we need for the exercise:
+To allow you to focus on React without having to worry about the styling we provided you with the CSS styles. All the CSS is included in the starter code in the `src/index.css` file. 
 
-<br>
+We have also provided you with the initial content of the `App.js` and we included the HTML structure for the `Tweet.js` component. Before you start working take a moment to go over these two files.
 
-**`Tweet.js`**
-
-<details>
-
-<summary>Click here for the code</summary>
-<br>
-
-> Create a new folder `src/components/` and inside it a new file `Tweet.js`.
->
-> As a starting point, we will provide you with the HTML structure for the `Tweet` component. Paste the following code to the component `src/components/Tweet.js`:
-
-> ```jsx
-> // src/compoenents/Tweet.js
-> 
-> function Tweet() {
->   return (
->     <div className="tweet">
-> 
->       <img src="https://i.imgur.com/9yw1Fyw.jpg" className="profile" alt="profile"/>
-> 
->       <div className="body">
-> 
->         <div className="top">
-> 
->           <span className="user">
->             <span className="name">Ironhack</span>
->             <span className="handle">@ironhack</span>
->           </span>
-> 
->           <span className="timestamp">Nov 30, 2020</span>
->         </div>
-> 
->         <p className="message">
->           On December 7th, we will be hosting a #webinar that will introduce you
->           to #SQL! Are you ready? 🚀
->         </p>
-> 
->         <div className="actions">
->           {/* Font Awesome icons */}
->           <i class="far fa-comment"></i>
->           <i class="fas fa-retweet"></i>
->           <i class="far fa-heart"></i>
->           <i class="fas fa-share"></i>
->         </div>
-> 
->       </div>
-> 
->       <i class="fas fa-ellipsis-h"></i>
->     </div>
->   );
-> }
-> 
-> export default Tweet;
-> ```
-
-
-
-<hr>
-
-<br>
-
-</details> 
-
-<br>**`App.js`**
-
-<details>
-
-<summary>Click here for the code</summary>
-
-<br>
-
->  Copy the following starter code to the root component `src/App.js`:
-
-> ```jsx
-> // src/App.js
-> 
-> import "./App.css";
-> import Tweet from "./components/Tweet";
-> 
-> const tweetsArray = [
->   {
->     user: {
->       name: "Thoughts of Dog®",
->       image: "https://i.imgur.com/b0EdHVV.jpg",
->       handle: "dog_feelings",
->     },
->     timestamp: "1h ago",
->     message: "the human likes to say. that i live here rent free. but i would argue. this housing accommodation. is my payment. for a lifetime of love. and excellent company",
->   },
->   {
->     user: {
->       name: "Thoughts of Dog®",
->       image: "https://i.imgur.com/b0EdHVV.jpg",
->       handle: "dog_feelings",
->     },
->     timestamp: "2h ago",
->     message: "sometimes. the human presses their noggin against mine. to figure out what i’m thinking. so i just think really hard. about how much i love them. and hope they figure it out",
->   },
->   {
->     user: {
->       name: "Thoughts of Dog®",
->       image: "https://i.imgur.com/b0EdHVV.jpg",
->       handle: "dog_feelings",
->     },
->     timestamp: "3h ago",
->     message: "here is what. i plan to accomplish today: \n\n2. bark loudly. but at nothing \n7. lose my ball under the couch\n7b. politely ask the human. to get my ball\n3. immediately lose it again. under the same couch\n4. big nap. you have worked hard\n2. repeat",
->   },
-> ];
-> 
-> 
-> function App() {
->   return (
->     <div className="App">
->       <Tweet />
->     </div>
->   );
-> }
-> 
-> 
-> export default App;
-> ```
-
-
-
-<hr>
-
-
-<br>
-
-</details>
-
-<br>
-
-**`index.css`**
-
-<details>
-
-<summary>Click here for the code </summary>
-
-<br>
-
->  To allow you to focus on React without having to worry about the styling, we will provide you with the CSS styles. Paste the below code to your `src/index.css` file:
-
-> ```css
-> /*   src/index.css   */
-> 
-> body {
->   margin: 0;
->   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
->     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
->     sans-serif;
->   -webkit-font-smoothing: antialiased;
->   -moz-osx-font-smoothing: grayscale;
-> }
-> 
-> .App {
->   padding: 20px;
-> }
-> 
-> .tweet {
->   margin: 0 auto;
->   min-width: 480px;
->   max-width: 640px;
->   min-height: 80px;
->   padding: 10px;
->   border: 1px solid #ccc;  
->   display: flex;
->   font-size: 1.1rem;
->   line-height: 18px;
-> }
-> 
-> 
-> .body {
->   display: flex;
->   flex-direction: column;
->   width: 100%;
-> }
-> 
-> .top {
->   display: flex;
->   line-height: 1.4rem;
-> }
-> 
-> .more {
->   margin-left: 20px;
-> }
-> 
-> .profile {
->   width: 50px;
->   height: 50px;
->   border-radius: 50px;
->   margin-right: 10px;
-> }
-> 
-> .name {
->   font-weight: bold;
->   margin-bottom: 0.5em;
->   margin-right: 0.3em;
-> }
-> 
-> .handle {
->   color: #536471;
->   margin-left: 3px;
->   margin-right: 3px;
-> }
-> 
-> .timestamp {
->   color: #536471;
->   font-size: 1.1rem;
-> }
-> 
-> .timestamp::before {
->   content: "·";
->   padding-right: 0.3em;
->   font-size: 1.1rem;
->   font-weight: 600;
-> }
-> 
-> .message {
->   text-align: left;
->   font-stretch: 100%;
->   font-weight: 400;
->   line-height: 1.6rem;
->   overflow-wrap: break-word;
->   white-space: pre-wrap;
-> }
-> 
-> .actions {
->   padding: 5px 5px;
->   width: 360px;
->   display: flex;
->   justify-content: space-between;
->   color: #536471;
-> }
-> ```
-
-<hr>
-
-
-<br>
-
-</details>
-
-<br>
-
-**Expected Result**
-
-When done setting up the above files, your app should display the `Tweet` component as shown here:
+Once you initially run the app you should see the following:
 
 ![Tweet component after the initial setup](https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/labs/lab-react-tweets-1.png)
 
-<hr>
+`Tweet` component is at the moment rendering static content. We will change this in the next iteration. We'll update the `Tweet` component to display the content coming from the `props`.
+
 <br>
+
 
 ### Iteration 2 | Pass the Tweet as a Prop
 
-In `App.js`, we have an array named `tweetsArray` that holds *tweet* objects.  We will use the `Tweet` component to display the content from the objects. In the `Tweet` we will display the user's `name`, user's `image`, user's `handle`, tweet `timestamp` and the `message`. 
+In `App.js`, we have an array named `tweetsArray` that holds objects representing tweets.  We will use the `Tweet` component to display these *tweet* objects. In the `Tweet` we will display the user's `name`, user's `image`, user's `handle`, tweet `timestamp` and the `message`. 
 
 
 
@@ -358,7 +108,7 @@ Pass the first object from the `tweetsArray`  as a prop to the `Tweet` component
 
 **Display the tweet content in the `Tweet` component**
 
-Update the `Tweet` component to display the values coming from the `tweet` prop. Remember that  the value we passed is an object, so you may want to check the object's structure.
+Update the `Tweet` component to display the values coming from the `tweet` prop. Remember that the value we passed is an object, so you may want to check the object's structure.
 
 <br>
 
@@ -367,22 +117,6 @@ Update the `Tweet` component to display the values coming from the `tweet` prop.
 Once done, your `Tweet` component should display the following content:
 
 ![Tweet component after passing the "tweets" prop](https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/labs/lab-react-tweets-2.png)
-
-<!--
-
-<details>
-
-<summary>Click to see the image</summary>
-
-![Tweet component after passing the "tweets" prop](https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/labs/lab-react-tweets-2.png)
-
-<hr>
-
-<br>
-
-</details>
-
--->
 
 <br>
 
@@ -435,9 +169,9 @@ function Tweet(props) {
 }
 ```
 
-:heavy_exclamation_mark: Don't copy-paste the below code directly into the `Tweet` component!
+:heavy_exclamation_mark: Don't copy-paste the above code directly into the `Tweet` component!
 
-You will do it in the next iterations, one step at a time, replacing parts of HTML as you create each new component.
+You will do it in the next iterations, one step at a time. You will be replacing the parts of HTML as you create each new component.
 
 <hr>
 <br>
@@ -491,10 +225,10 @@ function Tweet(props) {
 Extract the existing `span` tags displaying the user information and render them through the `User` component:
 
 ```jsx
-    <span className="user">
-      <span className="name"> USER_NAME </span>
-      <span className="handle">@ USER_HANDLE</span>
-    </span>
+<span className="user">
+  <span className="name"> USER_NAME </span>
+  <span className="handle">@ USER_HANDLE</span>
+</span>
 ```
 
 <br>
@@ -523,7 +257,7 @@ function Tweet(props) {
 
 **Access the Props**
 
-We passed the object with the user information through the prop `userData`. Access and display the user's `name` and the `handle`.
+We passed the object with the user information through the prop `userData`. Access and display the user's *name* and the twitter *handle*.
 
 
 
@@ -536,7 +270,7 @@ We passed the object with the user information through the prop `userData`. Acce
 Extract the existing `span` tag displaying the *timestamp* information and render it through the `Timestamp` component:
 
 ```jsx
-  <span className="timestamp"> TWEET_TIMESTAMP </span>
+<span className="timestamp"> TWEET_TIMESTAMP </span>
 ```
 
 
@@ -580,10 +314,10 @@ function Tweet(props) {
 
 **Extract HTML**
 
-Extract the existing message `p` tag and render it through the `Message` component:
+Extract the existing `p` tag and render it through the `Message` component:
 
 ```jsx
-        <p className="message"> TWEET_MESSAGE </p>
+<p className="message"> TWEET_MESSAGE </p>
 ```
 
 <br>
@@ -667,7 +401,7 @@ function Tweet(props) {
 
 <br>
 
-The component doesn't take any props.
+`Actions` component doesn't take any props.
 
 <br>
 
