@@ -8,12 +8,9 @@ Passing data through props is an important React concept that is best understood
 
 We will be cloning an existing piece of UI from a popular app, Twitter. Let's get started!
 
-
 <p align="center">
   <img src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/labs/lab-react-tweets-4.png" width="500">
 </p>
-
-<br>
 
 ## Setup
 
@@ -29,10 +26,6 @@ We will be cloning an existing piece of UI from a popular app, Twitter. Let's ge
   $ npm start
   ```
 
-  
-
-<br>
-
 ## Submission
 
 - Upon completion, run the following commands:
@@ -44,8 +37,6 @@ We will be cloning an existing piece of UI from a popular app, Twitter. Let's ge
   ```
 
 - Create a Pull Request so that your TAs can check your work.
-
-  <br>
 
 ## Getting Started
 
@@ -74,8 +65,6 @@ We will be cloning an existing piece of UI from a popular app, Twitter. Let's ge
        />
    ```
 
-<br>
-
 ## Instructions
 
 ### Iteration 1 | Initial Content
@@ -89,8 +78,6 @@ Once you initially run the app you should see the following:
 ![Tweet component after the initial setup](https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/labs/lab-react-tweets-1.png)
 
 `Tweet` component is at the moment rendering static content. We will change this in the next iteration. We'll update the `Tweet` component to display the content coming from the `props`.
-
-<br>
 
 
 ### Iteration 2 | Pass the Tweet as a Prop
@@ -109,22 +96,15 @@ Pass the first object from the `tweetsArray`  as a prop to the `Tweet` component
 <Tweet tweet={ tweetsArray[0] }>
 ```
 
-<br>
-
 **Display the tweet content in the `Tweet` component**
 
 Update the `Tweet` component to display the values coming from the `tweet` prop. Remember that the value we passed is an object, so you may want to check the object's structure.
-
-<br>
 
 **Expected Result**
 
 Once done, your `Tweet` component should display the following content:
 
 ![Tweet component after passing the "tweets" prop](https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/labs/lab-react-tweets-2.png)
-
-<br>
-
 
 
 ### Iteration 3 | Create the Components
@@ -182,10 +162,6 @@ You will do it in the next iterations, one step at a time. You will be replacing
 <br>
 </details>
 
-
-
-<br>
-
 ### Iteration 4 | ProfileImage Component
 
 **Extract HTML**
@@ -195,8 +171,6 @@ Extract the existing `img` tag and render it through the `ProfileImage` componen
 ```jsx
 <img src="IMAGE_URL" className="profile" alt="profile"/>
 ```
-
-<br>
 
 **Render the component**
 
@@ -213,15 +187,10 @@ function Tweet(props) {
 // ...
 ```
 
-<br>
-
 **Access the Props**
 
 `ProfileImage` receives a prop `image`. Set this value as the `src` of the `<img />` tag.
 
-
-
-<br>
 
 ### Iteration 5 | User Component
 
@@ -235,8 +204,6 @@ Extract the existing `span` tags displaying the user information and render them
   <span className="handle">@ USER_HANDLE</span>
 </span>
 ```
-
-<br>
 
 **Render the component**
 
@@ -258,13 +225,9 @@ function Tweet(props) {
 // ...
 ```
 
-<br>
-
 **Access the Props**
 
 We passed the object with the user information through the prop `userData`. Access and display the user's *name* and the twitter *handle*.
-
-
 
 
 
@@ -277,10 +240,6 @@ Extract the existing `span` tag displaying the *timestamp* information and rende
 ```jsx
 <span className="timestamp"> TWEET_TIMESTAMP </span>
 ```
-
-
-
-<br>
 
 **Render the component**
 
@@ -303,15 +262,11 @@ function Tweet(props) {
 // ...
 ```
 
-<br>
 
 **Access the Props**
 
 `Timestamp` receives a prop `time`. Display this value as the content of the `span` tag.
 
-
-
-<br>
 
 
 
@@ -324,8 +279,6 @@ Extract the existing `p` tag and render it through the `Message` component:
 ```jsx
 <p className="message"> TWEET_MESSAGE </p>
 ```
-
-<br>
 
 **Render the component**
 
@@ -350,16 +303,9 @@ function Tweet(props) {
 // ...
 ```
 
-<br>
-
 **Access the Props**
 
 `Message` receives a prop `message`. Display this value in the `p` tag.
-
-
-
-<br>
-
 
 
 ### Iteration 8 | Actions Component
@@ -376,8 +322,6 @@ Extract the existing message `div.actions` tag and render it through the `Action
       <i class="fas fa-share"></i>
     </div>
 ```
-
-<br>
 
 **Render the component**
 
@@ -404,16 +348,7 @@ function Tweet(props) {
 // ...
 ```
 
-<br>
-
 `Actions` component doesn't take any props.
-
-<br>
-
-
-
-<br>
-
 
 
 ### Iteration 9 |Render multiple `Tweet`s
@@ -421,8 +356,6 @@ function Tweet(props) {
 Once you are done refactoring the `Tweet` component, update `App.js` to display three `<Tweet />` components. Each `<Tweet />` should receive a separate *tweet object* from the `tweetsArray`. 
 
 Once finished, your app should be displaying the following content:
-
-
 
 <details>
 
