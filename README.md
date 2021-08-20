@@ -9,7 +9,7 @@ Passing data through props is an important React concept that is best understood
 We will be cloning an existing piece of UI from a popular app, Twitter. Let's get started!
 
 
-<p>
+<p align="center">
   <img src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/labs/lab-react-tweets-4.png" width="500">
 </p>
 
