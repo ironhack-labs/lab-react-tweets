@@ -6,8 +6,8 @@ import User from './User.js';
 import Message from './Message'
 import Actions from './Actions'
 
-function Tweet({tweet}) {
-  const {user, message, timestamp} = tweet
+function Tweet({props}) {
+  const {user, message, timestamp} = props
   const {name, image, handle} = user;
   
   return (
