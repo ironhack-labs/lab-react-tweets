@@ -43,7 +43,8 @@ function App() {
   <div className="App">
 
   <Tweet />
-  <tweet tweet={ tweetsArray[0]}></tweet>
+  <Tweet tweet={ tweetsArray[0]}/>
+
 
   </div>
 
