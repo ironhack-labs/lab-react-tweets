@@ -1,4 +1,8 @@
 import ProfileImage from './ProfileImage.js'
+import User from "./User.js"
+import Timestamp from "./Timestamp.js"
+import Message from "./Message.js"
+import Actions from "./Actions.js"
 
 function Tweet(props) {
   return (
@@ -6,28 +10,12 @@ function Tweet(props) {
       <ProfileImage image = {props.tweet.user.image}/>
       <div className="body">
         <div className="top">
-          <span className="user">
-            <span className="name">{props.tweet.user.name}</span>
-            <span className="handle">@{props.tweet.user.handle}</span>
-          </span>
-
-          <span className="timestamp">{props.tweet.timestamp}</span>
+          <User userData= {props.tweet.user}/>
+          <Timestamp time= {props.tweet.time} />
         </div>
-
-        <p className="message">
-          {props.tweet.message}
-        </p>
-
-        <div className="actions">
-          {/* Font Awesome icons */}
-          <i class="far fa-comment"></i>
-          <i class="fas fa-retweet"></i>
-          <i class="far fa-heart"></i>
-          <i class="fas fa-share"></i>
-        </div>
+          <Message message= {props.tweet.message} />
+          <Actions />
       </div>
-
-      <i class="fas fa-ellipsis-h"></i>
     </div>
   );
 }
