@@ -1,10 +1,12 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+i {
+  color: #536471;
 }
 
 .App {
@@ -21,6 +23,7 @@ body {
   display: flex;
   font-size: 1.1rem;
   line-height: 18px;
+  margin-bottom: 20px;
 }
 
 .body {
@@ -31,11 +34,11 @@ body {
 
 .top {
   display: flex;
-  line-height: 1.4rem;
+  line-height: 2.9rem;
 }
 
 .more {
-  margin-left: 20px;
+  padding: 10px 16.2px 18px 16.2px;
 }
 
 .profile {
@@ -48,7 +51,8 @@ body {
 .name {
   font-weight: bold;
   margin-bottom: 0.5em;
-  margin-right: 0.3em;
+  margin-right: 0.6em;
+  padding-left: .5rem;
 }
 
 .handle {
@@ -72,6 +76,7 @@ body {
 .message {
   text-align: left;
   font-stretch: 100%;
+  padding: .5rem .5rem 1rem .5rem;
   font-weight: 400;
   line-height: 1.6rem;
   overflow-wrap: break-word;
@@ -84,4 +89,6 @@ body {
   display: flex;
   justify-content: space-between;
   color: #536471;
+  align-self: center;
+  margin-bottom: .3rem;
 }
