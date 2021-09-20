@@ -34,10 +34,18 @@ const tweetsArray = [
   },
 ];
 
+function printTweets(array) {
+  let arr = []
+  for(let i=0; i<array.length; i++){
+    arr.push(<Tweet tweet={array[i]} />)
+  }
+  return arr
+}
+
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      {printTweets(tweetsArray)}
     </div>
   );
 }
