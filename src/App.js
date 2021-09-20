@@ -1,3 +1,13 @@
+/* import "./App.css";
+
+function App() {
+  return <div className="App"></div>;
+}
+export default App;
+ */
+
+
+
 import "./App.css";
 import Tweet from "./components/Tweet";
 
@@ -37,7 +47,7 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      <Tweet  tweet={ tweetsArray[0] }/>
     </div>
   );
 }
