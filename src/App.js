@@ -34,10 +34,16 @@ const tweetsArray = [
   },
 ];
 
+console.log('line 37', tweetsArray[0])
+
 function App() {
   return (
     <div className="App">
-      <Tweet />
+    {tweetsArray.map(tweetEl => {
+      return (<Tweet tweet={tweetEl}/>)
+    })}
+    
+      
     </div>
   );
 }
