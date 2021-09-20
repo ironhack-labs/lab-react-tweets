@@ -20,7 +20,9 @@ function Tweet(props) {
 				<Actions />
 			</div>
 
-			<i class="fas fa-ellipsis-h" />
+			<a href="/">
+				<i class="fa fa-ellipsis-h" aria-hidden="true" />
+			</a>
 		</div>
 	);
 }

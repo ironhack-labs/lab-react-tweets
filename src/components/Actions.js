@@ -1,10 +1,18 @@
 function Actions() {
 	return (
 		<div className="actions">
-			<i class="far fa-comment" />
-			<i class="fas fa-retweet" />
-			<i class="far fa-heart" />
-			<i class="fas fa-share" />
+			<a href="/">
+				<i class="fa fa-comment" aria-hidden="true" />
+			</a>
+			<a href="/">
+				<i class="fa fa-retweet" aria-hidden="true" />
+			</a>
+			<a href="/">
+				<i class="fa fa-heart" aria-hidden="true" />
+			</a>
+			<a href="/">
+				<i class="fa fa-share" aria-hidden="true" />
+			</a>
 		</div>
 	);
 }
