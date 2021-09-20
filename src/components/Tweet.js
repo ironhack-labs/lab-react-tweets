@@ -1,8 +1,19 @@
-function Tweet() {
+import React from 'react'
+
+// export default function Tweet(props) {
+//   console.log(props.data);
+//   console.log(props.data[0]);
+//   return (
+//       <>
+      
+//       </>
+//   )
+// }
+function Tweet(props) {
   return (
     <div className="tweet">
       <img
-        src="https://i.imgur.com/9yw1Fyw.jpg"
+        src={props.data[0].user.image}
         className="profile"
         alt="profile"
       />
@@ -10,16 +21,15 @@ function Tweet() {
       <div className="body">
         <div className="top">
           <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
+          <span className="name">{props.data[0].user.name}</span>
+            <span className="handle">{props.data[0].user.handle}</span>
           </span>
 
-          <span className="timestamp">Nov 30, 2020</span>
+          <span className="timestamp">{props.data[0].timestamp}</span>
         </div>
 
         <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
+          {props.data[0].message}
         </p>
 
         <div className="actions">
