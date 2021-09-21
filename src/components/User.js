@@ -1,12 +1,12 @@
 
 
 
-const User =(props)=>{
+const User =({userData})=>{
    
     return(
         <span className="user">
-                <span className="name">{props.userData.name}</span>
-                <span className="handle">{props.userData.handle}</span>
+                <span className="name">{userData.name}</span>
+                <span className="handle">{userData.handle}</span>
         </span>
     )
 }

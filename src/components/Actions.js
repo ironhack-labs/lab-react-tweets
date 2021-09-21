@@ -1,5 +1,5 @@
 
-const Actions = props =>{
+const Actions = () =>{
     return (
 
 
