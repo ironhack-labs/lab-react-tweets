@@ -148,7 +148,7 @@ function Tweet(props) {
         
       </div>
 
-      <i class="fas fa-ellipsis-h"></i>
+      <i className="fas fa-ellipsis-h"></i>
     </div>
   );
 }
@@ -316,10 +316,10 @@ Extract the existing message `div.actions` tag and render it through the `Action
 
 ```jsx
     <div className="actions">
-      <i class="far fa-comment"></i>
-      <i class="fas fa-retweet"></i>
-      <i class="far fa-heart"></i>
-      <i class="fas fa-share"></i>
+      <i className="far fa-comment"></i>
+      <i className="fas fa-retweet"></i>
+      <i className="far fa-heart"></i>
+      <i className="fas fa-share"></i>
     </div>
 ```
 

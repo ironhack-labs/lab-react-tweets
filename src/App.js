@@ -9,8 +9,7 @@ const tweetsArray = [
       handle: "dog_feelings",
     },
     timestamp: "1h ago",
-    message:
-      "the human likes to say. that i live here rent free. but i would argue. this housing accommodation. is my payment. for a lifetime of love. and excellent company",
+    message: "the human likes to say. that i live here rent free. but i would argue. this housing accommodation. is my payment. for a lifetime of love. and excellent company",
   },
   {
     user: {
@@ -19,8 +18,7 @@ const tweetsArray = [
       handle: "dog_feelings",
     },
     timestamp: "2h ago",
-    message:
-      "sometimes. the human presses their noggin against mine. to figure out what i’m thinking. so i just think really hard. about how much i love them. and hope they figure it out",
+    message: "sometimes. the human presses their noggin against mine. to figure out what i’m thinking. so i just think really hard. about how much i love them. and hope they figure it out",
   },
   {
     user: {
@@ -37,7 +35,9 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      {tweetsArray.map((tweet, i) => {
+        return <Tweet key={i} tweet={tweet} />;
+      })}
     </div>
   );
 }
