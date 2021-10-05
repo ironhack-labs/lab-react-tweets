@@ -1,39 +1,41 @@
-function Tweet() {
+// components/Header.js
+// COMPONENTE
+
+// 1. IMPORTACIONES
+// SINÓNIMO DEL REQUIRE QUE VIMOS EN BACKEND
+import React from "react";
+import Message from "./Message";
+import ProfileImage from "./ProfileImage";
+import Timestamp from "./Timestamp";
+import User from "./User";
+import Actions from "./Actions";
+
+function Tweet(props) {
+  // console.log( "archivos", props)
   return (
     <div className="tweet">
-      <img
-        src="https://i.imgur.com/9yw1Fyw.jpg"
-        className="profile"
-        alt="profile"
-      />
+    <ProfileImage image={props.tweet.user.image} />
 
       <div className="body">
+
         <div className="top">
-          <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
-          </span>
-
-          <span className="timestamp">Nov 30, 2020</span>
+          <User userData={props.tweet.user}></User>
+          <Timestamp timestamp={props.tweet.timestamp} />
         </div>
 
-        <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
-        </p>
+        <Message message={props.tweet.message}/>
 
-        <div className="actions">
-          {/* Font Awesome icons */}
-          <i class="far fa-comment"></i>
-          <i class="fas fa-retweet"></i>
-          <i class="far fa-heart"></i>
-          <i class="fas fa-share"></i>
-        </div>
+        <Actions/>
       </div>
 
-      <i class="fas fa-ellipsis-h"></i>
+      <i className="fas fa-ellipsis-h"></i>
     </div>
+    
   );
+  
+  
+
 }
+
 
 export default Tweet;
