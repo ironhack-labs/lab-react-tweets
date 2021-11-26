@@ -15,9 +15,7 @@ We will be cloning an existing piece of UI from a popular app, Twitter. Let's ge
 ## Setup
 
 - Fork this repo
-
 - Clone this repo
-
 - Open the LAB and start:
 
   ```bash
@@ -352,7 +350,7 @@ function Tweet(props) {
 `Actions` component doesn't take any props.
 
 
-### Iteration 9 |Render multiple `Tweet`s
+### Iteration 9 | Render multiple `Tweet`s
 
 Once you are done refactoring the `Tweet` component, update `App.js` to display three `<Tweet />` components. Each `<Tweet />` should receive a separate *tweet object* from the `tweetsArray`. 
 
