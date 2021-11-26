@@ -40,6 +40,7 @@ We will be cloning an existing piece of UI from a popular app, Twitter. Let's ge
 
 ## Getting Started
 
+<!--
 1. Clean the `App.js` component so that it has the following structure:
 
    ```jsx
@@ -51,10 +52,10 @@ We will be cloning an existing piece of UI from a popular app, Twitter. Let's ge
    }
    export default App;
    ```
-
+-->
    
 
-2. We will use [Font Awesome](https://fontawesome.com/v5.15/icons?d=gallery&p=1) for the icons in our app. Add the following stylesheet in the `head` of the `public/index.html` page:
+1. We will use [Font Awesome](https://fontawesome.com/v5.15/icons?d=gallery&p=1) for the icons in our app. Add the following stylesheet in the `head` of the `public/index.html` page:
   
    ```html
        <link
