@@ -1,8 +1,10 @@
-function Tweet() {
+function Tweet(props) {
+  const {user,timestamp,message} = props.tweet;
+
   return (
     <div className="tweet">
       <img
-        src="https://i.imgur.com/9yw1Fyw.jpg"
+        src={user.image}
         className="profile"
         alt="profile"
       />
@@ -10,16 +12,15 @@ function Tweet() {
       <div className="body">
         <div className="top">
           <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
+            <span className="name">{user.name}</span>
+            <span className="handle">@{user.handle}</span>
           </span>
 
-          <span className="timestamp">Nov 30, 2020</span>
+          <span className="timestamp">{timestamp}</span>
         </div>
 
         <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
+          {message}
         </p>
 
         <div className="actions">
