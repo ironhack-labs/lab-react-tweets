@@ -1,4 +1,5 @@
 import ProfileImage from "./ProfileImage";
+import Timestamp from "./Timestamp";
 import User from './User';
 
 const Tweet = (props) => {
@@ -11,7 +12,7 @@ const Tweet = (props) => {
         <div className="top">
           <User userData={tweet.user} />
 
-          <span className="timestamp">{props.tweet.timestamp}</span>
+          <Timestamp timestamp={tweet.timestamp}/>
         </div>
 
         <p className="message">
