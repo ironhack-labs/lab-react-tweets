@@ -1,13 +1,11 @@
 
+import ProfileImage from "./ProfileImage";
+
 const Tweet = (props) => {
   const {tweet} = props
   return (
     <div className="tweet">
-      <img
-        src={tweet.user.image}
-        className="profile"
-        alt="profile"
-      />
+        <ProfileImage image={props.tweet.user.image}/>
 
       <div className="body">
         <div className="top">
@@ -16,7 +14,7 @@ const Tweet = (props) => {
             <span className="handle"> @ {tweet.user.handle}</span>
           </span>
 
-          <span className="timestamp">{tweet.timestamps}</span>
+          <span className="timestamp">{tweet.timestamp}</span>
         </div>
 
         <p className="message">
