@@ -1,4 +1,5 @@
 import ProfileImage from './ProfileImage'
+import User from './User'
 
 function Tweet(props) {
   const {tweet} = props
@@ -12,11 +13,7 @@ function Tweet(props) {
 
       <div className="body">
         <div className="top">
-          <span className="user">
-            <span className="name">{name}</span>
-            <span className="handle">{handle}</span>
-          </span>
-
+          <User userData ={user}/>
           <span className="timestamp">{timestamp}</span>
         </div>
 
