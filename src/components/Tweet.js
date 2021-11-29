@@ -1,6 +1,6 @@
 
 import ProfileImage from "./ProfileImage";
-import User from "./User";
+import UserData from "./User";
 import Timestamp from "./Timestamp";
 import Message from "./Message";
 import Actions from "./Actions"
@@ -14,8 +14,7 @@ const Tweet = (props) => {
 
       <div className="body">
         <div className="top">
-           <User user = {tweet.user}/>
-            <span className="handle"> @ {tweet.user.handle}</span>
+           <UserData user = {tweet.user}/>
            <Timestamp timestamp = {tweet.timestamp} />
         </div>
 
