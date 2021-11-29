@@ -1,18 +1,17 @@
 
 import ProfileImage from "./ProfileImage";
+import User from "./User";
 
 const Tweet = (props) => {
   const {tweet} = props
   return (
     <div className="tweet">
-        <ProfileImage image={props.tweet.user.image}/>
+        <ProfileImage image={tweet.user.image}/>
 
       <div className="body">
         <div className="top">
-          <span className="user">
-            <span className="name">{tweet.user.name}</span>
+           <User user = {tweet.user}/>
             <span className="handle"> @ {tweet.user.handle}</span>
-          </span>
 
           <span className="timestamp">{tweet.timestamp}</span>
         </div>
