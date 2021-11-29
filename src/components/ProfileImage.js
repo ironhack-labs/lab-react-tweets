@@ -1,7 +1,7 @@
-const ProfileImage = (prop) => {
+const ProfileImage = (props) => {
     return (
         <img
-            src={prop.image}
+            src={props.image}
             className="profile"
             alt="profile"
         />
@@ -9,3 +9,4 @@ const ProfileImage = (prop) => {
 }
 
 export default ProfileImage
+
