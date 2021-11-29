@@ -3,6 +3,7 @@ import ProfileImage from "./ProfileImage";
 import User from "./User";
 import Timestamp from "./Timestamp";
 import Message from "./Message";
+import Actions from "./Actions"
 
 
 const Tweet = (props) => {
@@ -20,17 +21,8 @@ const Tweet = (props) => {
 
           <Message message = {tweet.message}/>
 
-        {/* <p className="message">
-          {tweet.message}
-        </p> */}
+          <Actions/>
 
-        <div className="actions">
-          {/* Font Awesome icons */}
-          <i class="far fa-comment"></i>
-          <i class="fas fa-retweet"></i>
-          <i class="far fa-heart"></i>
-          <i class="fas fa-share"></i>
-        </div>
       </div>
 
       <i class="fas fa-ellipsis-h"></i>
