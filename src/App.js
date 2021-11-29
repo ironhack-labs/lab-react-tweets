@@ -1,5 +1,5 @@
 import "./App.css";
-import Tweet from "./components/Tweet";
+import { TweetsList } from "./components/TweetsList";
 
 const tweetsArray = [
   {
@@ -37,7 +37,7 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      <TweetsList tweets={tweetsArray} />
     </div>
   );
 }
