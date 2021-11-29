@@ -1,6 +1,5 @@
 import "./App.css";
 import Tweet from "./components/Tweet";
-import ProfileImage from "./components/ProfileImage"
 
 const tweetsArray = [
   {
@@ -36,12 +35,12 @@ const tweetsArray = [
 ];
 
 function App() {
-  return (
-    <div className="App">
-      <Tweet tweet = { tweetsArray[0] } />
-      <ProfileImage tweet = { tweetsArray[0] } />
-    </div>
-  );
+    
+      return(
+        <div className="App">
+          {tweetsArray.map((tweet)=>(<Tweet tweet={tweet} />))}
+        </div>
+          )
 }
 
 export default App;
