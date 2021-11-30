@@ -1,12 +1,13 @@
-import React from 'react'
-import ProfileImage from './ProfileImage'
-import User from './User'
+import React from 'react';
+import ProfileImage from './ProfileImage';
+import User from './User';
 import Timestamp from './Timestamp';
 import Message from './Message';
 import Actions from './Actions';
 
 function Tweet(props) {
   return (
+    
     <div className="tweet">
       <ProfileImage image={props.tweet.user.image} />
 
@@ -22,7 +23,7 @@ function Tweet(props) {
         
       </div>
 
-      <i class="fas fa-ellipsis-h"></i>
+      <i className="fas fa-ellipsis-h"></i>
     </div>
   );
 }
