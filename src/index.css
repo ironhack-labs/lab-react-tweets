@@ -12,15 +12,18 @@ body {
 }
 
 .tweet {
-  margin: 0 auto;
+  margin: 15px auto;
   min-width: 480px;
   max-width: 640px;
   min-height: 80px;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: none;
   display: flex;
   font-size: 1.1rem;
   line-height: 18px;
+  box-shadow: -1px 0px 15px #a9a6a6;
+  border-radius: 15px;
+
 }
 
 .body {
