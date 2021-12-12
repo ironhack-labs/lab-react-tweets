@@ -1,17 +1,27 @@
-function Tweet() {
+import ProfileImage from "./ProfileImage";
+
+function Tweet(props) {
+ 
+  const singleTweet = props.tweet
+
+  console.log(singleTweet)
   return (
+
     <div className="tweet">
-      <img
-        src="https://i.imgur.com/9yw1Fyw.jpg"
+         
+    <ProfileImage image={props.tweet.user.image} />
+
+    {/* 
+      <img src={singleTweet.user.image}
         className="profile"
         alt="profile"
-      />
+      /> */}
 
       <div className="body">
         <div className="top">
           <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
+            <span className="name">{singleTweet.user.name}</span>
+            <span className="handle">{singleTweet.user.handle}</span>
           </span>
 
           <span className="timestamp">Nov 30, 2020</span>
