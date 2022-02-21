@@ -1,18 +1,16 @@
 import ProfileImage from "./ProfileImage";
 import User from "./User";
+import Timestamp from "./Timestamp";
 
 function Tweet(props) {
   /* console.log(props) */
   return (
     <div className="tweet">
       <ProfileImage image={props.tweet.user.image} />
-
       <div className="body">
         <div className="top">
-
           <User userData={props.tweet.user} />
-
-          <span className="timestamp"> {props.tweet.timestamp} </span>
+          <Timestamp time={props.tweet.timestamp} />
         </div>
 
         <p className="message"> {props.tweet.message} </p>
