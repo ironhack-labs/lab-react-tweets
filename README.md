@@ -53,7 +53,8 @@ We will be cloning an existing piece of UI from a popular app, Twitter. Let's ge
 -->
    
 
-1. We will use [Font Awesome](https://fontawesome.com/v5.15/icons?d=gallery&p=1) for the icons in our app. Add the following stylesheet in the `head` of the `public/index.html` page:
+1. We will use [Font Awesome](https://fontawesome.com/v5.15/icons?d=gallery&p=1) for the icons in our app. 
+Add the following stylesheet in the `head` of the `public/index.html` page:
   
    ```html
        <link
@@ -68,9 +69,11 @@ We will be cloning an existing piece of UI from a popular app, Twitter. Let's ge
 
 ### Iteration 1 | Initial Content
 
-To allow you to focus on React without having to worry about the styling we provided you with the CSS styles. All the CSS is included in the starter code in the `src/index.css` file. 
+To allow you to focus on React without having to worry about the styling we provided you with the CSS styles. 
+All the CSS is included in the starter code in the `src/index.css` file. 
 
-We have also provided you with the initial content of the `App.js` and we included the HTML structure for the `Tweet.js` component. Before you start working take a moment to go over these two files.
+We have also provided you with the initial content of the `App.js` and we included the HTML structure for the `Tweet.jsx` component.
+ Before you start working take a moment to go over these two files.
 
 Once you initially run the app you should see the following:
 
@@ -81,7 +84,9 @@ Once you initially run the app you should see the following:
 
 ### Iteration 2 | Pass the Tweet as a Prop
 
-In `App.js`, we have an array named `tweetsArray` that holds objects representing tweets.  We will use the `Tweet` component to display these *tweet* objects. In the `Tweet` we will display the user's `name`, user's `image`, user's `handle`, tweet `timestamp` and the `message`. 
+In `App.js`, we have an array named `tweetsArray` that holds objects representing tweets. 
+We will use the `Tweet` component to display these *tweet* objects.
+In the `Tweet` we will display the user's `name`, user's `image`, user's `handle`, tweet `timestamp` and the `message`. 
 
 
 
@@ -97,7 +102,8 @@ Pass the first object from the `tweetsArray`  as a prop to the `Tweet` component
 
 **Display the tweet content in the `Tweet` component**
 
-Update the `Tweet` component to display the values coming from the `tweet` prop. Remember that the value we passed is an object, so you may want to check the object's structure.
+Update the `Tweet` component to display the values coming from the `tweet` prop. 
+Remember that the value we passed is an object, so you may want to check the object's structure.
 
 **Expected Result**
 
@@ -110,11 +116,11 @@ Once done, your `Tweet` component should display the following content:
 
 We will now create new files for the components that we'll make in the following iterations. Inside the folder `src/components/` create the following new files:
 
-- `src/components/ProfileImage.js` ,
+- `src/components/ProfileImage.jsx` ,
 - `src/components/User.js` ,
-- `src/components/Timestamp.js` ,
-- `src/components/Message.js`  and
-- `src/components/Actions.js`.
+- `src/components/Timestamp.jsx` ,
+- `src/components/Message.jsx`  and
+- `src/components/Actions.jsx`.
 
 
 
@@ -173,7 +179,7 @@ Extract the existing `img` tag and render it through the `ProfileImage` componen
 
 **Render the component**
 
-Once done, import the `ProfileImage` component to `Tweet.js`.  After importing it, render the component inside of `Tweet` in the following way:
+Once done, import the `ProfileImage` component to `Tweet.jsx`.  After importing it, render the component inside of `Tweet` in the following way:
 
 ```jsx
 // ...
@@ -206,7 +212,7 @@ Extract the existing `span` tags displaying the user information and render them
 
 **Render the component**
 
-Import the `User` component to `Tweet.js`.  After importing it, render the component inside of `Tweet` in the following way:
+Import the `User` component to `Tweet.jsx`.  After importing it, render the component inside of `Tweet` in the following way:
 
 ```jsx
 // ...
@@ -242,7 +248,7 @@ Extract the existing `span` tag displaying the *timestamp* information and rende
 
 **Render the component**
 
-Import the `Timestamp` component to `Tweet.js`.  After importing it, render the component inside of `Tweet` in the following way:
+Import the `Timestamp` component to `Tweet.jsx`.  After importing it, render the component inside of `Tweet` in the following way:
 
 ```jsx
 // ...
@@ -281,7 +287,7 @@ Extract the existing `p` tag and render it through the `Message` component:
 
 **Render the component**
 
-When done, import the `Message` component and render it in the `Tweet.js` in the following way:
+When done, import the `Message` component and render it in the `Tweet.jsx` in the following way:
 
 ```jsx
 // ...
@@ -324,7 +330,7 @@ Extract the existing message `div.actions` tag and render it through the `Action
 
 **Render the component**
 
-When done, import the `Actions` component and render it in the `Tweet.js` like this:
+When done, import the `Actions` component and render it in the `Tweet.jsx` like this:
 
 ```jsx
 // ...
