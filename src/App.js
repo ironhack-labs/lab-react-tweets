@@ -1,4 +1,3 @@
-import "./App.css";
 import Tweet from "./components/Tweet";
 
 const tweetsArray = [
@@ -15,7 +14,7 @@ const tweetsArray = [
   {
     user: {
       name: "Thoughts of Dog®",
-      image: "https://i.imgur.com/b0EdHVV.jpg",
+      image: "https://vocesdelperiodista.mx/wp-content/uploads/2016/10/Snoopy.jpg",
       handle: "dog_feelings",
     },
     timestamp: "2h ago",
@@ -25,7 +24,7 @@ const tweetsArray = [
   {
     user: {
       name: "Thoughts of Dog®",
-      image: "https://i.imgur.com/b0EdHVV.jpg",
+      image: "https://www.kindpng.com/picc/m/424-4249960_transparent-clifford-the-big-red-dog-png-clifford.png",
       handle: "dog_feelings",
     },
     timestamp: "3h ago",
@@ -37,7 +36,10 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      <Tweet tweet={tweetsArray[0]} />
+      <Tweet tweet={tweetsArray[1]} />
+      <Tweet tweet={tweetsArray[2]} />
+
     </div>
   );
 }
