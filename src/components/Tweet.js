@@ -1,26 +1,19 @@
-function Tweet() {
+function Tweet(props) {
   return (
     <div className="tweet">
-      <img
-        src="https://i.imgur.com/9yw1Fyw.jpg"
-        className="profile"
-        alt="profile"
-      />
+      <img src={props.tweet.user.image} className="profile" alt="profile" />
 
       <div className="body">
         <div className="top">
           <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
+            <span className="name">{props.tweet.user.name}</span>
+            <span className="handle">{props.tweet.user.handle}</span>
           </span>
 
-          <span className="timestamp">Nov 30, 2020</span>
+          <span className="timestamp">{props.tweet.timestamp}</span>
         </div>
 
-        <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
-        </p>
+        <p className="message">{props.tweet.message}</p>
 
         <div className="actions">
           {/* Font Awesome icons */}
