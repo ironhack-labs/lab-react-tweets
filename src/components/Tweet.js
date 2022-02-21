@@ -28,6 +28,6 @@ function Tweet(props) {
       <i class="fas fa-ellipsis-h"></i>
     </div>
   );
-}
+} 
 
 export default Tweet;
