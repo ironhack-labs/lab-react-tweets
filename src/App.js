@@ -38,7 +38,9 @@ function App() {
   return (
     <div className="App">
       {/* pass first object from tweetsArray as a prop to the Tweet component */}
-      <Tweet tweet={ tweetsArray[0] } />
+      <Tweet tweet={tweetsArray[0]} />
+      <Tweet tweet={tweetsArray[1]} />
+      <Tweet tweet={tweetsArray[2]} />
     </div>
   );
 }
