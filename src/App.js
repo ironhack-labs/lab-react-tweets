@@ -36,12 +36,11 @@ const tweetsArray = [
 ];
 
 function App() {
+  tweetsArray.map(tw => console.log(tw));
   return (
     <div className="App">
       <TweetList>
-        <Tweet tweet={ tweetsArray[0] }/>
-        <Tweet tweet={ tweetsArray[1] }/>
-        <Tweet tweet={ tweetsArray[2] }/>
+        { tweetsArray.map(tw => <Tweet tweet={tw}/>) }
       </TweetList>
     </div>
   );
