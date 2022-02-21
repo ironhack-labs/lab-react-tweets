@@ -1,8 +1,8 @@
 function User({ username, handle }) {
   return (
-    <span className="userData">
-      {" "}
-      {username} {handle}
+    <span className="user">
+      <span className="name">{username}</span>
+      <span className="handle">{handle}</span>
     </span>
   );
 }

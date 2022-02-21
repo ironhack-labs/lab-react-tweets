@@ -1,5 +1,5 @@
 function Timestamp({ time }) {
-  return <span className="time"> {time} </span>;
+  return <span className="timestamp"> {time} </span>;
 }
 
 export default Timestamp;
