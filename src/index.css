@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #121212;
 }
 
 .App {
@@ -17,10 +18,13 @@ body {
   max-width: 640px;
   min-height: 80px;
   padding: 10px;
-  border: 1px solid #ccc;
+  border-radius: 10px;
+  border: 1px solid #333;
   display: flex;
   font-size: 1.1rem;
   line-height: 18px;
+  background-color: #1e1e1e;
+  margin-bottom:1em;
 }
 
 .body {
@@ -49,16 +53,17 @@ body {
   font-weight: bold;
   margin-bottom: 0.5em;
   margin-right: 0.3em;
+  color: #ddd;
 }
 
 .handle {
-  color: #536471;
+  color: #777;
   margin-left: 3px;
   margin-right: 3px;
 }
 
 .timestamp {
-  color: #536471;
+  color: #555;
   font-size: 1.1rem;
 }
 
@@ -76,6 +81,7 @@ body {
   line-height: 1.6rem;
   overflow-wrap: break-word;
   white-space: pre-wrap;
+  color: #fff;
 }
 
 .actions {
@@ -83,5 +89,11 @@ body {
   width: 360px;
   display: flex;
   justify-content: space-between;
-  color: #536471;
+  color: #555;
+}
+.more{
+  color: #555;
+}
+.title{
+  color: #555;
 }

@@ -1,37 +1,31 @@
-function Tweet() {
+import ProfileImg from './ProfileImg';
+import User from './User'
+import Timestamp from './Timestamp'
+import Message from './Message'
+import Actions from './Actions'
+
+function Tweet(props) {
+  console.log(props);
   return (
-    <div className="tweet">
-      <img
-        src="https://i.imgur.com/9yw1Fyw.jpg"
-        className="profile"
-        alt="profile"
-      />
-
-      <div className="body">
-        <div className="top">
-          <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
-          </span>
-
-          <span className="timestamp">Nov 30, 2020</span>
-        </div>
-
-        <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
-        </p>
-
-        <div className="actions">
-          {/* Font Awesome icons */}
-          <i class="far fa-comment"></i>
-          <i class="fas fa-retweet"></i>
-          <i class="far fa-heart"></i>
-          <i class="fas fa-share"></i>
-        </div>
-      </div>
-
-      <i class="fas fa-ellipsis-h"></i>
+    <div>
+      {
+        props.tweet.map((element) => {
+          return (
+            <div className="tweet">
+              <ProfileImg url={element.user.image} alt={element.user.name}/>
+              <div className="body">
+                <div className="top">
+                  <User name={element.user.name} handle={element.user.handle} />
+                  <Timestamp time={element.timestamp} />
+                </div>
+                <Message msg={element.message}/>
+                <Actions />
+              </div>
+              <i className="fas fa-ellipsis-h more"></i>
+            </div>
+          )
+        })
+      }
     </div>
   );
 }
