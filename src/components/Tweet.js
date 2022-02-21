@@ -1,5 +1,5 @@
 function Tweet(props) {
-  console.log(props)
+  /* console.log(props) */
   return (
     <div className="tweet">
       <img src={props.tweet.user.image} className="profile" alt="profile" />
