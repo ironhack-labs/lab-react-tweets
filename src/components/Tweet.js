@@ -13,10 +13,11 @@ import User from "./User";
 function Tweet(props) {
   return (
     <div className="tweet">
-      <ProfileImage image= {props.tweet.user.image}/>
+            <ProfileImage image= {props.tweet.user.image}/>
       
 
       <div className="body">
+         
           <div className="top">
 
             <User user={props.tweet.user}/>
@@ -24,9 +25,9 @@ function Tweet(props) {
 
           </div>
 
-        <Message message={props.tweet.message}/>
+            <Message message={props.tweet.message}/>
 
-        < Actions />
+            < Actions />
 
       </div>
 
