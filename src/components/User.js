@@ -1,10 +1,9 @@
-import React from 'react'
 
-export default function User() {
+export default function User(props) {
   return (
     <span className='user'>
-        <span className='name'> Thoughts of Dog® </span>
-        <span className='handle'> @dog_feelings </span>
+        <span className='name'> {props.user.name} </span>
+        <span className='handle'> {props.user.handle} </span>
     </span>
   )
 }

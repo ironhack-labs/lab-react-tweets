@@ -14,7 +14,7 @@ function Tweet(props) {
       <div className="body">
         <div className="top">
 
-          <User userData={props.tweet.user} />
+          <User user={props.tweet.user} />
           <Timestamp time={props.tweet.timestamp} />
         </div>
 
@@ -26,6 +26,7 @@ function Tweet(props) {
       <i class="fas fa-ellipsis-h"></i>
     </div>
   );
+
 }
 
 export default Tweet;

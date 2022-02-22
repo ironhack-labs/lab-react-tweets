@@ -1,6 +1,6 @@
 
-export default function Timestamp() {
+export default function Timestamp(props) {
   return (
-    <span className="timestamp"> 1h ago </span>
+    <span className="timestamp">{props.timestamp}</span>
   )
 }
