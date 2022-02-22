@@ -8,6 +8,7 @@ import Actions from "./Actions";
 function Tweet(props) {
   return (
     <div className="App">
+      <div class="tweet">
       <ProfileImage image={props.tweet.user.image} />
 
       <div className="body">
@@ -20,6 +21,7 @@ function Tweet(props) {
         <Message message={props.tweet.message} />
 
         <Actions />
+        </div>
       </div>
     </div>
   );
