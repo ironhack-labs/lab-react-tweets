@@ -7,9 +7,5 @@ export default function Timestamp (props) {
         <div>
             <span className="timestamp">{props.timestamp}</span>
         </div>
-
-
     )
-
-
 }
