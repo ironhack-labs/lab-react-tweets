@@ -1,8 +1,10 @@
 
 //Importaciones
+import Message from "./Message";
 import ProfileImage from "./ProfileImage";
 import Timestamp from "./Timestamp";
 import User from "./User";
+
 
 
 
@@ -13,15 +15,14 @@ function Tweet(props) {
       
 
       <div className="body">
-        <div className="top">
+          <div className="top">
 
-        
             <User user={props.tweet.user}/>
-            <Timestamp time={props.tweet.Timestamp} />
+            <Timestamp time={props.tweet.timestamp} />
 
-        </div>
+          </div>
 
-        <p className="message">{props.tweet.message} </p>
+        <Message message={props.tweet.message}/>
 
         <div className="actions">
           {/* Font Awesome icons */}
