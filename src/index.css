@@ -12,12 +12,13 @@ body {
 }
 
 .tweet {
-  margin: 0 auto;
+  margin: 20px auto;
   min-width: 480px;
   max-width: 640px;
   min-height: 80px;
-  padding: 10px;
-  border: 1px solid #ccc;
+  padding: 30px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  border-radius: 20px;
   display: flex;
   font-size: 1.1rem;
   line-height: 18px;
@@ -84,4 +85,9 @@ body {
   display: flex;
   justify-content: space-between;
   color: #536471;
+}
+
+h1 {
+  margin-bottom: 40px;
+
 }
