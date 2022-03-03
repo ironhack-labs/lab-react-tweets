@@ -30,7 +30,7 @@ function Tweet() {
           <i class="fas fa-share"></i>
         </div>
       </div>
-
+      <div>I"m trying</div>
       <i class="fas fa-ellipsis-h"></i>
     </div>
   );
