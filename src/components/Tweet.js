@@ -1,7 +1,7 @@
 // jshint esversion:8
 import ProfileImage from "./ProfileImage";
 import User from "./User";
-
+import Timestamp from "./Timestamp";
 
 function Tweet(props) {
   
@@ -14,8 +14,8 @@ function Tweet(props) {
         <div className="top">
 
           <User userData={props.tweet.user}/>
-        
-          <span className="timestamp">{props.tweet.timestamp}</span>
+          <Timestamp time={props.tweet.timestamp} />
+          
         </div>
 
         <p className="message">
