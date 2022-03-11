@@ -1,22 +1,20 @@
 // jshint esversion:8
+import ProfileImage from "./ProfileImage";
+import User from "./User";
+
 
 function Tweet(props) {
   
   return (
     <div className="tweet">
-      <img
-        src={props.tweet.user.image}
-        className="profile"
-        alt="profile"
-      />
+
+      <ProfileImage url={props.tweet.user.image}/>
 
       <div className="body">
         <div className="top">
-          <span className="user">
-            <span className="name">{props.tweet.user.name}</span>
-            <span className="handle">@{props.tweet.user.handle}</span>
-          </span>
 
+          <User userData={props.tweet.user}/>
+        
           <span className="timestamp">{props.tweet.timestamp}</span>
         </div>
 
