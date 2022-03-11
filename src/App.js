@@ -36,12 +36,20 @@ const tweetsArray = [
   },
 ];
 
+
+// make a forEach or Map to tweets
+
 function App() {
+
   return (
     <div className="App">
-      <Tweet tweet={ tweetsArray[0] }/>
+      {/*tweetsArray.forEach(item => <Tweet tweet={item}/>)*/}
+      <Tweet tweet={tweetsArray[0]}/> 
+      <Tweet tweet={tweetsArray[1]}/>
+      <Tweet tweet={tweetsArray[2]}/>  
     </div>
   );
+    
 }
 
 export default App;
