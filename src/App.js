@@ -1,5 +1,6 @@
 import "./App.css";
 import Tweet from "./components/Tweet";
+import styled from "styled-components";
 
 const tweetsArray = [
   {
@@ -34,6 +35,11 @@ const tweetsArray = [
   },
 ];
 
+const Title = styled.p`
+  text-align: center;
+  font-size: 2rem;
+`;
+
 function App() {
   return (
     <div className="App">
@@ -45,6 +51,10 @@ function App() {
       {/* <Tweet tweet={tweetsArray[0]} />
       <Tweet tweet={tweetsArray[1]} />
       <Tweet tweet={tweetsArray[2]} /> */}
+      <>
+        <Title>Welcome to my website</Title>
+        {/* <p className="title">Welcome to my website</p> */}
+      </>
     </div>
   );
 }
