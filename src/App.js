@@ -20,7 +20,7 @@ const tweetsArray = [
     },
     timestamp: "2h ago",
     message:
-      "sometimes. the human presses their noggin against mine. to figure out what i’m thinking. so i just think really hard. about how much i love them. and hope they figure it out",
+      "sometimes. the human presses their noggin against mine. to figure out what im thinking. so i just think really hard. about how much i love them. and hope they figure it out",
   },
   {
     user: {
@@ -30,14 +30,21 @@ const tweetsArray = [
     },
     timestamp: "3h ago",
     message:
-      "here is what. i plan to accomplish today: \n\n2. bark loudly. but at nothing \n7. lose my ball under the couch\n7b. politely ask the human. to get my ball\n3. immediately lose it again. under the same couch\n4. big nap. you have worked hard\n2. repeat",
+      "here is what. i plan to accomplish today: 2. bark loudly. but at nothing 7. lose my ball under the couch7b. politely ask the human. to get my ball3. immediately lose it again. under the same couch4. big nap. you have worked hard2. repeat",
   },
 ];
 
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      {/* Using MAP */}
+      {tweetsArray.map((tweet) => (
+        <Tweet tweet={tweet} />
+      ))}
+      {/* Whithout MAP */}
+      {/* <Tweet tweet={tweetsArray[0]} />
+      <Tweet tweet={tweetsArray[1]} />
+      <Tweet tweet={tweetsArray[2]} /> */}
     </div>
   );
 }
