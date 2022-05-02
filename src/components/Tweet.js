@@ -1,25 +1,23 @@
-function Tweet() {
+import ProfileImage from './ProfileImage.js'
+import User from './User.js'
+
+
+
+const Tweet = ({ name, image, handle, timestamp, message }) => {
   return (
     <div className="tweet">
-      <img
-        src="https://i.imgur.com/9yw1Fyw.jpg"
-        className="profile"
-        alt="profile"
+      <ProfileImage image={image}
       />
 
       <div className="body">
         <div className="top">
-          <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
-          </span>
-
-          <span className="timestamp">Nov 30, 2020</span>
+          <User name={name}
+            handle={handle} />
+          <span className="timestamp">{timestamp}</span>
         </div>
 
         <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
+          {message}
         </p>
 
         <div className="actions">
