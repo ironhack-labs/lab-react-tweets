@@ -1,34 +1,28 @@
-function Tweet() {
+import ProfileImage from '../components/ProfileImage'
+import User from '../components/User'
+import Timestamp from '../components/Timestamp'
+import Message from '../components/Message'
+import Actions from './Actions'
+
+const Tweet = ({name, image, handle, timestamp, message}) => {
   return (
     <div className="tweet">
-      <img
-        src="https://i.imgur.com/9yw1Fyw.jpg"
-        className="profile"
-        alt="profile"
-      />
+      <ProfileImage image={image}/>
 
       <div className="body">
         <div className="top">
-          <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
-          </span>
+          <User name={name} 
+            handle={handle}
+          />
 
-          <span className="timestamp">Nov 30, 2020</span>
+          <Timestamp timestamp={timestamp}/>
+
         </div>
 
-        <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
-        </p>
+        <Message message={message}/>
 
-        <div className="actions">
-          {/* Font Awesome icons */}
-          <i class="far fa-comment"></i>
-          <i class="fas fa-retweet"></i>
-          <i class="far fa-heart"></i>
-          <i class="fas fa-share"></i>
-        </div>
+        <Actions/>
+        
       </div>
 
       <i class="fas fa-ellipsis-h"></i>
