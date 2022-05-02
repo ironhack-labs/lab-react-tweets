@@ -1,27 +1,23 @@
+import ProfileImage from './ProfileImage';
+import Message from './Message';
+import User from './User';
+import Timestamp from './Timestamp';
+import Actions from './Actions';
+
 function Tweet(props) {
   return (
     <div className='tweet'>
-      <img src={props.image} className='profile' alt='profile' />
+      <ProfileImage image={props.image} />
 
       <div className='body'>
         <div className='top'>
-          <span className='user'>
-            <span className='name'>{props.name}</span>
-            <span className='handle'>{props.handle}</span>
-          </span>
-
-          <span className='timestamp'>{props.timestamp}</span>
+          <User name={props.name} handle={props.handle} />
+          <Timestamp timestamp={props.timestamp} />
         </div>
 
-        <p className='message'>{props.message}</p>
+        <Message message={props.message} />
 
-        <div className='actions'>
-          {/* Font Awesome icons */}
-          <i class='far fa-comment'></i>
-          <i class='fas fa-retweet'></i>
-          <i class='far fa-heart'></i>
-          <i class='fas fa-share'></i>
-        </div>
+        <Actions />
       </div>
 
       <i class='fas fa-ellipsis-h'></i>
