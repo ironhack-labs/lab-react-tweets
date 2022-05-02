@@ -1,9 +1,13 @@
-import ProfileImage from "./ProfileImage";
+
 
 function Tweet({ tweet }) {
   return (
     <div className="tweet">
-      <ProfileImage image={tweet.user.image} />
+      <img
+        src={tweet.user.image}
+        className="profile"
+        alt="profile"
+      />
 
       <div className="body">
         <div className="top">
