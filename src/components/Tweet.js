@@ -22,7 +22,7 @@ function Tweet(props) {
         <Actions />
       </div>
 
-      <i class="fas fa-ellipsis-h"></i>
+      <i className="fas fa-ellipsis-h"></i>
     </div>
   );
 }
