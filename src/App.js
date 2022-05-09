@@ -35,11 +35,15 @@ const tweetsArray = [
 ];
 
 function App() {
-  return (
-    <div className="App">
-      <Tweet />
-    </div>
-  );
+ return <div className="App">
+  {tweetsArray.map((tweet) => {
+    console.log(tweet)
+      return ( 
+      <Tweet image = {tweet.user.image} name={tweet.user.name} handle = {tweet.user.handle} timestamp = {tweet.timestamp} message = {tweet.message} />
+      )})
+  }
+  </div>
 }
+
 
 export default App;
