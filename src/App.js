@@ -34,12 +34,27 @@ const tweetsArray = [
   },
 ];
 
+
+
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      <Tweet tweet={tweetsArray[0]}/>
+      <Tweet tweet={tweetsArray[1]}/>
+      <Tweet tweet={tweetsArray[2]}/>
     </div>
   );
 }
+
+// Solution for iteration 9 by iterating through the tweets array instead of declaring each line:
+//
+// function App() {
+//     const tweets = tweetsArray.map((tweet) => <Tweet tweet={tweet}/>);
+//     return (
+//       <div className="App">
+//         {tweets}
+//       </div>
+//     );
+//   }
 
 export default App;
