@@ -32,13 +32,24 @@ const tweetsArray = [
     message:
       "here is what. i plan to accomplish today: \n\n2. bark loudly. but at nothing \n7. lose my ball under the couch\n7b. politely ask the human. to get my ball\n3. immediately lose it again. under the same couch\n4. big nap. you have worked hard\n2. repeat",
   },
+  { ///I add one more exemple to understand better.
+    user: {
+      name: "Pedro",
+      image: "https://i.imgur.com/b0EdHVV.jpg",
+      handle: "the great"
+    },
+    
+    timestamp: "5h ago",
+    message: "Just to say that I handle it a lot"
+    
+  }
 ];
 
 function App() {
   return (
     <div className="App">
-      <Tweet />
-    </div>
+      {tweetsArray.map((user) => (<Tweet tweet={ user } />))}
+     </div>
   );
 }
 
