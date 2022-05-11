@@ -24,7 +24,7 @@ function Tweet(props) {
         </p>
         
         <p>
-          <b>:</b> {props.tweet.timestamp}   
+            
         </p>
 
         <p>
