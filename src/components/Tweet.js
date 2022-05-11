@@ -1,4 +1,7 @@
-function Tweet() {
+function Tweet(props) {
+
+  //const AppTweet = 'the human likes to say. that i live here rent free. but i would argue. this housing accommodation. is my payment. for a lifetime of love. and excellent company';
+  
   return (
     <div className="tweet">
       <img
@@ -7,10 +10,37 @@ function Tweet() {
         alt="profile"
       />
 
+      <div className="tweet2">
+        <p>
+          <b>name:</b>{props.tweet.name} 
+        </p>
+        
+        <p>
+          <b>image:</b> {props.tweet.img}   
+        </p>
+
+        <p>
+          <b>handle:</b> {props.tweet.handle}
+        </p>
+        
+        <p>
+          <b>timestamp:</b> {props.tweet.timestamp}   
+        </p>
+
+        <p>
+          <b>message:</b> {props.tweet.message}   
+        </p>
+
+
+      <br />
+      </div>
+    
+
       <div className="body">
         <div className="top">
           <span className="user">
             <span className="name">Ironhack</span>
+
             <span className="handle">@ironhack</span>
           </span>
 
@@ -30,6 +60,7 @@ function Tweet() {
           <i class="fas fa-share"></i>
         </div>
       </div>
+
 
       <i class="fas fa-ellipsis-h"></i>
     </div>
