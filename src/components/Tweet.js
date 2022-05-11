@@ -28,7 +28,7 @@ function Tweet(props) {
         </p>
 
         <p>
-          <b>:</b>  
+          <b></b>  
         </p>
 
 
