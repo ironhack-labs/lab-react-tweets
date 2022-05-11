@@ -5,30 +5,30 @@ function Tweet(props) {
   return (
     <div className="tweet">
       <img
-        src="https://i.imgur.com/9yw1Fyw.jpg"
+        src= "https://i.imgur.com/b0EdHVV.jpg"
         className="profile"
         alt="profile"
       />
 
       <div className="tweet2">
         <p>
-          <b>name:</b>{props.tweet.name} 
+         
         </p>
         
         <p>
-          <b>image:</b> {props.tweet.img}   
+          
         </p>
 
         <p>
-          <b>handle:</b> {props.tweet.handle}
+          
         </p>
         
         <p>
-          <b>timestamp:</b> {props.tweet.timestamp}   
+          <b>:</b> {props.tweet.timestamp}   
         </p>
 
         <p>
-          <b>message:</b> {props.tweet.message}   
+          <b>:</b>  
         </p>
 
 
@@ -39,17 +39,16 @@ function Tweet(props) {
       <div className="body">
         <div className="top">
           <span className="user">
-            <span className="name">Ironhack</span>
+            <span className="name">{props.tweet.name}</span>
 
-            <span className="handle">@ironhack</span>
+            <span className="handle">{props.tweet.handle}</span>
           </span>
 
-          <span className="timestamp">Nov 30, 2020</span>
+          <span className="timestamp">{props.tweet.timestamp}</span>
         </div>
 
         <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
+          {props.tweet.message}
         </p>
 
         <div className="actions">
