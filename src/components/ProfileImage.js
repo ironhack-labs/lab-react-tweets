@@ -4,9 +4,11 @@
 //import Tweet from "./Tweet";
 
 function ProfileImage(props)  {
-    const profileImage = props.image;
+    //const profileImage = props.image;
     return (
-        <img src={profileImage} className="profile" alt="profileFuck Yous"/>
+        <img className="profile"
+         src={props.user.image}  alt="profile"
+         />
     );
 }
 export default ProfileImage;
