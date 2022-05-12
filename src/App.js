@@ -1,4 +1,5 @@
 import "./App.css";
+//import ProfileImage from "./components/ProfileImage";
 import Tweet from "./components/Tweet";
 
 const tweetsArray = [
@@ -37,14 +38,14 @@ const tweetsArray = [
 
 function App() {
   return (
-    <div className="App">
-      <Tweet tweet={{
-      name: 'Thoughts of Dog®', 
-      image: 'https://i.imgur.com/b0EdHVV.jpg' ,
-      handle: 'dog_feelings',
-      timestamp: '1h ago', 
-      message: 'the human likes to say. that i live here rent free. but i would argue. this housing accommodation. is my payment. for a lifetime of love. and excellent company' }}>
-        </Tweet>
+    <div className="tweet">
+      <Tweet tweet={tweetsArray[0]} />
+     
+     <div>
+     
+
+     </div>
+       <hr /> 
     </div>
   );
 }
