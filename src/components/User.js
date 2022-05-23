@@ -1,6 +1,5 @@
 export default function User(props) {
-    const { name, image, handle } = props.userData;
-
+    const { name, handle } = props.userData;
     return (
         <>
             <span className="user">
