@@ -1,39 +1,31 @@
-function Tweet() {
-  return (
-    <div className="tweet">
-      <img
-        src="https://i.imgur.com/9yw1Fyw.jpg"
-        className="profile"
-        alt="profile"
-      />
 
-      <div className="body">
-        <div className="top">
-          <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
-          </span>
+import User from './User.js';
+import Timestamp from './Timestamp.js';
+import ProfileImage from './ProfileImage.js';
+import Message from './Message.js';
+import Actions from './Actions.js';
 
-          <span className="timestamp">Nov 30, 2020</span>
-        </div>
+function Tweet({tweet}) {
+return (
 
-        <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
-        </p>
+<div className="tweet">
+<ProfileImage image={tweet.user.image} />
 
-        <div className="actions">
-          {/* Font Awesome icons */}
-          <i class="far fa-comment"></i>
-          <i class="fas fa-retweet"></i>
-          <i class="far fa-heart"></i>
-          <i class="fas fa-share"></i>
-        </div>
-      </div>
+<div className="body">
+<div className="top">
+<User userData={tweet.user} />
+<Timestamp time={tweet.timestamp} />
+</div>
 
-      <i class="fas fa-ellipsis-h"></i>
-    </div>
-  );
+<Message message={tweet.message} />
+<Actions />
+</div>
+
+<i class="fas fa-ellipsis-h"></i>
+
+</div>
+
+);
 }
 
 export default Tweet;
