@@ -1,25 +1,20 @@
-function Tweet() {
+function Tweet({tweet}) {
   return (
     <div className="tweet">
-      <img
-        src="https://i.imgur.com/9yw1Fyw.jpg"
-        className="profile"
-        alt="profile"
-      />
+      {/*  <img> Image: {tweet.image}</img>  */}
 
       <div className="body">
         <div className="top">
           <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
+            <span className="name">Name: {tweet.name}</span>
+            <span className="handle">Name@: {tweet.name}</span>
           </span>
 
-          <span className="timestamp">Nov 30, 2020</span>
+          <span className="timestamp">Timestamp:{tweet.timestamp}</span>
         </div>
 
         <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
+          Message: {tweet.message}
         </p>
 
         <div className="actions">
