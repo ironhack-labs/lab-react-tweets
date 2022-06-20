@@ -3,6 +3,7 @@ import Tweet from "./components/Tweet";
 
 const tweetsArray = [
   {
+    // user: { name, image, handle }, timestamp, message
     user: {
       name: "Thoughts of Dog®",
       image: "https://i.imgur.com/b0EdHVV.jpg",
@@ -37,7 +38,9 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      <Tweet tweet={tweetsArray[0]}></Tweet>
+      <Tweet tweet={tweetsArray[1]}></Tweet>
+      <Tweet tweet={tweetsArray[2]}></Tweet>
     </div>
   );
 }
