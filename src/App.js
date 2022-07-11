@@ -14,9 +14,9 @@ const tweetsArray = [
   },
   {
     user: {
-      name: "Thoughts of Dog®",
-      image: "https://i.imgur.com/b0EdHVV.jpg",
-      handle: "dog_feelings",
+      name: "Thoughts of Cat®",
+      image: "https://i.pinimg.com/originals/d2/84/12/d28412eb3dc83160514d0946bfa1a925.jpg",
+      handle: "cat_feelings",
     },
     timestamp: "2h ago",
     message:
@@ -24,9 +24,9 @@ const tweetsArray = [
   },
   {
     user: {
-      name: "Thoughts of Dog®",
-      image: "https://i.imgur.com/b0EdHVV.jpg",
-      handle: "dog_feelings",
+      name: "Thoughts of Human®",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZzsWvhPNvWmTaPuuW8Xl2Pqsquh4SFvdWGQ&usqp=CAU",
+      handle: "hunan_feelings",
     },
     timestamp: "3h ago",
     message:
@@ -35,11 +35,22 @@ const tweetsArray = [
 ];
 
 function App() {
+
+  const listOfTweets = tweetsArray.map(function (tweet) {
+    return <Tweet tweet={tweet} />
+
+  })
+
   return (
     <div className="App">
-      <Tweet />
+
+      {listOfTweets}
+      {/* <Tweet tweet={ tweetsArray[0] }/> */}
+
     </div>
   );
+
+
 }
 
 export default App;
