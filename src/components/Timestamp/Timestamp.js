@@ -1,0 +1,11 @@
+import Tweet from "../Tweet"
+
+const Timestamp = ({ timestamp }) => {
+    return (
+        <>
+            <span className="timestamp">{timestamp}</span>
+        </>
+    )
+}
+
+export default Timestamp

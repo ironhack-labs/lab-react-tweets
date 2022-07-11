@@ -1,25 +1,75 @@
-function Tweet() {
+// function Tweet() {
+//   return (
+//     <div className="tweet">
+//       <img
+//         src="https://i.imgur.com/9yw1Fyw.jpg"
+//         className="profile"
+//         alt="profile"
+//       />
+
+//       <div className="body">
+//         <div className="top">
+//           <span className="user">
+//             <span className="name">Ironhack</span>
+//             <span className="handle">@ironhack</span>
+//           </span>
+
+//           <span className="timestamp">Nov 30, 2020</span>
+//         </div>
+
+//         <p className="message">
+//           On December 7th, we will be hosting a #webinar that will introduce you
+//           to #SQL! Are you ready? 🚀
+//         </p>
+
+//         <div className="actions">
+//           {/* Font Awesome icons */}
+//           <i class="far fa-comment"></i>
+//           <i class="fas fa-retweet"></i>
+//           <i class="far fa-heart"></i>
+//           <i class="fas fa-share"></i>
+//         </div>
+//       </div>
+
+//       <i class="fas fa-ellipsis-h"></i>
+//     </div>
+//   );
+// }
+
+// export default Tweet;
+
+
+// --------------
+import Image from "./ProfileIImage/ProfileImage"
+import Name from "./Name/Name"
+import Timestamp from "./Timestamp/Timestamp"
+import Message from "./Message/Message"
+
+const Tweet = ({ tweet }) => {
+
+  const { user, timestamp, message } = tweet
+
   return (
-    <div className="tweet">
-      <img
-        src="https://i.imgur.com/9yw1Fyw.jpg"
-        className="profile"
-        alt="profile"
-      />
+    <article className="tweet">
+
+      <Image profileImg={user.image} />
+
+
 
       <div className="body">
         <div className="top">
           <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
+            <Name name={user.name} />
+            <span className="handle">{user.handle}</span>
           </span>
 
-          <span className="timestamp">Nov 30, 2020</span>
+          <span className="timestamp">
+            <Timestamp timestamp={timestamp} />
+          </span>
         </div>
 
         <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
+          <Message message={message} />
         </p>
 
         <div className="actions">
@@ -32,7 +82,7 @@ function Tweet() {
       </div>
 
       <i class="fas fa-ellipsis-h"></i>
-    </div>
+    </article>
   );
 }
 
