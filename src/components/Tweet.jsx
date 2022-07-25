@@ -1,5 +1,6 @@
 import { FaRegComment, FaRetweet, FaRegHeart, FaShare, FaEllipsisH } from 'react-icons/fa'
 import ProfileImage from './ProfileImage'
+import Timestamp from './Timestamp'
 import User from './User'
 
 function Tweet({ tweet }) {
@@ -11,7 +12,7 @@ function Tweet({ tweet }) {
         <div className="top">
           <User userData={tweet.user} />
 
-          <span className="timestamp">{tweet.timestamp}</span>
+          <Timestamp time={tweet.timestamp} />
         </div>
 
         <p className="message">{tweet.message}</p>
