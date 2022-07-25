@@ -1,4 +1,5 @@
 import { FaRegComment, FaRetweet, FaRegHeart, FaShare, FaEllipsisH } from 'react-icons/fa'
+import Message from './Message'
 import ProfileImage from './ProfileImage'
 import Timestamp from './Timestamp'
 import User from './User'
@@ -15,7 +16,7 @@ function Tweet({ tweet }) {
           <Timestamp time={tweet.timestamp} />
         </div>
 
-        <p className="message">{tweet.message}</p>
+        <Message message={tweet.message} />
 
         <div className="actions">
           {/* I like using react-icons components better 😁 */}
