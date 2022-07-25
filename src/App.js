@@ -36,9 +36,9 @@ const tweetsArray = [
 
 function App() {
 
-  function getTweets() {
+  function getTweets(tweetsArr) {
     let allTweets = [];
-    tweetsArray.forEach(element => {
+    tweetsArr.forEach(element => {
       allTweets.push(
         <div className="App">
           <Tweet tweet={element} />
@@ -48,7 +48,7 @@ function App() {
     return allTweets;
   }
 
-  return getTweets()
+  return getTweets(tweetsArray)
 }
 
 export default App;
