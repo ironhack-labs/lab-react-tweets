@@ -35,11 +35,20 @@ const tweetsArray = [
 ];
 
 function App() {
-  return (
-    <div className="App">
-      <Tweet tweet={ tweetsArray[0] }/>
-    </div>
-  );
+
+  function getTweets() {
+    let allTweets = [];
+    tweetsArray.forEach(element => {
+      allTweets.push(
+        <div className="App">
+          <Tweet tweet={element} />
+        </div>
+      )
+    });
+    return allTweets;
+  }
+
+  return getTweets()
 }
 
 export default App;
