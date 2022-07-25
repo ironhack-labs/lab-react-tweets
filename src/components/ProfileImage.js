@@ -1,11 +1,11 @@
 function ProfileImage(props) {
     return (
         <img
-        src={props.image}
-        className="profile"
-        alt="profile"
-      />
+            src={props.image}
+            className="profile"
+            alt="profile"
+        />
     );
-  }
-  
-  export default ProfileImage;
+}
+
+export default ProfileImage;
