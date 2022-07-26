@@ -1,4 +1,12 @@
-function Tweet() {
+import ProfileImage from "./components/ProfileImage";
+import User from "./components/User";
+import Timestamp from "./components/Timestamp";
+import Message from "./components/Message";
+import Actions from "Actions";
+
+
+
+function Tweet(props) {
   return (
     <div className="tweet">
       <img
@@ -6,6 +14,8 @@ function Tweet() {
         className="profile"
         alt="profile"
       />
+       <ProfileImage image={props.tweet.user.image} />
+
 
       <div className="body">
         <div className="top">
@@ -13,8 +23,10 @@ function Tweet() {
             <span className="name">Ironhack</span>
             <span className="handle">@ironhack</span>
           </span>
+          <User userData={props.tweet.user} />
 
           <span className="timestamp">Nov 30, 2020</span>
+          <Timestamp time={props.tweet.timestamp} />
         </div>
 
         <p className="message">
@@ -29,7 +41,11 @@ function Tweet() {
           <i class="far fa-heart"></i>
           <i class="fas fa-share"></i>
         </div>
-      </div>
+        <Message message={props.tweet.message} /> 
+
+        <Actions />
+      
+        </div>
 
       <i class="fas fa-ellipsis-h"></i>
     </div>
