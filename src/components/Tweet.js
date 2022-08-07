@@ -1,26 +1,25 @@
-function Tweet() {
+import "../index.css"
+
+function Tweet(props) {
+  const { name, image, handle, timestamp, message } = props;
   return (
     <div className="tweet">
-      <img
-        src="https://i.imgur.com/9yw1Fyw.jpg"
-        className="profile"
-        alt="profile"
-      />
-
+      <img 
+      src={image} 
+      className="profile" alt="profile" />
+      
       <div className="body">
         <div className="top">
           <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
+            <span className="name">
+            {name}</span>
+            <span className="handle">{handle}</span>
           </span>
 
-          <span className="timestamp">Nov 30, 2020</span>
+          <span className="timestamp">{timestamp}</span>
         </div>
 
-        <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
-        </p>
+        <p className="message">{message}</p>
 
         <div className="actions">
           {/* Font Awesome icons */}
@@ -33,6 +32,7 @@ function Tweet() {
 
       <i class="fas fa-ellipsis-h"></i>
     </div>
+    
   );
 }
 
