@@ -37,7 +37,11 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      <Tweet
+        user={tweetsArray[0].user}
+        timestamp={tweetsArray[0].timestamp}
+        message={tweetsArray[0].message}
+      />
     </div>
   );
 }
