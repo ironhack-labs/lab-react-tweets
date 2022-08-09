@@ -20,7 +20,7 @@ const tweetsArray = [
     },
     timestamp: "2h ago",
     message:
-      "sometimes. the human presses their noggin against mine. to figure out what i’m thinking. so i just think really hard. about how much i love them. and hope they figure it out",
+      "sometimes. the human presses their noggin against mine. to figure out what i'm thinking. so i just think really hard. about how much i love them. and hope they figure it out",
   },
   {
     user: {
@@ -37,11 +37,31 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet
-        user={tweetsArray[0].user}
-        timestamp={tweetsArray[0].timestamp}
-        message={tweetsArray[0].message}
-      />
+      <Tweet       
+      tweet = {tweetsArray[0]}
+      name = {tweetsArray[0].user.name}
+      image = {tweetsArray[0].user.image}
+      handle = {tweetsArray[0].user.handle}
+      timestamp = {tweetsArray[0].timestamp}
+      message = {tweetsArray[0].message}
+       />
+
+<Tweet       
+      tweet = {tweetsArray[1]}
+      name = {tweetsArray[1].user.name}
+      image = {tweetsArray[1].user.image}
+      handle = {tweetsArray[1].user.handle}
+      timestamp = {tweetsArray[1].timestamp}
+      message = {tweetsArray[1].message}
+       />
+       <Tweet       
+      tweet = {tweetsArray[2]}
+      name = {tweetsArray[2].user.name}
+      image = {tweetsArray[2].user.image}
+      handle = {tweetsArray[2].user.handle}
+      timestamp = {tweetsArray[2].timestamp}
+      message = {tweetsArray[2].message}
+       />
     </div>
   );
 }
