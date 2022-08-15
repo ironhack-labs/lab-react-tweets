@@ -2,7 +2,7 @@ import React from 'react'
 
 function Actions() {
   return (
-    <div>
+    <div className='actions'>
         <i class="far fa-comment"></i>
           <i class="fas fa-retweet"></i>
           <i class="far fa-heart"></i>
