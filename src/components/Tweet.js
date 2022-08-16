@@ -1,27 +1,41 @@
-function Tweet() {
+
+  import Message from "./Message";
+import Timestamp from "./Timestamp";
+import User from "./User";
+ import Message from "./Message";
+  import actions from "./Actions";
+
+
+
+
+function Tweet(props) {
+const {tweet} = props;
   return (
+
     <div className="tweet">
       <img
-        src="https://i.imgur.com/9yw1Fyw.jpg"
+        src={tweet.user.image}
         className="profile"
         alt="profile"
       />
 
       <div className="body">
+      
+      <ProfileImage img={tweet.user.image} /> 
         <div className="top">
           <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
+            <span className="name">Thoughts of Dog®</span>
+            <span className="handle">dog_feelings</span>
+            <User userData={twwet.user}/>
           </span>
 
-          <span className="timestamp">Nov 30, 2020</span>
+          <span className="timestamp">1h ago</span>
         </div>
-
+<Timestamp timestamp={tweet-timestamp}/>
         <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
+        the human likes to say. that i live here rent free. but i would argue. this housing accommodation. is my payment. for a lifetime of love. and excellent company
         </p>
-
+<Message message={TreeWalker.message}/>
         <div className="actions">
           {/* Font Awesome icons */}
           <i class="far fa-comment"></i>
@@ -30,7 +44,7 @@ function Tweet() {
           <i class="fas fa-share"></i>
         </div>
       </div>
-
+<Actions/>
       <i class="fas fa-ellipsis-h"></i>
     </div>
   );
