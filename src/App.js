@@ -34,12 +34,18 @@ const tweetsArray = [
   },
 ];
 
-function App() {
+function App(props) {
   return (
     <div className="App">
-      <Tweet />
+      
+<Tweet tweet={ tweetsArray[0] }></Tweet>
+<Tweet tweet={ tweetsArray[1] }></Tweet>
+<Tweet tweet={ tweetsArray[2] }></Tweet>
     </div>
+    //missing something here 
   );
 }
+
+
 
 export default App;
