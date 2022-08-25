@@ -1,25 +1,23 @@
+import ProfileImage from "./ProfileImage";
+import User from "./User";
+import Timestamp from "./Tiemstamp";
+import Message from "./Message";
+
 function Tweet(props) {
   const {tweet} = props
   const {user, timestamp, message} = tweet
   return (
     <div className="tweet">
-      <img
-        src={user.image}
-        className="profile"
-        alt="profile"
-      />
+      <ProfileImage image={user.image}/>
 
       <div className="body">
         <div className="top">
-          <span className="user">
-            <span className="name">{user.name}</span>
-            <span className="handle">@{user.handle}</span>
-          </span>
+          <User userData={user}/>
 
-          <span className="timestamp">{timestamp}</span>
+          <Timestamp time={timestamp}/>
         </div>
 
-        <p className="message">{message}</p>
+        <Message messages={message}/>
 
         <div className="actions">
           {/* Font Awesome icons */}
