@@ -3,7 +3,6 @@ import { Tweet } from "./container";
 import { tweetsArray } from './data'
 
 function App() {
-  console.log(tweetsArray.user)
   return (
     <div className="App">
       {tweetsArray.map((content) => {
