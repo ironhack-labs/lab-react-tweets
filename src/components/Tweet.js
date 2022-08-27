@@ -1,5 +1,5 @@
+import User from "./User.js"
 function Tweet(props) {
-  console.log("props",props)
   return (
     <div className="tweet">
       <img
@@ -10,11 +10,7 @@ function Tweet(props) {
 
       <div className="body">
         <div className="top">
-          <span className="user">
-            <span className="name">{props.tweet.user.name}</span>
-            <span className="handle">@{props.tweet.user.handle}</span>
-          </span>
-
+          <User />
           <span className="timestamp">{props.tweet.timestamp}</span>
         </div>
 
