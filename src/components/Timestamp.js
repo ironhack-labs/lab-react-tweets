@@ -1,7 +1,9 @@
 function Timestamp({ time }) {
   return (
-    <span className="timestamp">{ time }</span>
+    <div>
+      <span className="timestamp">{time}</span>
+    </div>
   )
 }
 
-export default Timestamp
+export default Timestamp 

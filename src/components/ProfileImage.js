@@ -1,9 +1,13 @@
 function ProfileImage({ image }) {
-  return(
+  return (
     <div>
-      <img src={ image } alt="img-profile" />
+      <img
+        src={image}
+        className="profile"
+        alt="profile"
+      />
     </div>
   )
 }
 
-export default ProfileImage
+export default ProfileImage 
