@@ -1,5 +1,5 @@
 import "./App.css";
-import Tweet from "./components/Tweet";
+import Tweet from "./components/tweet/Tweet";
 
 const tweetsArray = [
   {
@@ -35,9 +35,14 @@ const tweetsArray = [
 ];
 
 function App() {
+  const tweets = [];
+  for (let i = 0; i < tweetsArray.length; i++) {
+    tweets.push(<Tweet tweet={ tweetsArray[i] }/>);
+  }
+
   return (
     <div className="App">
-      <Tweet />
+      {tweets}
     </div>
   );
 }

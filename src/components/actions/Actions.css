@@ -1,0 +1,7 @@
+.actions {
+  padding: 5px 5px;
+  width: 360px;
+  display: flex;
+  justify-content: space-between;
+  color: #536471;
+}
