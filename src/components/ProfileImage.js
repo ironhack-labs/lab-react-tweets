@@ -1,1 +1,10 @@
-<img src="IMAGE_URL" className="profile" alt="profile"/>
+
+function ProfileImage(props){
+    return (
+        <>
+            <img src={props.tweet.user.image} className="profile" alt="profile"/>
+            
+        </>
+    )
+}
+export default ProfileImage;
