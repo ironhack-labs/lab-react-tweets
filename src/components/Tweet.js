@@ -1,3 +1,6 @@
+
+import './Tweet.css'
+
 function Tweet() {
   return (
     <div className="tweet">
