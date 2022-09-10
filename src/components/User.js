@@ -1,4 +1,4 @@
-function User(props) {
+export default function User(props) {
     return (
         <span className="user">
              <span className="name">  {props.userData.name} </span>
@@ -6,5 +6,3 @@ function User(props) {
         </span>
         );
 }
-
-export default User;
