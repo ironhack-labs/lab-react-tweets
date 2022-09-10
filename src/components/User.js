@@ -1,6 +1,3 @@
-import React from "react"
-
-
 function User(props) {
     return (
         <span className="user">
