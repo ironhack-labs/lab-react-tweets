@@ -1,27 +1,28 @@
+import Actions from "./Actions/Actions";
+import Message from "./Message/Message";
+import ProfileImage from "./ProfileImage/ProfileImage";
+import Timestamp from "./Timestamp/Timestamp";
+import User from "./User/User";
+
 function Tweet({ tweet }) {
   return (
     <div className="tweet">
-      <img src={tweet.user.image} className="profile" alt="profile" />
-
+      <ProfileImage tweet={tweet} />
       <div className="body">
         <div className="top">
           <span className="user">
-            <span className="name">{tweet.user.name}</span>
-            <span className="handle">{tweet.user.handle}</span>
+            <User tweet={tweet} />
           </span>
-
-          <span className="timestamp">{tweet.timestamp}</span>
+          <Timestamp tweet={tweet} />
         </div>
+        <Message tweet={tweet} />
 
-        <p className="message">{tweet.message}</p>
-
-        <div className="actions">
-          {/* Font Awesome icons */}
-          <i className="far fa-comment"></i>
+        {/* Font Awesome icons */}
+        <Actions />
+        {/* <i className="far fa-comment"></i>
           <i className="fas fa-retweet"></i>
           <i className="far fa-heart"></i>
-          <i className="fas fa-share"></i>
-        </div>
+          <i className="fas fa-share"></i> */}
       </div>
 
       <i className="fas fa-ellipsis-h"></i>
