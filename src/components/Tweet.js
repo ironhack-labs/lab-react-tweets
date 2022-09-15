@@ -1,25 +1,32 @@
-function Tweet() {
+import ProfileImage from "./ProfileImage";
+import User from "./User";
+import Timestamp from "./Timestamp";
+
+function Tweet(props) {
   return (
     <div className="tweet">
-      <img
-        src="https://i.imgur.com/9yw1Fyw.jpg"
+      {/* <img
+        src="https://i.imgur.com/b0EdHVV.jpg"
         className="profile"
         alt="profile"
-      />
-
+      /> */}
+      <ProfileImage image={props.tweet.user.image} />
       <div className="body">
         <div className="top">
-          <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
-          </span>
+          <User userData={props.tweet.user} />
+          {/* <span className="user">
+            <span className="name">"Thoughts of Dog®"</span>
+            <span className="handle">dog_feelings</span>
+          </span> */}
 
-          <span className="timestamp">Nov 30, 2020</span>
+          {/* <span className="timestamp">1h ago</span> */}
+          <Timestamp time={props.tweet.timestamp} />
         </div>
 
         <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
+          the human likes to say. that i live here rent free. but i would argue.
+          this housing accommodation. is my payment. for a lifetime of love. and
+          excellent company
         </p>
 
         <div className="actions">
