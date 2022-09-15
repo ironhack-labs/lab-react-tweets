@@ -40,7 +40,6 @@ function App(props) {
       <Tweet tweet={tweetsArray[0]} />
       <Tweet tweet={tweetsArray[1]} />
       <Tweet tweet={tweetsArray[2]} />
-      <Tweet tweet={tweetsArray[3]} />
     </div>
   );
 }

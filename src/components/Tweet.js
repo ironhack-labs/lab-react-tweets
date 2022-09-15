@@ -1,6 +1,8 @@
 import ProfileImage from "./ProfileImage";
 import User from "./User";
 import Timestamp from "./Timestamp";
+import Message from "./Message";
+import Actions from "./Actions";
 
 function Tweet(props) {
   return (
@@ -23,19 +25,24 @@ function Tweet(props) {
           <Timestamp time={props.tweet.timestamp} />
         </div>
 
-        <p className="message">
+        <Message message={props.tweet.message} />
+
+        {/* <p className="message">
           the human likes to say. that i live here rent free. but i would argue.
           this housing accommodation. is my payment. for a lifetime of love. and
-          excellent company
-        </p>
+          excellent com
+          pany
+        </p> */}
 
-        <div className="actions">
+        <Actions />
+
+        {/* <div className="actions">
           {/* Font Awesome icons */}
-          <i class="far fa-comment"></i>
-          <i class="fas fa-retweet"></i>
-          <i class="far fa-heart"></i>
-          <i class="fas fa-share"></i>
-        </div>
+        {/* <i class="far fa-comment"></i>
+        <i class="fas fa-retweet"></i>
+        <i class="far fa-heart"></i>
+        <i class="fas fa-share"></i> */}
+        {/* </div> */}
       </div>
 
       <i class="fas fa-ellipsis-h"></i>

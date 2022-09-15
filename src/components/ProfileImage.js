@@ -1,7 +1,7 @@
 function ProfileImage(props) {
   return (
     <div>
-      <img src={props.src} className="profile" alt="profile" />
+      <img src={props.image} className="profile" alt="profile" />
     </div>
   );
 }
