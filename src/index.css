@@ -85,3 +85,9 @@ body {
   justify-content: space-between;
   color: #536471;
 }
+
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+}
