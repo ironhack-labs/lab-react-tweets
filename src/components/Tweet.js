@@ -1,25 +1,30 @@
-function Tweet() {
+import ProfileImage from "./ProfileImage"
+import User from "./User"
+import Timestamp from "./Timestamp"
+import Message from "./Message"
+import Actions from "./Actions"
+
+function Tweet({ tweet }) {
+  // console.log('eeeeeeeeeeeeeeeeeeeeeeeeeeeeeee', tweet)
+
+  const { message } = tweet
+  const { name, image, handle } = tweet.user
+
   return (
     <div className="tweet">
-      <img
-        src="https://i.imgur.com/9yw1Fyw.jpg"
-        className="profile"
-        alt="profile"
-      />
+
+      <ProfileImage image={image} />
 
       <div className="body">
         <div className="top">
-          <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
-          </span>
+
+          <User name={name} />
 
           <span className="timestamp">Nov 30, 2020</span>
         </div>
 
         <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
+          {message}
         </p>
 
         <div className="actions">
