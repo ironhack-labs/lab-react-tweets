@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid';
 import "./App.css";
 import Tweet from "./components/Tweet";
 
@@ -37,7 +38,14 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+    { tweetsArray.map(tweet => {
+      const id = uuidv4();
+      return(
+        <Tweet key={id} tweet={tweet} />
+      )
+    })
+      
+    }
     </div>
   );
 }
