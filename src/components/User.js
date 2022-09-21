@@ -1,8 +1,9 @@
 function User(props){
+    const {name, handle} = props.userData;
     return(
         <span className="user">
-        <span className="name"> {props.userData.name} </span>
-        <span className="handle">@ {props.userData.handle}</span>
+        <span className="name"> {name} </span>
+        <span className="handle">@ {handle}</span>
         </span>
     );
 }
