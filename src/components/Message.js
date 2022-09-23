@@ -1,4 +1,8 @@
 function Message({ message }) {
-  return <p className="message">{message.message}</p>;
+  return (
+    <div>
+      <p className="message">{message}</p>
+    </div>
+  );
 }
 export default Message;
