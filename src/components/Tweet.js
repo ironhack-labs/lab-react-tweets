@@ -1,8 +1,8 @@
-function Tweet() {
+function Tweet(props) {
   return (
     <div className="tweet">
       <img
-        src="https://i.imgur.com/9yw1Fyw.jpg"
+        src={props.tweet.user.image}
         className="profile"
         alt="profile"
       />
@@ -10,7 +10,7 @@ function Tweet() {
       <div className="body">
         <div className="top">
           <span className="user">
-            <span className="name">Ironhack</span>
+            <span className="name">{props.tweet.user.name}</span>
             <span className="handle">@ironhack</span>
           </span>
 
