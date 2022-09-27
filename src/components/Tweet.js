@@ -11,15 +11,14 @@ function Tweet(props) {
         <div className="top">
           <span className="user">
             <span className="name">{props.tweet.user.name}</span>
-            <span className="handle">@ironhack</span>
+            <span className="handle">{props.tweet.user.handle}</span>
           </span>
 
-          <span className="timestamp">Nov 30, 2020</span>
+          <span className="timestamp">{props.tweet.user.timestamp}</span>
         </div>
 
         <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
+          {props.tweet.message}
         </p>
 
         <div className="actions">
