@@ -1,6 +1,10 @@
-function ProfileImage() {
+function ProfileImage(props) {
     return (
-        <img></img>
+        <img
+            src={props.image}
+            className="profile"
+            alt="profile"
+      />
     )
 }
 
