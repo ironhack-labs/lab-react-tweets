@@ -85,3 +85,8 @@ body {
   justify-content: space-between;
   color: #536471;
 }
+
+.user img {
+  width: 50px;
+  border-radius: 50%;
+}
