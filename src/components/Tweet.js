@@ -13,13 +13,12 @@ function Tweet(props) {
         <div className="top">
           <User userData={props.tweet.user} />
           <Timestamp time={props.tweet.timestamp} />
+          <i className="fas fa-ellipsis-h"></i>
         </div>
 
         <Message message={props.tweet.message} />
 
         <Actions />
-
-        <i className="fas fa-ellipsis-h"></i>
       </div>
     </div>
   );
