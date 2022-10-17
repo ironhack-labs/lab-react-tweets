@@ -8,7 +8,6 @@ function Actions(props) {
             <i className="fas fa-share"></i>
         </div>
     );
-
 }
 
 export default Actions;
