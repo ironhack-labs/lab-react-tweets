@@ -1,4 +1,4 @@
-function Actions({ data }) {
+function User({ data }) {
   return (
     <span className="user">
       <span className="name">{data.name}</span>
@@ -7,4 +7,4 @@ function Actions({ data }) {
   );
 }
 
-export default Actions;
+export default User;
