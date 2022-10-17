@@ -1,12 +1,19 @@
+import ProfileImage from "./ProfileImage";
+import User from "./User";
+import Timestamp from "./Timestamp";
+import Message from "./Message";
+import Actions from "./Actions";
+
 function Tweet(props) {
   console.log(props);
   return (
     <div className="tweet">
-      <img
+      {/* <img
         src={props.tweet.user.image}
         className="profile"
         alt="profile"
-      />
+      /> */}
+      <ProfileImage image={props.tweet.user.image} />
 
       <div className="body">
         <div className="top">

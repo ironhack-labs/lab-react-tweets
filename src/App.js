@@ -1,10 +1,6 @@
 import "./App.css";
 import Tweet from "./components/Tweet";
-import ProfileImage from "./components/ProfileImage";
-import User from "./components/User";
-import Timestamp from "./components/Timestamp";
-import Message from "./components/Message";
-import Actions from "./components/Actions";
+
 
 const tweetsArray = [
   {
