@@ -1,33 +1,22 @@
+import ProfileImage from "./ProfileImage";
+import Actions from "./Actions";
+import Message from "./Message";
+import Timestamp from "./Timestamp";
+import User from "./User";
+
 function Tweet({ tweet, children }) {
-  console.log(tweet);
   return (
     <div className="tweet">
-      <img
-        src="https://i.imgur.com/9yw1Fyw.jpg"
-        className="profile"
-        alt="profile"
-      />
+      <ProfileImage data={tweet.user.image} />
 
       <div className="body">
         <div className="top">
-          <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
-          </span>
-
-          {/* <span className="timestamp">Nov 30, 2020</span> */}
-          <span className="timestamp">{tweet.timestamp}</span>
+          <User data={tweet.user} />
+          <Timestamp data={tweet.timestamp} />
         </div>
 
-        <p className="message">{tweet.message} 🚀</p>
-
-        <div className="actions">
-          {/* Font Awesome icons */}
-          <i className="far fa-comment"></i>
-          <i className="fas fa-retweet"></i>
-          <i className="far fa-heart"></i>
-          <i className="fas fa-share"></i>
-        </div>
+        <Message data={tweet.message} />
+        <Actions />
       </div>
 
       <i className="fas fa-ellipsis-h"></i>
