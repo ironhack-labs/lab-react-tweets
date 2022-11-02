@@ -34,10 +34,14 @@ const tweetsArray = [
   },
 ];
 
+console.log(tweetsArray[0].user)
+
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      <Tweet tweets={ tweetsArray[0] } />
+      <Tweet tweets={ tweetsArray[1] } />
+      <Tweet tweets={ tweetsArray[2] } />
     </div>
   );
 }
