@@ -12,7 +12,7 @@ body {
 }
 
 .tweet {
-  margin: 0 auto;
+  margin: 1rem auto;
   min-width: 480px;
   max-width: 640px;
   min-height: 80px;
@@ -21,6 +21,7 @@ body {
   display: flex;
   font-size: 1.1rem;
   line-height: 18px;
+  border-radius: 10px;
 }
 
 .body {
