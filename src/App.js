@@ -35,9 +35,10 @@ const tweetsArray = [
 ];
 
 function App() {
+  console.log('from app tweetarray[0]',tweetsArray[0].user.image)
   return (
     <div className="App">
-      <Tweet />
+      <Tweet tweet={ tweetsArray[0] }/>
     </div>
   );
 }
