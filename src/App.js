@@ -35,7 +35,7 @@ const tweetsArray = [
 ];
 
 function App() {
-  console.log('from app tweetarray[0]',tweetsArray[0].user.image)
+ // console.log('from app tweetarray[0]',tweetsArray[0].user.image)
   return (
     <div className="App">
       <Tweet tweet={ tweetsArray[0] }/>
