@@ -1,5 +1,6 @@
 import "./App.css";
 import Tweet from "./components/Tweet";
+import ProfileImage from "./components/ProfileImage";
 
 const tweetsArray = [
   {
@@ -37,9 +38,11 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      <Tweet tweet={tweetsArray[0]} />
+      {/* <Image image={'https://i.imgur.com/b0EdHVV.jpg'} /> */}
     </div>
   );
+
 }
 
 export default App;
