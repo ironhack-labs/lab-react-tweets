@@ -1,39 +1,41 @@
-function Tweet() {
+import ProfileImage from "./ProfileImage";
+import User from "./User";
+import Actions from "./Actions";
+import Timestamp from "./Timestamp";
+
+
+
+function Tweet(props) {
+  const { tweet } = props
   return (
     <div className="tweet">
-      <img
-        src="https://i.imgur.com/9yw1Fyw.jpg"
+      {/* <img
+        src={tweet.user.image}
         className="profile"
         alt="profile"
-      />
+      /> */}
+
+      <ProfileImage url={tweet.user.image} />
+      <User name={tweet.user.name} />
+      <Actions icons={tweet.Actions} />
+      <Timestamp time={tweet.timestamp} />
+
+
 
       <div className="body">
-        <div className="top">
-          <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
-          </span>
 
-          <span className="timestamp">Nov 30, 2020</span>
-        </div>
 
         <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
+          {tweet.message}
         </p>
 
-        <div className="actions">
-          {/* Font Awesome icons */}
-          <i className="far fa-comment"></i>
-          <i className="fas fa-retweet"></i>
-          <i className="far fa-heart"></i>
-          <i className="fas fa-share"></i>
-        </div>
       </div>
 
       <i className="fas fa-ellipsis-h"></i>
     </div>
   );
+
+
 }
 
 export default Tweet;
