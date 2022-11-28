@@ -1,26 +1,33 @@
-function Tweet() {
+import ProfileImage from "./ProfileImage/ProfileImage";
+import User from "./User/User"
+import Timestamps from "./TimeStamps/Timestamp"
+import Message from "./Message/Message";
+
+
+function Tweet(props) {
+
+  console.log(props)
+
+  // const { user, message, timeStamp } = props.tweet
+
   return (
     <div className="tweet">
-      <img
+      {/* <img
         src="https://i.imgur.com/9yw1Fyw.jpg"
         className="profile"
         alt="profile"
-      />
+      /> */}
+
+      <ProfileImage prueba={props.tweet.user.image} />
 
       <div className="body">
         <div className="top">
-          <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
-          </span>
-
-          <span className="timestamp">Nov 30, 2020</span>
+          <User name={props.tweet.user.name} />
+          <User handle={props.tweet.user.handle} />
+          <Timestamps timestamp={props.tweet.timestamp} />
         </div>
 
-        <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
-        </p>
+        <Message Message={props.tweet.message} />
 
         <div className="actions">
           {/* Font Awesome icons */}
@@ -32,7 +39,7 @@ function Tweet() {
       </div>
 
       <i className="fas fa-ellipsis-h"></i>
-    </div>
+    </div >
   );
 }
 
