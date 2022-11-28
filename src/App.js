@@ -38,7 +38,11 @@ function App() {
  // console.log('from app tweetarray[0]',tweetsArray[0].user.image)
   return (
     <div className="App">
-      <Tweet tweet={ tweetsArray[0] }/>
+   
+    
+     <Tweet tweet={ tweetsArray[0] }/>
+     <Tweet tweet={ tweetsArray[1] }/>
+    <Tweet tweet={ tweetsArray[2] }/> 
     </div>
   );
 }
