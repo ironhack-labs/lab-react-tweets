@@ -5,7 +5,6 @@ import Message from "./Message";
 import Action from "./Action";
 
 function Tweet(props) {
-  console.log(props);
   return (
     <div className="tweet">
       <ProfileImage image={props.tweet.user.image} />
