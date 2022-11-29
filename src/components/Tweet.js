@@ -5,7 +5,7 @@ import Message from "./Message";
 import Actions from "./Actions";
 
 
-function Tweet({props}) {
+function Tweet(props) {
   return (
     <div className="tweet">
       <ProfileImage image={props.tweet.user.image} />
@@ -13,7 +13,8 @@ function Tweet({props}) {
       <div className="body">
         <div className="top">
           
-          <User userData={props.tweet.user} />
+          <User userData={props.tweet.user.name} handle={props.tweet.user.handle} />
+      
           <Timestamp time={props.tweet.timestamp} />
         </div> 
         <Message message={props.tweet.message} /> 
