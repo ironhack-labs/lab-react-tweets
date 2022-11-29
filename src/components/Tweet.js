@@ -19,8 +19,8 @@ function Tweet({props}) {
         <Message message={props.tweet.message} /> 
         <Actions />
             </div>
-{/* 
-            <i className="fas fa-ellipsis-h"></i> */}
+
+            <i className="fas fa-ellipsis-h"></i> 
         </div>
   );
 }
