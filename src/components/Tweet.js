@@ -1,39 +1,28 @@
-function Tweet() {
-  return (
-    <div className="tweet">
-      <img
-        src="https://i.imgur.com/9yw1Fyw.jpg"
-        className="profile"
-        alt="profile"
-      />
+import ProfileImage from './ProfileImage';
+import User from './User';
+import Timestamp from './Timestamp';
+import Message from './Message';
+import Actions from './Actions';
 
-      <div className="body">
-        <div className="top">
-          <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
-          </span>
+function Tweet(props) {
+    return (
+        <div className='tweet'>
+            <ProfileImage image={props.user.image} />
+            <div className='body'>
+                <div className='top'>
+                    <User name={props.user.name} handle={props.user.handle} />
 
-          <span className="timestamp">Nov 30, 2020</span>
+                    <Timestamp timestamp={props.timestamp} />
+                </div>
+
+                <Message message={props.message} />
+
+                <Actions />
+            </div>
+
+            <i className='fas fa-ellipsis-h'></i>
         </div>
-
-        <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
-        </p>
-
-        <div className="actions">
-          {/* Font Awesome icons */}
-          <i className="far fa-comment"></i>
-          <i className="fas fa-retweet"></i>
-          <i className="far fa-heart"></i>
-          <i className="fas fa-share"></i>
-        </div>
-      </div>
-
-      <i className="fas fa-ellipsis-h"></i>
-    </div>
-  );
+    );
 }
 
 export default Tweet;
