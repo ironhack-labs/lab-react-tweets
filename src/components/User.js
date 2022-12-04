@@ -1,12 +1,10 @@
-function User({userData}) {
+function User(props) {
     return (
-        <div>
-            <span className="user">
-                <span className="name">{props.userData.name}</span>
-                <span className="handle">{props.userData.handle}</span>
-            </span>
-        </div>
-    );
+        <span className="user">
+            <span className="name">{props.user.name}</span>
+            <span className="handle">@ {props.user.handle}</span>
+        </span>
+    )
 }
 
-export default User;
+export default User
