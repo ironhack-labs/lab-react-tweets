@@ -4,7 +4,9 @@ import data from "./data/data";
 function App() {
   return (
     <div className="App">
-      <Tweet tweets={data[0]} />
+      {data.map((tweet) => {
+        return <Tweet tweets={tweet} />;
+      })}
     </div>
   );
 }
