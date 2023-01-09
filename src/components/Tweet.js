@@ -1,11 +1,8 @@
-function Tweet() {
+function Tweet(props) {
+  const { tweet } = props;
   return (
     <div className="tweet">
-      <img
-        src="https://i.imgur.com/9yw1Fyw.jpg"
-        className="profile"
-        alt="profile"
-      />
+      <img src={tweet.user.image} className="profile" alt="profile" />
 
       <div className="body">
         <div className="top">
