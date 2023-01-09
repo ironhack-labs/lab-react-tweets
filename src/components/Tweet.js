@@ -7,11 +7,11 @@ function Tweet(props) {
       <div className="body">
         <div className="top">
           <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
+            <span className="name">{tweet.user.name}</span>
+            <span className="handle">{tweet.user.handle}</span>
           </span>
 
-          <span className="timestamp">Nov 30, 2020</span>
+          <span className="timestamp">{tweet.timestamp}</span>
         </div>
 
         <p className="message">
