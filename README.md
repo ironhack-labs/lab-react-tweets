@@ -369,3 +369,197 @@ Once finished, your app should be displaying the following content:
 
 
 Happy coding! :blue_heart:
+
+
+## FAQs
+
+
+<details>
+  <summary>I am stuck and don't know how to solve the problem or where to start. What should I do?</summary>
+
+
+  If you are stuck in your code and don't know how to solve the problem or where to start, you should take a step back and try to form a clear question about the specific issue you are facing. This will help you narrow down the problem and come up with potential solutions.
+
+
+For example, is it a concept that you don't understand, or are you receiving an error message that you don't know how to fix? It is usually helpful to try to state the problem as clearly as possible, including any error messages you are receiving. This can help you communicate the issue to others and potentially get help from classmates or online resources. 
+
+
+Once you have a clear understanding of the problem, you will be able to start working towards the solution.
+
+  <br>
+
+  [Back to top](#faqs)
+
+</details>
+
+
+<details>
+  <summary>I got the error: "Cannot find module" Node.js". How can I resolve it?</summary>
+
+
+  The error "Cannot find module" in a Node.js application means that the module you are trying to import or use does not exist in your project or cannot be found by Node.js.
+
+
+There are a few things you can try to resolve the issue:
+
+
+1. **Dependencies are not installed**: Make sure that all dependencies are installed.
+
+   To do this, run the command `npm install` in the root folder of your project.
+
+   This will install all of the dependencies listed in the project's `package.json` file, and ensure that all of the modules that your Node'js application requires are available.
+   <br>
+
+2. **Module is not installed**: Make sure that the *package* you are trying to use is listed in the project's `package.json` and that it is installed.
+
+   To do this, run the command `npm install <package_name>`, replacing the `<package_name>` with the name of the package.
+
+   This will add the package to the list of dependencies in the `package.json` file, and install it in the project.
+   <br>
+
+3. **Module is not imported:** Make sure that you've imported the module/package correctly and that the `import` statement is spelled correctly and available in the correct place in your code.
+   <br>
+
+4. **Wrong file path:** If you are importing another file as a module, make sure that the file you are trying to *import* is located in the correct folder and that you are using the correct file path.
+   <br>
+
+5. **Wrong module/package name:** Check the spelling of the package name you are trying to import.
+
+
+  <br>
+
+  [Back to top](#faqs)
+
+</details>
+
+
+<details>
+  <summary>I got the message: "Something is already running at ... Would you like to run the app at another port instead? [Y/n]". What should I do?</summary>
+
+
+  This message means that another process is already using the specified port. This could be another instance of your React app, or it could be another application that is using that port.
+
+To resolve this, you can change the port your React app is running on by typing Y when prompted. This will kill the process and automatically start the server on another port.
+
+Another approach is to manually terminate the process using the port in question and then try running the app again.
+<br>
+
+  <br>
+
+  [Back to top](#faqs)
+
+</details>
+
+
+<details>
+  <summary>How do I display an image in a React component?</summary>
+
+
+  To display an image in a React component, you should first `import` the image in the component and then render it. Here is an example of how to do this:
+
+```jsx
+import example from './example.png'; // Import the image file
+
+function App() {
+  return (
+    <img src={example} alt="example" /> // Display the image
+  
+}
+
+export default App;
+```
+
+In the above example, the `example` variable is assigned the value of the imported image file. The image is then displayed using the <img> element, with the `src` attribute set to the `example` variable.
+
+  <br>
+
+  [Back to top](#faqs)
+
+</details>
+
+
+<details>
+  <summary>Where should images for a React project be stored?</summary>
+
+
+  The images for your React project should be stored inside of the `src/` folder. To keep the things organized you should create a separate `assets/` or `images/` directory inside of the `src/` folder.
+
+  <br>
+
+  [Back to top](#faqs)
+
+</details>
+
+
+<details>
+  <summary>I got the warning in my React app:" 'variable' is assigned a value but never used: no-unused-vars". What should I do?</summary>
+
+
+  This is warning is a linting error thrown by a linting tool in your React project, and it is warning you that the variable is created, but that it is never being used in your code.
+
+To resolve this issue, you can either use the variable in your code, or you can simply remove the variable if you don't need it.
+
+
+  <br>
+
+  [Back to top](#faqs)
+
+</details>
+
+
+<details>
+  <summary>I am getting an error: "not defined". How do I fix it?</summary>
+
+
+  The "ReferenceError: variable is not defined" error in JavaScript occurs when you try to access a variable or a function that has not been defined yet, or is out of scope. 
+
+
+
+To fix the issue, check that you have defined the variable or function that you are trying to use and double-check the spelling to make sure you are using the correct name.
+
+
+
+In case that the variable or a function is defined in another file, make sure that the file has been imported or loaded correctly.
+<br>
+
+  <br>
+
+  [Back to top](#faqs)
+
+</details>
+
+
+<details>
+  <summary>I am unable to push changes to the repository. What should I do?</summary>
+
+
+  There are a couple of possible reasons why you may be unable to *push* changes to a Git repository:
+
+1. **You have not committed your changes:** Before you can push your changes to the repository, you need to commit them using the `git commit` command. Make sure you have committed your changes and try pushing again. To do this, run the following terminal commands from the project folder:
+
+   ```bash
+   git add .
+   git commit -m "Your commit message"
+   git push
+   ```
+
+
+2. **You do not have permission to push to the repository:** If you have cloned the repository directly from the main Ironhack repository without making a *Fork* first, you do not have write access to the repository.
+   To check which remote repository you have cloned, run the following terminal command from the project folder:
+
+   ```bash
+   git remote -v
+   ```
+
+If the link shown is the same as the main Ironhack repository, you will need to fork the repository to your Github account first, and then clone your fork to your local machine to be able to push the changes.
+
+Note: You may want to make a copy of the code your have locally, to avoid losing it in the process.
+
+
+  <br>
+
+  [Back to top](#faqs)
+
+</details>
+
+
