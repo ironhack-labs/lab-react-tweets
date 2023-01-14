@@ -37,7 +37,12 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      {/* tweetsArray[0] is an object that will be passed to the 
+    Componet Tweet as props.tweet */}
+      <Tweet tweet={tweetsArray[0]} />
+      <Tweet tweet={tweetsArray[1]} />
+      <Tweet tweet={tweetsArray[2]} />
+
     </div>
   );
 }
