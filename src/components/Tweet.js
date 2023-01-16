@@ -1,9 +1,11 @@
 import ProfileImage from "./ProfileImage";
+import User from "./User";
 
 function Tweet(props) {
   return (
     <div className="tweet">
       <ProfileImage image={props.tweet.user.image} />
+      <User userData={props.tweet.user}/>
       <div className="body">
         <div className="top">
           <span className="user">
