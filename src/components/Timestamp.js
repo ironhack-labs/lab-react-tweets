@@ -1,10 +1,9 @@
 function Timestamp(props) {
-    return (
-      <div>
+  return (
+    <div>
+      <span className="timestamp">{props.time}</span>
+    </div>
+  );
+}
 
-      </div>
-    );
-  }
-  
-  export default Timestamp;
-  
+export default Timestamp;

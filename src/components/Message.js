@@ -1,10 +1,9 @@
 function Message(props) {
-    return (
-      <div>
+  return (
+    <div>
+      <p className="message">{props.message}</p>
+    </div>
+  );
+}
 
-      </div>
-    );
-  }
-  
-  export default Message;
-  
+export default Message;
