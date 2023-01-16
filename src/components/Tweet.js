@@ -7,21 +7,21 @@ import Actions from "./Actions";
 
 function Tweet(props) {
   return (
-    <div className="tweet">
-      <ProfileImage image={props.tweet.user.image} />
+    <div>
+      {props.array.map((tweet) => {
+        return <div className="Tweet"key={tweet.user.id}>
+        <ProfileImage image={tweet.user.image} />
       <div className="body">
-        <div className="top">
-          <User userData={props.tweet.user} />
-          <Timestamp time={props.tweet.timestamp} />
+      "<div className="top">
+          <User userData={tweet.user} />
+          <Timestamp time={tweet.timestamp} />
         </div>
-
-        <Message message={props.tweet.message} /> 
-
+        <Message message={tweet.message} /> 
         <Actions />
-        
       </div>
-
-      <i className="fas fa-ellipsis-h"></i>
+          <i className="fas fa-ellipsis-h"></i>
+          </div>   
+      })}
     </div>
   );
 }
