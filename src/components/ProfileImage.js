@@ -1,10 +1,9 @@
 function ProfileImage(props) {
-    return (
-      <div>
+  return (
+    <div>
+      <img src="IMAGE_URL" className="profile" alt="profile" />
+    </div>
+  );
+}
 
-      </div>
-    );
-  }
-  
-  export default ProfileImage;
-  
+export default ProfileImage;
