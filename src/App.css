@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+#actions {
+  display:flex;
+  justify-content: space-around;
+}
+
+#message {
+  text-align: left;
+}
