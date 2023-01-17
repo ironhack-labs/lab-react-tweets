@@ -6,25 +6,19 @@ import Actions from "./Actions";
 
 function Tweet(props) {
   return (
-    <>
-      {props.array.map((tweet) => {
-        return (
           <div className="tweet">
-            <ProfileImage image={tweet.user.image} />
+            <ProfileImage image={props.content.user.image} />
             <div className="body">
               <div className="top">
-                <User userData={tweet.user} />
-                <Timestamp time={tweet.timestamp} />
+                <User userData={props.content.user} />
+                <Timestamp time={props.content.timestamp} />
               </div>
-              <Message message={tweet.message} />
+              <Message message={props.content.message} />
               <Actions />
             </div>
             <i class="fas fa-ellipsis-h"></i>
           </div>
         );
-      })}
-    </>
-  );
 }
 
 export default Tweet;
