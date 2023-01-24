@@ -464,7 +464,7 @@ Happy coding! :blue_heart:
   export default App;
   ```
 
-  In the above example, the `example` variable is assigned the value of the imported image file. The image is then displayed using the <img> element, with the `src` attribute set to the `example` variable.
+  In the above example, the `example` variable is assigned the value of the imported image file. The image is then displayed using the `<img>` element, with the `src` attribute set to the `example` variable.
 
   <br>
 
