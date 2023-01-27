@@ -42,7 +42,7 @@ function App() {
       <div className="tweet">
         <ProfileImg img={ tweets.user.image }/>
           <div className="body">
-            <Usr usr={ tweets.user } time={ tweetsArray[1].timestamp} />
+            <Usr usr={ tweets.user } time={ tweets.timestamp} />
             <Msg msj={ tweets.message } />
             <Act />
           </div>
