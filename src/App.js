@@ -1,5 +1,6 @@
 import "./App.css";
 import Tweet from "./components/Tweet";
+import { ProfileImg, Usr, Msg, Act } from "./components";
 
 const tweetsArray = [
   {
@@ -37,7 +38,17 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      {tweetsArray.map(tweets =>
+      <div className="tweet">
+        <ProfileImg img={ tweets.user.image }/>
+          <div className="body">
+            <Usr usr={ tweets.user } time={ tweetsArray[1].timestamp} />
+            <Msg msj={ tweets.message } />
+            <Act />
+          </div>
+          <i className="fas fa-ellipsis-h"></i>
+      </div>
+      )}
     </div>
   );
 }
