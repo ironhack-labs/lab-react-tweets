@@ -1,15 +1,12 @@
-import React, {Component} from "react";
-import photo from '../../assets/images/vaca.png'
-
-class CardProfile extends Component {
+class ProfileImage extends Component {
     render(){
         return(
             <div>
-                <img src={photo} alt={'Vaca'} />
+                <img src={this.props.image} alt='profile' />
                 
             </div>
         )
     }
 }
 
-export default CardProfile
+export default ProfileImage;
