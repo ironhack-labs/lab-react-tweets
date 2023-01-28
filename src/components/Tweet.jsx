@@ -20,7 +20,7 @@ function Tweet() {
 
         <Message message={props.tweet.message} />
         <div className='actions'>
-        <Actions />
+        <Action />
         </div>
         
         
