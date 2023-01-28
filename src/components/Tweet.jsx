@@ -1,3 +1,12 @@
+//Importación de los componentes 
+import ProfileImage from './ProfileImage'
+import Message from './Message'
+import User from './User'
+import Action from './Action'
+import Timestamp from './Timestamp'
+
+
+
 function Tweet() {
     return (
       <div className="tweet">
@@ -10,7 +19,10 @@ function Tweet() {
         </div>
 
         <Message message={props.tweet.message} />
+        <div className='actions'>
         <Actions />
+        </div>
+        
         
       </div>
 
