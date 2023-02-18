@@ -4,6 +4,9 @@ const Timestamp = ({ time }) => {
 
 export default Timestamp;
 
+// without destructuring
 // const Timestamp = (props) => {
 //   return <span className="timestamp">{props.time}</span>;
 // };
+
+// export default Timestamp;

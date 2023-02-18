@@ -6,7 +6,7 @@ const tweetsArray = [
     user: {
       name: "Thoughts of Dog®",
       image: "https://i.imgur.com/b0EdHVV.jpg",
-      handle: "dog_feelings",
+      handle: "@dog_feelings",
     },
     timestamp: "1h ago",
     message:
@@ -16,7 +16,7 @@ const tweetsArray = [
     user: {
       name: "Thoughts of Dog®",
       image: "https://i.imgur.com/b0EdHVV.jpg",
-      handle: "dog_feelings",
+      handle: "@dog_feelings",
     },
     timestamp: "2h ago",
     message:
@@ -26,7 +26,7 @@ const tweetsArray = [
     user: {
       name: "Thoughts of Dog®",
       image: "https://i.imgur.com/b0EdHVV.jpg",
-      handle: "dog_feelings",
+      handle: "@dog_feelings",
     },
     timestamp: "3h ago",
     message:
@@ -34,7 +34,7 @@ const tweetsArray = [
   },
 ];
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       {/* return {} --> () */}
@@ -50,6 +50,6 @@ function App() {
       <Tweet tweet={tweetsArray[2]} /> */}
     </div>
   );
-}
+};
 
 export default App;
