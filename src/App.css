@@ -1,3 +1,9 @@
+:root {
+  --white-text-color: white;
+  --main-text-color: #61dafb;
+  --main-background-color: #282c34;
+}
+
 .App {
   text-align: center;
 }
@@ -14,18 +20,18 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: var(--main-background-color);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--white-text-color);
 }
 
 .App-link {
-  color: #61dafb;
+  color: var(--main-text-color);
 }
 
 @keyframes App-logo-spin {

@@ -37,7 +37,17 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      {/* return {} --> () */}
+      {/* after map() in react every element should have a unique key, 
+      for example index. In every map() we can use 'index', 
+      every time it will relate to the map where is used */}
+      {tweetsArray.map((tweet, index) => (
+        <Tweet tweet={tweet} key={index} />
+      ))}
+      {/* another approach */}
+      {/* <Tweet tweet={tweetsArray[0]} />
+      <Tweet tweet={tweetsArray[1]} />
+      <Tweet tweet={tweetsArray[2]} /> */}
     </div>
   );
 }
