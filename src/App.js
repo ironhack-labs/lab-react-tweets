@@ -44,7 +44,26 @@ function App() {
           image: tweetsArray[0].user.image,
           handle: tweetsArray[0].user.handle,
         }}
+        timestamp={tweetsArray[0].timestamp}
         message={tweetsArray[0].message}
+      />
+      <Tweet
+        user={{
+          name: tweetsArray[1].user.name,
+          image: tweetsArray[1].user.image,
+          handle: tweetsArray[1].user.handle,
+        }}
+        timestamp={tweetsArray[1].timestamp}
+        message={tweetsArray[1].message}
+      />
+      <Tweet
+        user={{
+          name: tweetsArray[2].user.name,
+          image: tweetsArray[2].user.image,
+          handle: tweetsArray[2].user.handle,
+        }}
+        timestamp={tweetsArray[2].timestamp}
+        message={tweetsArray[2].message}
       />
     </div>
   );
