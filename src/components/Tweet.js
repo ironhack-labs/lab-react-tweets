@@ -17,7 +17,6 @@ function Tweet(props) {
         </div>
 
         <Message message={props.tweet.message} />
-
         <Actions />
       </div>
 

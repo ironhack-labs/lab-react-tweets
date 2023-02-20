@@ -1,6 +1,6 @@
 function Timestamp(props) {
     return ( 
-        <span className="timestamp">"1h ago"</span>
+        <span className="timestamp">{props.time}</span>
      );
 }
 
