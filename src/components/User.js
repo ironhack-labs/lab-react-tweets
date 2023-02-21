@@ -1,8 +1,8 @@
 function User(props)  {
     return (
         <span className="user">
-            <span className="name">"Thoughts of Dog®"</span>
-            <span className="handle">"dog_feelings"</span>
+                 <span className="name">{props.userData.name}</span>
+            <span className="handle">{props.userData.handle}</span>
           </span>
      );
 }
