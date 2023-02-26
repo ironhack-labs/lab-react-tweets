@@ -1,37 +1,76 @@
-function Tweet() {
+import React from 'react';
+import ProfileImage from './ProfileImage';
+import ProfileImageDos from './ProfileImageDos';
+import ProfileImageTres from './ProfileImageTres';
+import User from './User';
+import UserDos from './UserDos';
+import UserTres from './UserTres';
+import Timestamp from './Timestamp';
+import TimestampDos from './TimestampDos';
+import TimestampTres from './TimestampTres';
+import Message from './Message';
+import MessageDos from './MessageDos';
+import MessageTres from './MessageTres';
+import Actions from './Actions';
+import ActionsDos from './ActionsDos';
+import ActionsTres from './ActionsTres';
+
+function Tweet(props) {
   return (
+    <div>
     <div className="tweet">
-      <img
-        src="https://i.imgur.com/9yw1Fyw.jpg"
-        className="profile"
-        alt="profile"
-      />
-
+      <ProfileImage image={props.tweet.user.image} />
+       
       <div className="body">
+   
         <div className="top">
-          <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
-          </span>
-
-          <span className="timestamp">Nov 30, 2020</span>
+          <User userData={props.tweet.user} />
+          <Timestamp time={props.tweet.timestamp} />
         </div>
 
-        <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
-        </p>
+        <Message message={props.tweet.message} />
+        <Actions/>
+     
+      </div>  
+      <i class="fas fa-ellipsis-h"></i>
+     
+    </div>
 
-        <div className="actions">
-          {/* Font Awesome icons */}
-          <i className="far fa-comment"></i>
-          <i className="fas fa-retweet"></i>
-          <i className="far fa-heart"></i>
-          <i className="fas fa-share"></i>
+    <div className="tweetDos">
+      <ProfileImageDos image={props.tweet.user.image} />
+       
+      <div className="body">
+   
+        <div className="top">
+          <UserDos userData={props.tweet.user} />
+          <TimestampDos time={props.tweet.timestamp} />
         </div>
-      </div>
 
-      <i className="fas fa-ellipsis-h"></i>
+        <MessageDos message={props.tweet.message} />
+        <ActionsDos/>
+     
+      </div>  
+      <i class="fas fa-ellipsis-h"></i>
+     
+    </div>
+
+    <div className="tweetTres">
+      <ProfileImageTres image={props.tweet.user.image} />
+       
+      <div className="body">
+   
+        <div className="top">
+          <UserTres userData={props.tweet.user} />
+          <TimestampTres time={props.tweet.timestamp} />
+        </div>
+
+        <MessageTres message={props.tweet.message} />
+        <ActionsTres/>
+     
+      </div>  
+      <i class="fas fa-ellipsis-h"></i>
+     
+    </div>
     </div>
   );
 }

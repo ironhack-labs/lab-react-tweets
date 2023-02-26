@@ -7,6 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 .App {
   padding: 20px;
 }
@@ -23,13 +24,60 @@ body {
   line-height: 18px;
 }
 
+.tweetDos {
+  margin: 0 auto;
+  min-width: 480px;
+  max-width: 640px;
+  min-height: 80px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  display: flex;
+  font-size: 1.1rem;
+  line-height: 18px;
+}
+
+.tweetTres {
+  margin: 0 auto;
+  min-width: 480px;
+  max-width: 640px;
+  min-height: 80px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  display: flex;
+  font-size: 1.1rem;
+  line-height: 18px;
+}
+
+
 .body {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
+.bodyDos {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.bodyTres {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .top {
+  display: flex;
+  line-height: 1.4rem;
+}
+
+.topDos {
+  display: flex;
+  line-height: 1.4rem;
+}
+
+.topTres {
   display: flex;
   line-height: 1.4rem;
 }
@@ -62,6 +110,7 @@ body {
   font-size: 1.1rem;
 }
 
+
 .timestamp::before {
   content: "·";
   padding-right: 0.3em;
@@ -78,10 +127,37 @@ body {
   white-space: pre-wrap;
 }
 
+.messageDos {
+  text-align: left;
+  font-stretch: 100%;
+  font-weight: 400;
+  line-height: 1.6rem;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.mensajeTres {
+  text-align: left;
+  font-stretch: 100%;
+  font-weight: 400;
+  line-height: 3rem;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+}
+
 .actions {
   padding: 5px 5px;
   width: 360px;
   display: flex;
   justify-content: space-between;
   color: #536471;
+}
+
+p{
+  text-align: left;
+  font-stretch: 100%;
+  font-weight: 400;
+  line-height: 0.8rem;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
 }
