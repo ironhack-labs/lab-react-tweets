@@ -37,9 +37,14 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      <Tweet tweet = { tweetsArray[0] }/>  
+      <Tweet tweet = { tweetsArray[1] }/>  
+      <Tweet tweet = { tweetsArray[2] }/>  
     </div>
   );
 }
 
 export default App;
+
+
+// line 40: <Tweet tweet={  --> here we pass the first object from the tweetsArray as a prop to the Tweet component
