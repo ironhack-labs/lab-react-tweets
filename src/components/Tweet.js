@@ -1,34 +1,31 @@
-function Tweet() {
+import userEvent from "@testing-library/user-event";
+import Actions from "./Actions/Actions";
+import Message from "./Message/Message";
+import ProfileImage from "./ProfileImage/ProfileImage";
+import TimeStamp from "./TimeStamp/TimeStamp";
+import User from "./User/User";
+
+const Tweet = ({ tweet }) => {
+
+
+  const { user, timestamp, message } = tweet
+
   return (
     <div className="tweet">
-      <img
-        src="https://i.imgur.com/9yw1Fyw.jpg"
-        className="profile"
-        alt="profile"
-      />
+
+      <ProfileImage user={user} />
 
       <div className="body">
         <div className="top">
-          <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
-          </span>
 
-          <span className="timestamp">Nov 30, 2020</span>
+          <User user={user} />
+          <TimeStamp timestamp={timestamp} />
+
         </div>
 
-        <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
-        </p>
+        <Message message={message} />
 
-        <div className="actions">
-          {/* Font Awesome icons */}
-          <i className="far fa-comment"></i>
-          <i className="fas fa-retweet"></i>
-          <i className="far fa-heart"></i>
-          <i className="fas fa-share"></i>
-        </div>
+        <Actions />
       </div>
 
       <i className="fas fa-ellipsis-h"></i>
