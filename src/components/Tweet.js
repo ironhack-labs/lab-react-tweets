@@ -10,7 +10,7 @@ function Tweet() {
       <div className="body">
         <div className="top">
           <span className="user">
-            <span className="name">Ironhack</span>
+            <span className="name">Ironhacks</span>
             <span className="handle">@ironhack</span>
           </span>
 
