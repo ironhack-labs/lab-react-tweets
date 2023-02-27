@@ -1,8 +1,10 @@
+import ProfileImage from "./ProfileImage";
+
 function Tweet(props) {
   const { tweet } = props;
   return (
     <div className="tweet">
-      <img src={tweet.user.image} className="profile" alt="profile" />
+      <ProfileImage image={props.tweet.user.image} />
 
       <div className="body">
         <div className="top">
