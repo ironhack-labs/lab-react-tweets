@@ -1,37 +1,77 @@
-function Tweet() {
+import ProfileImage from "./ProfileImage";
+import User from "./User";
+import Timestamp from "./Timestamp";
+import Message from "./Message";
+import Actions from "./Actions";
+
+function Tweet(props) {
+  const tweet = props.tweet;
+  console.log(tweet)
+  
+  
   return (
+    <div className="tweets-list">
     <div className="tweet">
-      <img
-        src="https://i.imgur.com/9yw1Fyw.jpg"
-        className="profile"
-        alt="profile"
-      />
+      <ProfileImage image={tweet[0].user.image}/>
 
       <div className="body">
         <div className="top">
           <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
+            <User user = {tweet[0].user}/>
           </span>
 
-          <span className="timestamp">Nov 30, 2020</span>
+          <Timestamp timestamp={tweet[0].timestamp}/>
         </div>
 
-        <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
-        </p>
+        <Message message={tweet[0].message}/>
 
-        <div className="actions">
-          {/* Font Awesome icons */}
-          <i className="far fa-comment"></i>
-          <i className="fas fa-retweet"></i>
-          <i className="far fa-heart"></i>
-          <i className="fas fa-share"></i>
-        </div>
+        <Actions/>
+      </div>
+    
+      
       </div>
 
-      <i className="fas fa-ellipsis-h"></i>
+      <div className="tweet">
+      <ProfileImage image={tweet[1].user.image}/>
+
+      <div className="body">
+        <div className="top">
+          <span className="user">
+            <User user = {tweet[1].user}/>
+          </span>
+
+          <Timestamp timestamp={tweet[1].timestamp}/>
+        </div>
+
+        <Message message={tweet[1].message}/>
+
+        <Actions/>
+      </div>
+    
+      
+      </div>
+
+      <div className="tweet">
+      <ProfileImage image={tweet[2].user.image}/>
+
+      <div className="body">
+        <div className="top">
+          <span className="user">
+            <User user = {tweet[2].user}/>
+          </span>
+
+          <Timestamp timestamp={tweet[2].timestamp}/>
+        </div>
+
+        <Message message={tweet[2].message}/>
+
+        <Actions/>
+      </div>
+    
+      
+      </div>
+
+      
     </div>
   );
 }
