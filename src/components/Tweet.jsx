@@ -1,4 +1,4 @@
-function Tweet() {
+const Tweet = () => {
   return (
     <div className="tweet">
       <img
@@ -34,6 +34,6 @@ function Tweet() {
       <i className="fas fa-ellipsis-h"></i>
     </div>
   );
-}
+};
 
 export default Tweet;
