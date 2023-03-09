@@ -1,35 +1,23 @@
-function Tweet({tweet}) {
+import React from 'react'
+import ProfileImage from './ProfileImage'
+import User from './User'
+import Timestamp from "./Timestamp"
+
+function Tweet(props) {
   return (
-    <div className="tweet">
-      {/*  <img> Image: {tweet.image}</img>  */}
+    <div className='tweet'>
+      <ProfileImage image={props.tweet.user.image}/>
 
-      <div className="body">
-        <div className="top">
-          <span className="user">
-            <img className="profile" src={tweet.user.image}/>
-            <span className="name">{tweet.user.name}</span>
-            <span className="handle">@{tweet.user.name}</span>
-          </span>
+      <div className='body'>
+        <div className='top'>
+          <User name={props.tweet.user.name}/>
+          <Timestamp time={props.tweet.timestamp}/>
 
-          <span className="timestamp">{tweet.timestamp}</span>
-        </div>
-
-        <p className="message">
-          {tweet.message}
-        </p>
-
-        <div className="actions">
-          {/* Font Awesome icons */}
-          <i class="far fa-comment"></i>
-          <i class="fas fa-retweet"></i>
-          <i class="far fa-heart"></i>
-          <i class="fas fa-share"></i>
+      
         </div>
       </div>
-
-      <i class="fas fa-ellipsis-h"></i>
     </div>
-  );
+  )
 }
 
-export default Tweet;
+export default Tweet
