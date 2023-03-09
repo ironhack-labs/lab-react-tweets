@@ -6,15 +6,16 @@ function Tweet({tweet}) {
       <div className="body">
         <div className="top">
           <span className="user">
-            <span className="name">Name: {tweet.name}</span>
-            <span className="handle">Name@: {tweet.name}</span>
+            <img className="profile" src={tweet.user.image}/>
+            <span className="name">{tweet.user.name}</span>
+            <span className="handle">@{tweet.user.name}</span>
           </span>
 
-          <span className="timestamp">Timestamp:{tweet.timestamp}</span>
+          <span className="timestamp">{tweet.timestamp}</span>
         </div>
 
         <p className="message">
-          Message: {tweet.message}
+          {tweet.message}
         </p>
 
         <div className="actions">

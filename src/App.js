@@ -15,7 +15,7 @@ const tweetsArray = [
   {
     user: {
       name: "Thoughts of Dog®",
-      image: "https://i.imgur.com/b0EdHVV.jpg",
+      image:"https://i.imgur.com/b0EdHVV.jpg",
       handle: "dog_feelings",
     },
     timestamp: "2h ago",
@@ -37,7 +37,7 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet tweet={ tweetsArray[0]}/>
+      <Tweet tweet={ tweetsArray[1]}/>
     </div>
   );
 }
