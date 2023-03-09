@@ -37,7 +37,14 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet tweet={tweetsArray[0]} />
+      {/*Version simple (Sabes la longitud del array)*/}
+      {/* <Tweet tweet={tweetsArray[0]} />
+      <Tweet tweet={tweetsArray[1]} />
+      <Tweet tweet={tweetsArray[2]} /> */}
+      {/*Version avanzada (NO sabes la longitud del array)*/}
+      {tweetsArray.map((tweet, index) => (
+        <Tweet tweet={tweet} key={index} />
+      ))}
     </div>
   );
 }
