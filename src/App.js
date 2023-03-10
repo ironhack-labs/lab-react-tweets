@@ -37,7 +37,7 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-    // componente vista = lo que le paso
+    {/* componente vista = lo que le paso */}
       <Tweet tweet={tweetsArray[0]} />
     </div>
   );
