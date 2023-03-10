@@ -1,3 +1,4 @@
+import Message from "./Message";
 import ProfileImage from "./ProfileImage";
 import Timestamp from "./Timestamp";
 
@@ -11,10 +12,11 @@ const Tweet = ({ tweet }) => {
             <span className="name">{tweet.user.name}</span>
             <span className="handle">{tweet.user.handle}</span>
           </span>
+          
           <Timestamp time={tweet.timestamp} />
         </div>
 
-        <p className="message">{tweet.message}</p>
+        <Message message={tweet.message} />
 
         <div className="actions">
           {/* Font Awesome icons */}

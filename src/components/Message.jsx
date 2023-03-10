@@ -1,7 +1,5 @@
-const Message = () => {
-  return (
-    <div>Message</div>
-  )
-}
+const Message = ({ message }) => {
+  return <p className="message">{message}</p>;
+};
 
-export default Message
+export default Message;
