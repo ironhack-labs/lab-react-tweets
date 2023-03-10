@@ -1,7 +1,10 @@
-const User = () => {
+const User = ({ name, handle }) => {
   return (
-    <div>User</div>
-  )
-}
+    <span className="user">
+      <span className="name">{name}</span>
+      <span className="handle">{handle}</span>
+    </span>
+  );
+};
 
-export default User
+export default User;
