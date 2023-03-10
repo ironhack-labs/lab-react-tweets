@@ -5,7 +5,9 @@ import Tweet from "./components/Tweet";
 const App = () => {
   return (
     <div className="App">
-      <Tweet tweet={tweetsArray[0]} />
+      {tweetsArray.map((tweet, i) => (
+        <Tweet key={i} tweet={tweet} />
+      ))}
     </div>
   );
 };
