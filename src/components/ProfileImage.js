@@ -1,10 +1,10 @@
-function ProfileImage ({ image }) {
+function ProfileImage({ image }) {
   return (
-  <img
-        src={image}
-        className="profile"
-        alt="profile"
-      />
+    <img
+      src={image}
+      className="profile"
+      alt="profile"
+    />
   )
 }
 
