@@ -1,7 +1,9 @@
-const ProfileImage = () => {
+const ProfileImage = ({ image }) => {
   return (
-    <div>ProfileImage</div>
-  )
-}
+    <div>
+      <img src={image} className="profile" alt="profile" />
+    </div>
+  );
+};
 
-export default ProfileImage
+export default ProfileImage;

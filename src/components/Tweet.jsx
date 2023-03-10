@@ -1,8 +1,9 @@
+import ProfileImage from "./ProfileImage";
+
 const Tweet = ({ tweet }) => {
   return (
     <div className="tweet">
-      <img src={tweet.user.image} className="profile" alt="profile" />
-
+      <ProfileImage image={tweet.user.image} />
       <div className="body">
         <div className="top">
           <span className="user">
