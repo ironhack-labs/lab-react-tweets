@@ -1,8 +1,8 @@
 function Tweet(props) {
   return (
     <div className="tweet">
-      <img
-        src={props.tweet.user.image}
+      <ProfileImage 
+        image={props.tweet.user.image}
         className="profile"
         alt="profile"
       />
