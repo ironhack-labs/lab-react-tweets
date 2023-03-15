@@ -1,6 +1,8 @@
 import "./App.css";
 import Tweet from "./components/Tweet";
 
+
+
 const tweetsArray = [
   {
     user: {
@@ -38,7 +40,9 @@ function App() {
   return (
     <div className="App">
     {/* componente vista = lo que le paso */}
-      <Tweet tweet={tweetsArray[0]} />
+    <Tweet tweet={tweetsArray[0]} />
+    <Tweet tweet={tweetsArray[1]} />
+    <Tweet tweet={tweetsArray[2]} />
     </div>
   );
 }

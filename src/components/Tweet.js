@@ -1,31 +1,31 @@
-import ProfileImage from "./profileImage";
-import User from "./user";
+import Actions from "./Actions";
+import Message from "./Message";
+import ProfileImage from "./ProfileImage";
+import TimeStamps from "./TimeStamps";
+import User from "./User";
+
+
 
 function Tweet({ tweet }) {
   return (
     <div className="tweet">
       <ProfileImage image={tweet.user.image} />
+
       <div className="body">
-      
         <div className="top">
+
         <User name={tweet.user.name} handle={tweet.user.handle}  />
         
-          <span className="timestamp">{tweet.timestamp}</span>
+          <TimeStamps timestamp={new Date().toLocaleTimeString()} />
+
         </div>
 
-        <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
-        </p>
+        <Message message={tweet.message} />
+         
 
-        <div className="actions">
-          {/* Font Awesome icons */}
-          <i className="far fa-comment"></i>
-          <i className="fas fa-retweet"></i>
-          <i className="far fa-heart"></i>
-          <i className="fas fa-share"></i>
+        <Actions />
+
         </div>
-      </div>
 
       <i className="fas fa-ellipsis-h"></i>
     </div>
