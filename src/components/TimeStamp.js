@@ -1,11 +1,11 @@
-function Timestamp ({ time }) {
+function Timestamp ({ timestamp }) {
   return (
-    <span className="timestamp"> TWEET_TIMESTAMP </span>
+    <span className="timestamp"> {timestamp} </span>
   )
 }
 
-TimeStamp.defaultProps = {
-  time: ""
+Timestamp.defaultProps = {
+  timestamp: ""
 }
 
 export default Timestamp

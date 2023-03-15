@@ -1,4 +1,4 @@
-function Actions({ actions }) {
+function Actions() {
   return (
     <div className="actions">
       <i class="far fa-comment"></i>
