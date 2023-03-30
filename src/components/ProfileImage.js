@@ -1,9 +1,10 @@
 import React from "react"
 
-export default function ProfileImage() {
+export default function ProfileImage(props) {
+  const { image } = props
   return (
     <img
-      src="https://i.imgur.com/b0EdHVV.jpg"
+      src={image}
       className="profile"
       alt="profile"
     />
