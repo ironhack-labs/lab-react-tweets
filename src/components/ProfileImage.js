@@ -1,6 +1,6 @@
-function ProfileImage(image) {
+function ProfileImage(props) {
   //console.log(image.image)
-  return <img src={image.image} className="profile" alt="profile" />;
+  return <img src={props.image} className="profile" alt="profile" />;
 }
 
 export default ProfileImage;

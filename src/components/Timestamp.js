@@ -1,5 +1,5 @@
-function Timestamp(time) {
-  return <span>{ time.time }</span>;
+function Timestamp(props) {
+  return <span>{ props.time }</span>;
 }
 
 export default Timestamp;
