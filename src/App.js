@@ -40,9 +40,10 @@ function App() {
 
       <h1>Displaying {tweetsArray.length} Tweets</h1>
 
-      <Tweet details={tweetsArray[0]}/>
-      <Tweet details={tweetsArray[1]}/>
-      <Tweet details={tweetsArray[2]}/>
+      {tweetsArray.map( tweet => {
+        return <Tweet key={tweet.timestamp} details={tweet}/>;
+      })}
+      
     </div>
   );
 }
