@@ -10,15 +10,15 @@ function Tweet(props) {
       <ProfileImage image={props.details.user.image}/>
 
       <div className="body">
+
         <div className="top">
           <User name={props.details.user.name} handle={props.details.user.handle} />
-
           <Timestamp timestamp={props.details.timestamp} />
         </div>
 
         <Message message={props.details.message} />
-
         <Actions />
+        
       </div>
 
       <i className="fas fa-ellipsis-h"></i>
