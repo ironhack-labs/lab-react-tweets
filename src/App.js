@@ -1,6 +1,5 @@
 import "./App.css";
 import Tweet from "./components/Tweet";
-import ProfileImage from "./components/ProfileImage";
 
 
 const tweetsArray = [
