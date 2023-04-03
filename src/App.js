@@ -37,9 +37,16 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+s
+      <Tweet tweet={tweetsArray[0]}/>
+ 
+      <Tweet tweet={tweetsArray[1]} />
+      
+      <Tweet tweet={tweetsArray[2]}/>
+
     </div>
   );
 }
+
 
 export default App;
