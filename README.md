@@ -1,6 +1,27 @@
 ![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
 
-# LAB | React Tweets 
+# LAB | React Tweets
+
+<details>
+  <summary>
+   <h2>Learning Goals</h2>
+  </summary>
+
+  This exercise allows you to practice and apply the concepts and techniques taught in class. 
+
+  Upon completion of this exercise, you will be able to:
+
+  - Clone and set up an existing React app and run it in development mode.
+  - Create and render React components.
+  - Use JSX to render content within a React component.
+  - Use props to pass data to components and display the data received through props within the components.
+  - Render multiple instances of a React component while passing different data to each instance.
+  - Extract and organize parts of the existing UI into separate new components.
+
+  <br>
+  <hr> 
+
+</details>
 
 ## Introduction
 
