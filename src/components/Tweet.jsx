@@ -2,7 +2,7 @@ function Tweet() {
   return (
     <div className="tweet">
       <img
-        src="https://i.imgur.com/9yw1Fyw.jpg"
+        src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/ih_logo.jpeg"
         className="profile"
         alt="profile"
       />
