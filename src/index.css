@@ -133,4 +133,5 @@ button:focus-visible {
   display: flex;
   justify-content: space-between;
   color: #536471;
+  margin: 0 auto;
 }
