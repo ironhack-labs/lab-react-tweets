@@ -1,6 +1,7 @@
 import "./App.css";
 import Tweet from "./components/Tweet";
 
+
 const tweetsArray = [
   {
     user: {
@@ -37,9 +38,31 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      <Tweet tweet={ tweetsArray[0] }/>     
+      <Tweet tweet={ tweetsArray[1] }/>      
+     <Tweet tweet={ tweetsArray[2] }/>      
+
+  
+      
+
+      
+
     </div>
   );
 }
 
 export default App;
+
+
+// function StudentCard(props) {
+//   return (
+//     <div className="StudentCard">
+//       <p><b>Name:</b> {props.name}</p>
+//       <p><b>Cohort:</b> {props.info.city} - {props.info.course}</p>
+//       <p><b>Current week: {props.week}</b></p>
+//       <br />
+//     </div>
+//   )
+// }
+
+// export default StudentCard;
