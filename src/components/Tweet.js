@@ -8,14 +8,14 @@ function Tweet(props) {
   const { user, timestamp, message } = props.tweet;
   return (
     <div className="tweet">
-      <ProfileImage image={props.tweet.user.image} />
+      <ProfileImage image={user.image} />
       <div className="body">
         <div className="top">
-          <User userData={props.tweet.user} />
-          <User name={props.tweet.user.name} handle={"@ " + props.tweet.user.handle} />
-          <Timestamp timestamp={props.tweet.timestamp} />
+          <User userData={user} />
+          <User name={user.name} handle={"@ " + user.handle} />
+          <Timestamp timestamp={timestamp} />
         </div>
-        <Message message={props.tweet.message} />
+        <Message message={message} />
 
         <Actions />
       </div>
