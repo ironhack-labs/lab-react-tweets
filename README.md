@@ -57,6 +57,33 @@ We will be cloning an existing piece of UI from a popular app, Twitter. Let's ge
 
 - Create a Pull Request so that your TAs can check your work.
 
+<br>
+
+##  Test Your Code
+
+This lab is equipped with unit tests to provide automated feedback on your progress and help you understand whether your code is working as expected. If you want to check the tests, they are located in the `src/test` folder.
+
+
+### Iterations and Test Results
+
+During an iteration, if your code seems to work as expected but some tests don't pass, feel free to move on to the next iteration. Once you've completed all the mandatory iterations, you can go back and resolve any remaining failed test
+
+<br>
+
+### Run the Tests
+
+1. To execute the tests, run the following command in the terminal:
+
+   ```shell
+   npm run test
+   ```
+
+2. The above command will execute the tests and open the `@vitest/ui` Test Reporter in the browser. 
+
+3. To see the test results, **open** [http://127.0.0.1:51204/\_\_vitest\_\_](http://127.0.0.1:51204/__vitest__) in your browser.
+
+<br>
+
 ## Getting Started
 
 1. We will use [Font Awesome](https://fontawesome.com/v5.15/icons?d=gallery&p=1) for the icons. Add the following stylesheet in the `head` of the `index.html` page:
