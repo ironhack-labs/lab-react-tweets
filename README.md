@@ -7,18 +7,25 @@
    <h2>Learning Goals</h2>
   </summary>
 
+
 This exercise allows you to practice and apply the concepts and techniques taught in class.
 
 Upon completion of this exercise, you will be able to:
 
 - Clone and set up an existing React app and run it in development mode.
+
 - Create and render React components.
+
 - Use JSX to render content within a React component.
+
 - Use props to pass data to components and display the data received through props within the components.
+
 - Render multiple instances of a React component while passing different data to each instance.
+
 - Extract and organize parts of the existing UI into separate new components.
 
   <br>
+
   <hr>
 
 </details>
@@ -33,16 +40,19 @@ We will be cloning an existing piece of UI from a popular app, Twitter. Let's ge
   <img src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/labs/lab-react-tweets-4.png" width="500">
 </p>
 
+
 ## Setup
 
 - Fork this repo
+
 - Clone this repo
+
 - Open the LAB and start:
 
   ```bash
-  $ cd lab-react-tweets
-  $ npm install
-  $ npm start
+  cd lab-react-tweets
+  npm install
+  npm run dev
   ```
 
 ## Submission
@@ -55,7 +65,7 @@ We will be cloning an existing piece of UI from a popular app, Twitter. Let's ge
   git push origin master
   ```
 
-- Create a Pull Request so that your TAs can check your work.
+- Create a Pull Request and submit your assignment.
 
 <br>
 
@@ -84,7 +94,11 @@ During an iteration, if your code seems to work as expected but some tests don't
 
 <br>
 
-## Getting Started
+
+## Instructions
+
+
+### Iteration 0 | Font Awesome
 
 1. We will use [Font Awesome](https://fontawesome.com/v5.15/icons?d=gallery&p=1) for the icons. Add the following stylesheet in the `head` of the `index.html` page:
 
@@ -97,7 +111,7 @@ During an iteration, if your code seems to work as expected but some tests don't
    />
    ```
 
-## Instructions
+<br>
 
 ### Iteration 1 | Initial Content
 
@@ -107,33 +121,70 @@ We have also provided you with the initial content of the `App.jsx` and we inclu
 
 Once you initially run the app you should see the following:
 
-![Tweet component after the initial setup](https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/labs/lab-react-tweets-1.png)
+<br>
 
-`Tweet` component is at the moment rendering static content. We will change this in the next iteration. We'll update the `Tweet` component to display the content coming from the `props`.
+<details>
+
+
+  <summary><b>See Expected Result</b></summary>
+
+  ![Tweet component after the initial setup](https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/labs/lab-react-tweets-1.png)
+
+  <br>
+
+</details>
+
+<br>
 
 ### Iteration 2 | Pass the Tweet as a Prop
 
-In `App.jsx`, we have an array named `tweetsArray` that holds objects representing tweets. We will use the `Tweet` component to display these _tweet_ objects. In the `Tweet` we will display the user's `name`, user's `image`, user's `handle`, tweet `timestamp` and the `message`.
+
+The `Tweet` component is at the moment rendering static content, but we will modify it to show the content dynamically. In this iteration, we'll modify the `Tweet` component to display the content coming from the `props`.
+
+In `App.jsx`, we have an array named `tweetsArray` that holds objects representing tweets. We will use the `Tweet` component to display these _tweet_ objects.
+
+The `Tweet` component should display the user's `name`, user's `image`, user's `handle`, tweet `timestamp` and the `message`.
+
+<br>
 
 **Pass the tweet as a prop**
 
-Pass the first object from the `tweetsArray` as a prop to the `Tweet` component:
+Pass the first object from the `tweetsArray` as a `tweet` prop to the component:
 
 ```jsx
 // src/App.jsx
+
 // ...
-<Tweet tweet={ tweetsArray[0] }>
+
+      <Tweet tweet={ tweetsArray[0] }>
+
+// ...
 ```
+
+<br>
 
 **Display the tweet content in the `Tweet` component**
 
 Update the `Tweet` component to display the values coming from the `tweet` prop. Remember that the value we passed is an object, so you may want to check the object's structure.
 
-**Expected Result**
 
 Once done, your `Tweet` component should display the following content:
 
-![Tweet component after passing the "tweets" prop](https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/labs/lab-react-tweets-2.png)
+<br>
+
+<details>
+
+
+
+  <summary><b>See Expected Result</b></summary>
+
+  ![Tweet component after passing the "tweets" prop](https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/labs/lab-react-tweets-2.png)
+
+  <br>
+
+</details>
+
+<br>
 
 ### Iteration 3 | Create the Components
 
@@ -147,18 +198,31 @@ We will now create new files for the components that we'll make in the following
 
 <br>
 
-In the following iterations, you will need to refactor the `Tweet` component. You will be asked to extract parts of the existing HTML structure into new components:
+In the following iterations, you will work on refactoring the `Tweet` component. You will be asked to extract parts of the existing HTML structure into new components:
 
 <br>
 
-![Example - Refactoring the "Tweet" component](https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/labs/lab-react-tweets-3.png)<br>
+<details>
+
+
+
+  <summary><b>See Expected Result</b></summary>
+
+
+  ![Example - Refactoring the "Tweet" component](https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/labs/lab-react-tweets-3.png)<br>
+
+  <br>
+
+</details>
 
 <br>
 
+<!--
 **When done with all of the iterations**, the final version of your `Tweet` component will look like this:
 
 <details>
 <summary>Click to see the code</summary>
+
 
 ```jsx
 // FINAL VERSION
@@ -184,13 +248,16 @@ function Tweet(props) {
 }
 ```
 
-:heavy_exclamation_mark: Don't copy-paste the above code directly into the `Tweet` component!
-
-You will do it in the next iterations, one step at a time. You will be replacing the parts of HTML as you create each new component.
+:heavy_exclamation_mark: Don't copy-paste the above code directly into the `Tweet` component! You will do it in the next iterations, one step at a time.
 
 <hr>
 <br>
 </details>
+
+
+-->
+
+<br>
 
 ### Iteration 4 | ProfileImage Component
 
@@ -202,6 +269,8 @@ Extract the existing `img` tag and render it through the `ProfileImage` componen
 <img src="IMAGE_URL" className="profile" alt="profile" />
 ```
 
+<br>
+
 **Render the component**
 
 Once done, import the `ProfileImage` component to `Tweet.jsx`. After importing it, render the component inside of `Tweet` in the following way:
@@ -209,17 +278,18 @@ Once done, import the `ProfileImage` component to `Tweet.jsx`. After importing i
 ```jsx
 // ...
 
-function Tweet(props) {
-  return (
-    <div className="tweet">
-      <ProfileImage image={props.tweet.user.image} />
-
+  <ProfileImage image={IMAGE_URL} />
+  
 // ...
 ```
+
+<br>
 
 **Access the Props**
 
 `ProfileImage` receives a prop `image`. Set this value as the `src` of the `<img />` tag.
+
+<br>
 
 ### Iteration 5 | User Component
 
@@ -234,6 +304,8 @@ Extract the existing `span` tags displaying the user information and render them
 </span>
 ```
 
+<br>
+
 **Render the component**
 
 Import the `User` component to `Tweet.jsx`. After importing it, render the component inside of `Tweet` in the following way:
@@ -241,25 +313,18 @@ Import the `User` component to `Tweet.jsx`. After importing it, render the compo
 ```jsx
 // ...
 
-function Tweet(props) {
-  return (
-    <div className="tweet">
-      <ProfileImage image={props.tweet.user.image} />
+ <User name={USER_NAME} handle={USER_HANDLE} />
 
-      <div className="body">
-        <div className="top">
-          <User userData={props.tweet.user} />
-          // ...
-        </div>
-      </div>
-    </div>
-  );
-}
+// ...
 ```
+
+<br>
 
 **Access the Props**
 
-We passed the object with the user information through the prop `userData`. Access and display the user's _name_ and the twitter _handle_.
+`User` component should take `name` and `handle` as props. Access these values and display the user's _name_ and the twitter _handle_.
+
+<br>
 
 ### Iteration 6 | Timestamp Component
 
@@ -271,6 +336,8 @@ Extract the existing `span` tag displaying the _timestamp_ information and rende
 <span className="timestamp"> TWEET_TIMESTAMP </span>
 ```
 
+<br>
+
 **Render the component**
 
 Import the `Timestamp` component to `Tweet.jsx`. After importing it, render the component inside of `Tweet` in the following way:
@@ -278,26 +345,19 @@ Import the `Timestamp` component to `Tweet.jsx`. After importing it, render the 
 ```jsx
 // ...
 
-function Tweet(props) {
-  return (
-    <div className="tweet">
-      <ProfileImage image={props.tweet.user.image} />
+  <Timestamp time={TWEET_TIMESTAMP} />
+  
+// ...
 
-      <div className="body">
-        <div className="top">
-          <User userData={props.tweet.user} />
-          <Timestamp time={props.tweet.timestamp} />
-          // ...
-        </div>
-      </div>
-    </div>
-  );
-}
 ```
+
+<br>
 
 **Access the Props**
 
-`Timestamp` receives a prop `time`. Display this value as the content of the `span` tag.
+`Timestamp` should take a prop `time`. Display this value as the content of the `span` tag.
+
+<br>
 
 ### Iteration 7 | Message Component
 
@@ -309,6 +369,8 @@ Extract the existing `p` tag and render it through the `Message` component:
 <p className="message"> TWEET_MESSAGE </p>
 ```
 
+<br>
+
 **Render the component**
 
 When done, import the `Message` component and render it in the `Tweet.jsx` in the following way:
@@ -316,25 +378,18 @@ When done, import the `Message` component and render it in the `Tweet.jsx` in th
 ```jsx
 // ...
 
-function Tweet(props) {
-  return (
-    <div className="tweet">
-      <ProfileImage image={props.tweet.user.image} />
-
-      <div className="body">
-        <div className="top">
-
-          <User userData={props.tweet.user} />
-          <Timestamp time={props.tweet.timestamp} />
-        </div>
-
-        <Message message={props.tweet.message} />
+  <Message message={TWEET_MESSAGE} />
+  
 // ...
 ```
 
+<br>
+
 **Access the Props**
 
-`Message` receives a prop `message`. Display this value in the `p` tag.
+`Message` component should take a prop `message`. Display this value in the `p` tag.
+
+<br>
 
 ### Iteration 8 | Actions Component
 
@@ -351,6 +406,8 @@ Extract the existing message `div.actions` tag and render it through the `Action
 </div>
 ```
 
+<br>
+
 **Render the component**
 
 When done, import the `Actions` component and render it in the `Tweet.jsx` like this:
@@ -358,25 +415,16 @@ When done, import the `Actions` component and render it in the `Tweet.jsx` like 
 ```jsx
 // ...
 
-function Tweet(props) {
-  return (
-    <div className="tweet">
-      <ProfileImage image={props.tweet.user.image} />
-
-      <div className="body">
-        <div className="top">
-
-          <User userData={props.tweet.user} />
-          <Timestamp time={props.tweet.timestamp} />
-        </div>
-
-        <Message message={props.tweet.message} />
-
-        <Actions />
+  <Actions />
+  
 // ...
 ```
 
-`Actions` component doesn't take any props.
+<br>
+
+`Actions` component is not supposed to take any props.
+
+<br>
 
 ### Iteration 9 | Render multiple `Tweet`s
 
@@ -386,7 +434,8 @@ Once finished, your app should be displaying the following content:
 
 <details>
 
-<summary>Click to see the image</summary>
+
+<summary><b>See Expected Result</b></summary>
 
 <br>
 
@@ -396,6 +445,7 @@ Once finished, your app should be displaying the following content:
 <br>
 </details>
 
+
 Happy coding! :blue_heart:
 
 <br>
@@ -404,6 +454,7 @@ Happy coding! :blue_heart:
 
 <details>
   <summary>I am stuck and don't know how to solve the problem or where to start. What should I do?</summary>
+
 
   <br>
 
@@ -421,6 +472,7 @@ Once you have a clear understanding of the problem, you will be able to start wo
 
 <details>
   <summary>I got the error: "Cannot find module 'Node.js'". How can I resolve it?</summary>
+
 
   <br>
 
@@ -446,7 +498,7 @@ This will add the package to the list of dependencies in the `package.json` file
 
 5. **Wrong module/package name:** Check the spelling of the package name you are trying to import.
 
-  <br>
+   <br>
 
 [Back to top](#faqs)
 
@@ -454,6 +506,7 @@ This will add the package to the list of dependencies in the `package.json` file
 
 <details>
   <summary>I got the message: "Something is already running at ... Would you like to run the app at another port instead? [Y/n]". What should I do?</summary>
+
 
   <br>
 
@@ -471,6 +524,7 @@ Another approach is to manually terminate the process using the port in question
 
 <details>
   <summary>How do I display an <em>image</em> in a React component?</summary>
+
 
   <br>
 
@@ -499,6 +553,7 @@ In the above example, the `example` variable is assigned the value of the import
 <details>
   <summary>Where should images for a React project be stored?</summary>
 
+
   <br>
 
 The images for your React project should be stored inside the `src/` folder. To keep things organized you should create a separate `assets/` or `images/` directory inside of the `src/` folder.
@@ -511,6 +566,7 @@ The images for your React project should be stored inside the `src/` folder. To 
 
 <details>
   <summary>I got the warning in my React app:" 'variable' is assigned a value but never used: no-unused-vars". What should I do?</summary>
+
 
   <br>
 
@@ -526,6 +582,7 @@ To resolve this issue, you can either use the variable in your code, or you can 
 
 <details>
   <summary>I am getting an error: "not defined". How do I fix it?</summary>
+
 
   <br>
 
@@ -543,6 +600,7 @@ In case the variable or a function is defined in another file, make sure that th
 
 <details>
   <summary>I am unable to push changes to the repository. What should I do?</summary>
+
 
   <br>
 
