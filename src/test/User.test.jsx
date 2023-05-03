@@ -13,14 +13,14 @@ describe("User component", () => {
     message: "the human likes to say. that i live here rent free.",
   };
 
-  test("renders name and handle correctly", () => {
+  test("renders user's name and handle correctly", () => {
     render(
-      <User userData={{ name: "Thoughts of Dog®", handle: "dog_feelings" }} />
+      <User name={"Thoughts of Dog®"} handle={"dog_feelings"} />
     );
-    const name = screen.getByText("Thoughts of Dog®");
-    const handle = screen.getByText("@dog_feelings");
+    const nameText = screen.getByText("Thoughts of Dog®");
+    const handleText = screen.getByText("@dog_feelings");
 
-    expect(name).toBeInTheDocument();
-    expect(handle).toBeInTheDocument();
+    expect(nameText).toBeInTheDocument();
+    expect(handleText).toBeInTheDocument();
   });
 });
