@@ -50,7 +50,7 @@ We will be cloning an existing piece of UI from a popular app, Twitter. Let's ge
 - Open the LAB and start:
 
   ```bash
-  cd lab-react-tweets
+  cd lab-react-tweets-vite
   npm install
   npm run dev
   ```
