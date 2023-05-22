@@ -4,6 +4,7 @@
 import React from "react";
 import ProfileImage from "./ProfileImage";
 import User from "./User";
+import Actions from "./Actions";
 
 function Tweet(props) {
   const { name, image, handle} = props.tweet.user;
@@ -22,15 +23,9 @@ function Tweet(props) {
 
         <p className="message">{message}</p>
 
-        <div className="actions">
-          {/* Font Awesome icons */}
-          <i className="far fa-comment"></i>
-          <i className="fas fa-retweet"></i>
-          <i className="far fa-heart"></i>
-          <i className="fas fa-share"></i>
-        </div>
-      </div>
 
+      <Actions/>
+      </div>
       <i className="fas fa-ellipsis-h"></i>
     </div>
   );
