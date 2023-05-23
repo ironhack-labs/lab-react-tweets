@@ -5,14 +5,14 @@ import Message from "./message";
 import Actions from "./actions";
 
 function Tweet(props) {
-  const {image} = props.tweet.user
+  const {name, handle, image} = props.tweet.user
   const {message, timestamp} = props.tweet
   return (
     <div className="tweet">
       <Image picture={image}/> 
       <div className="body">
         <div className="top">
-          <User userData={props.tweet.user}/>
+          <User userName={name} userHandle={handle}/>
           <Timestamps timestmp={timestamp}/>
         </div>
         <Message msg={message}/>
