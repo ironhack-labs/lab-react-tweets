@@ -1,9 +1,10 @@
-const Message = ({ message }) => {
-  return (
-    <p className="message">
-    {message}
-  </p>
-  )
+import React from 'react';
+function Message(props){
+    let {message} = props;
+    return(
+        <div>
+            <p className="message">{message}</p>
+        </div>
+    )
 }
-
-export default Message
+export default Message;
