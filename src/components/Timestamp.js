@@ -9,8 +9,9 @@
 
 
 const Timestamp = (props) => {
+    console.log('timestamp', props)
     return (
-      <span className="timestamp">{props.userData.timestamp}</span>
+      <span className="timestamp">{props.userData}</span>
 
     )
   }
