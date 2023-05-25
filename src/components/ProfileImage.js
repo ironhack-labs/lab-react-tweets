@@ -1,6 +1,7 @@
 function ProfileImage(props) {
+    console.log('adwad',props.image)
     return (
-        <image src="{props.userData.image}" className="profile" alt="profile"> </image>
+        <img src={props.image} className="profile" alt="profile"/>
     )
 }
 export default ProfileImage
