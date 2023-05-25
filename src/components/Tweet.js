@@ -4,12 +4,12 @@ import Message from './Message'
 import Timestamp from './Timestamp'
 import User from './User'
 
-function Tweet( props ) {
+function Tweet(props) {
   console.log('tweetArr', props.tweet.user.name )
   return (
     <div className='tweet'>
       <ProfileImage image={props.tweet.user.image} />
-      <h1>{props.tweet.user.name}</h1>
+      
 
     
         <div className="body">

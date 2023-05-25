@@ -1,8 +1,18 @@
-function Timestamp(props) {
-    return (
-        <span className='timestamp'>{props.userData.timestamp}</span>
+// function Timestamp(props) {
+//     return (
+//         <span className='timestamp'>{props.userData.timestamp}</span>
        
-    )
-}
+//     )
+// }
 
-export default Timestamp
+// export default Timestamp
+
+
+const Timestamp = (props) => {
+    return (
+      <span className="timestamp">{props.userData.timestamp}</span>
+
+    )
+  }
+
+  export default Timestamp
