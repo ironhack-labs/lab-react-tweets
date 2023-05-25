@@ -4,7 +4,7 @@ import User from "./User";
 function Tweet({ tweet }) {
   return (
     <div className="tweet">
-      <ProfileImage image={tweet.user.image} />
+      <ProfileImage imageUrl={tweet.user.image} />
 
       <div className="body">
         <div className="top">
