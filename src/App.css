@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+.body {
+  height: 50px;
+  width: 500px;
+}
+
+/* .top {
+  height: 100px;
+  width: 500px;
+} */
+
+.tweet {
+  width: 500;
+}
+
+.image {
+  height: 500px;
+}
