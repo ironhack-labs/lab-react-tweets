@@ -21,7 +21,7 @@ body {
   display: flex;
   font-size: 1.1rem;
   line-height: 18px;
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 
 .body {
@@ -44,7 +44,7 @@ body {
   height: 50px;
   border-radius: 50px;
   margin-right: 10px;
-  background-color: green;
+  /* background-color: green; */
 }
 
 .profile img {
@@ -52,7 +52,7 @@ body {
   height: 50px;
   border-radius: 50px;
   margin-right: 10px;
-  background-color: blue;
+  /* background-color: blue; */
 }
 
 .name {
