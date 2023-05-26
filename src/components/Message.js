@@ -1,7 +1,10 @@
 function Message({ message }) {
-    console.log("user name and handle comp", message);
+    console.log("message comp", message);
     return (
-        <p className="message"> { message } </p>
+        <div className="message">
+             <p > { message } </p>
+        </div>
+       
     );
   }
   export default Message;

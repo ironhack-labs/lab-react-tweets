@@ -1,5 +1,5 @@
 function Timestamp({ time }) {
-    console.log("user name and handle comp", time);
+    console.log("timestamp comp", time);
     return (
       <span className="top">
         <span className="timestamp"> { time } </span>
