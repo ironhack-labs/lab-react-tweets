@@ -37,7 +37,13 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      {tweetsArray.map((eachTweet) => {
+        return (
+          <div key={eachTweet.timestamp}>
+            <Tweet tweet={eachTweet} />
+          </div>
+        );
+      })}
     </div>
   );
 }
