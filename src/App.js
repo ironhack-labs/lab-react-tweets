@@ -1,11 +1,16 @@
 import "./App.css";
 import Tweet from "./components/Tweet";
+import Photo from "./components/ProfileImage";
+import User from "./components/User"
+import TimesTamp from "./components/Timestamp";
+import Message from "./components/Message"
+import Actions from "./components/Actions";
 
 const tweetsArray = [
   {
     user: {
       name: "Thoughts of Dog®",
-      image: "https://i.imgur.com/b0EdHVV.jpg",
+      url: "https://i.imgur.com/b0EdHVV.jpg",
       handle: "dog_feelings",
     },
     timestamp: "1h ago",
@@ -15,7 +20,7 @@ const tweetsArray = [
   {
     user: {
       name: "Thoughts of Dog®",
-      image: "https://i.imgur.com/b0EdHVV.jpg",
+      url: "https://i.imgur.com/b0EdHVV.jpg",
       handle: "dog_feelings",
     },
     timestamp: "2h ago",
@@ -25,7 +30,7 @@ const tweetsArray = [
   {
     user: {
       name: "Thoughts of Dog®",
-      image: "https://i.imgur.com/b0EdHVV.jpg",
+      url: "https://i.imgur.com/b0EdHVV.jpg",
       handle: "dog_feelings",
     },
     timestamp: "3h ago",
@@ -37,7 +42,20 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      <Tweet tweet={tweetsArray[0]} />
+
+
+      <Photo url={tweetsArray[0].user.url} />
+      <User name={tweetsArray[0].user.name} />
+      <TimesTamp timestamp={tweetsArray[0].timestamp} />
+      <Message message={tweetsArray[0].message} />
+      <Actions />
+
+
+
+
+      <Tweet tweet={tweetsArray[1]} />
+      <Tweet tweet={tweetsArray[2]} />
     </div>
   );
 }
