@@ -4,6 +4,7 @@ import Tweet from "./components/Tweet";
 const tweetsArray = [
   {
     user: {
+      id: 1,
       name: "Thoughts of Dog®",
       image:
         "https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/m3/tweet-user-photo.png",
@@ -15,6 +16,7 @@ const tweetsArray = [
   },
   {
     user: {
+      id: 2,
       name: "Thoughts of Dog®",
       image:
         "https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/m3/tweet-user-photo.png",
@@ -26,6 +28,7 @@ const tweetsArray = [
   },
   {
     user: {
+      id: 3,
       name: "Thoughts of Dog®",
       image:
         "https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/m3/tweet-user-photo.png",
@@ -40,7 +43,9 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      {tweetsArray.map((tweet) => {
+        return <Tweet key={tweet.id} tweet={tweet} />;
+      })}
     </div>
   );
 }
