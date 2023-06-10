@@ -1,5 +1,6 @@
 import ProfileImage from "./ProfileImage";
 import User from "./User";
+import Timestamp from "./Timestamp";
 
 function Tweet(props) {
   const src = props.tweet.user.image;
@@ -9,15 +10,14 @@ function Tweet(props) {
   return (
     <div className="tweet">
       <ProfileImage image={src} />
-      
 
       <div className="body">
         <div className="top">
           <span className="user">
             <User name={USER_NAME} handle={USER_HANDLE} />
           </span>
-
-          <span className="timestamp">{props.tweet.timestamp}</span>
+          <Timestamp time={props.tweet.timestamp} />{" "}
+          {/* passe par directement time={"2h ago"} */}
         </div>
 
         <p className="message">{props.tweet.message}</p>
