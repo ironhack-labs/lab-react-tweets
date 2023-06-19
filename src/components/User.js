@@ -4,6 +4,8 @@
 // >>> if not set, this function gives a WARNING: Assign arrow function to a variable before exporting as module defaulteslint
 // yet it is possible, but also a bad practice for debugging:
 // https://stackoverflow.com/questions/68783347/eslint-warning-assign-arrow-function-to-a-variable-before-exporting-as-module/69265156#69265156
+// or apply rule directly here:
+/*eslint import/no-anonymous-default-export: ["error", { allowArrowFunction: true }]*/
 export default ({userData}) => {
     return (
         <span className="user">
