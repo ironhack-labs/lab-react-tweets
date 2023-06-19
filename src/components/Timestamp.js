@@ -1,4 +1,6 @@
-function timestamp(props) {
-  <span className="timestamp">{props.tweet.timestamp}</span>;
+function Timestamp(props) {
+  return (
+  <span className="timestamp">{props.time}</span>
+  );
 }
-export default timestamp;
+export default Timestamp;

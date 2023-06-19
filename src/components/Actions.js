@@ -1,4 +1,5 @@
-function actions(props) {
+function Actions(props) {
+  return (
 <div className="actions">
           {/* Font Awesome icons */}
           <i className="far fa-comment"></i>
@@ -6,6 +7,7 @@ function actions(props) {
           <i className="far fa-heart"></i>
           <i className="fas fa-share"></i>
         </div>
+        )
 }
 
-export default actions;
+export default Actions;
