@@ -1,5 +1,5 @@
 function Actions(props){
-    console.log(props);
+    // console.log(props);
     return(
         <div className="actions">
           {/* Font Awesome icons */}
