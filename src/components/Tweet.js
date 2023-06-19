@@ -1,12 +1,13 @@
+import ProfileImage from "./components/ProfileImage";
+
+
+
+
 function Tweet(props) {
   console.log(props)
   return (
     <div className="tweet">
-      <img
-        src={props.tweet.user.image}
-        className="profile"
-        alt="profile"
-      />
+       <ProfileImage image={props.tweet.user.image} />
 
       <div className="body">
         <div className="top">
