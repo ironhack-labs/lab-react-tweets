@@ -1,6 +1,6 @@
 function Message(props){
     return(
-        <p className="message"> {props.tweet.message} </p>
+        <p className="message"> {props.message} </p>
     );
 }
 
