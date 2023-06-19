@@ -37,7 +37,29 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+
+      {/* <Tweet tweet={ tweetsArray[0] }/> */} {/* --> Tweet(props){} --> {props.tweet.user.name} */}
+      {/* <Tweet tweet={ tweetsArray[0] }/> */} {/* --> Tweet({tweet}){} --> {tweet.user.name} */} {/* using destructuring */}
+      
+      {/*
+      <Tweet tweet={ tweetsArray[0] }/>
+      <Tweet tweet={ tweetsArray[1] }/>
+      <Tweet tweet={ tweetsArray[2] }/>
+      */}
+
+      {
+        // Array.forEach cannot be used because it only returns undefined
+        // tweetsArray.map(tweetElement => {
+        //   return <Tweet tweet={ tweetElement }/>
+        // })
+        // // https://stackblitz.com/edit/react-xptvgf
+        // mind the parentheses to skip the braces / curly brackets 
+        // allowing to still have a line break **and** the implicit return statement
+        tweetsArray.map(tweetElement => (
+          <Tweet tweet={ tweetElement }/>
+        ))
+      }
+
     </div>
   );
 }
