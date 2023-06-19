@@ -1,5 +1,5 @@
 function User(props) {
-    console.log(props);
+    // console.log(props);
     return(
         <span className="user">
             <span className="name">{props.userData.name}</span>
