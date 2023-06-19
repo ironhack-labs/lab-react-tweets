@@ -1,5 +1,5 @@
 function Message(props){
-    console.log(props);
+    // console.log(props);
     return(
         <p className="message">{props.message}</p>
     )
