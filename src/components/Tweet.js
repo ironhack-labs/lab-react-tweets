@@ -1,39 +1,30 @@
-function Tweet() {
-  return (
-    <div className="tweet">
-      <img
-        src="https://i.imgur.com/9yw1Fyw.jpg"
-        className="profile"
-        alt="profile"
-      />
+/** @format */
 
-      <div className="body">
-        <div className="top">
-          <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
-          </span>
+import ProfileImage from "./ProfileImage";
+import User from "./User";
+import Timestamp from "./Timestamp";
+import Message from "./Message";
+import Actions from "./Actions";
 
-          <span className="timestamp">Nov 30, 2020</span>
-        </div>
+function Tweet(props) {
+	return (
+		<div className="tweet">
+			<ProfileImage imgProfile={props.tweet.user.image} />
 
-        <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
-        </p>
+			<div className="body">
+				<div className="top">
+					<User userProfile={props.tweet.user} />
 
-        <div className="actions">
-          {/* Font Awesome icons */}
-          <i className="far fa-comment"></i>
-          <i className="fas fa-retweet"></i>
-          <i className="far fa-heart"></i>
-          <i className="fas fa-share"></i>
-        </div>
-      </div>
+					<Timestamp timestampProfile={props.tweet.timestamp} />
+				</div>
+				<Message messageProfile={props.tweet.message} />
 
-      <i className="fas fa-ellipsis-h"></i>
-    </div>
-  );
+				<Actions />
+			</div>
+
+			<i className="fas fa-ellipsis-h"></i>
+		</div>
+	);
 }
 
 export default Tweet;
