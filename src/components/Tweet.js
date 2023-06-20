@@ -1,5 +1,5 @@
-import ProfileImage from "./components/ProfileImage";
-import User from "./components/User";
+import ProfileImage from "./ProfileImage";
+import User from "./User";
 import Timestamp from "./Timestamp";
 import Message from "./Message";
 import Actions from "./Actions";
