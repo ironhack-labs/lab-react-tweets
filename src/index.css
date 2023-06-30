@@ -23,6 +23,12 @@ body {
   line-height: 18px;
 }
 
+.profileImage{
+  width: 6vh;
+  height: 6vh;
+  border-radius: 50%; 
+}
+
 .body {
   display: flex;
   flex-direction: column;
