@@ -1,4 +1,11 @@
-function Tweet() {
+import User from "./User";
+import Timestamp from "./Timestamp";
+import Actions from "./Actions";
+import Message from "./Message";
+
+function Tweet(props) {
+  console.log("props", props);
+
   return (
     <div className="tweet">
       <img
@@ -6,6 +13,7 @@ function Tweet() {
         className="profile"
         alt="profile"
       />
+      <img src={props.tweet.user.image} className="profile" alt="profile" />
 
       <div className="body">
         <div className="top">
@@ -28,7 +36,11 @@ function Tweet() {
           <i className="fas fa-retweet"></i>
           <i className="far fa-heart"></i>
           <i className="fas fa-share"></i>
+          <User tweet={props.tweet}></User>
+          <Timestamp tweet={props.tweet}></Timestamp>
         </div>
+        <Message tweet={props.tweet}></Message>
+        <Actions />
       </div>
 
       <i className="fas fa-ellipsis-h"></i>
