@@ -34,10 +34,18 @@ const tweetsArray = [
   },
 ];
 
+
+
 function App() {
+  const displayAllTweets = () => {
+    return tweetsArray.map((tweet, index) => (
+      <Tweet key={index} tweet={tweet} />
+    ));
+  }
   return (
     <div className="App">
-      <Tweet />
+      {/* <Tweet tweet={ tweetsArray[0] } /> */}
+      {displayAllTweets()}
     </div>
   );
 }
