@@ -1,0 +1,13 @@
+
+const User = ({ name, handle, timestamp }) => {
+  return (
+    <div>
+      <span className="user">
+        <span className="name">{name}</span>
+        <span className="handle">{handle}</span>
+      </span>
+    </div>
+  );
+};
+
+export default User;
