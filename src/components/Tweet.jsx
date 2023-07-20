@@ -5,7 +5,7 @@ function Tweet(props) {
   return (
     <div className="tweet">
       <img
-        src="https://i.imgur.com/9yw1Fyw.jpg"
+        src={tweet.user.image}
         className="profile"
         alt="profile"
       />
