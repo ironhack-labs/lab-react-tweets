@@ -1,29 +1,33 @@
-import Actions from "./Actions";
-import Message from "./Message";
-import ProfileImage from "./ProfileImage";
-import Timestamp from "./Timestamp";
-import User from "./User";
+import ProfileImage from "./ProfileImage"
+import User from "./User"
+import Timestamp from "./Timestamp"
+import Message from "./Message"
+import Actions from "./Actions"
 
-function Tweet(props) {
+function Tweet(props) {  
+  const {
+    tweet: { user, timestamp, message },
+  } = props
+  const { image } = user
+
   return (
     <div className="tweet">
-      <ProfileImage image={props.tweet.user.image}/>
+      <ProfileImage image={image} />
 
       <div className="body">
         <div className="top">
-          <User userInfo={props.tweet.user}/>
-
-          <Timestamp timestamp={props.tweet.timestamp}/>
+          <User userData={user} />
+          <Timestamp time={timestamp} />
         </div>
 
-        <Message message={props.tweet.message}/>
+        <Message message={message} />
 
-        <Actions/>
+        <Actions />
       </div>
 
       <i className="fas fa-ellipsis-h"></i>
     </div>
-  );
+  )
 }
 
 export default Tweet;
