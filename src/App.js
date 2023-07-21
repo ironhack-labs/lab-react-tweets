@@ -38,6 +38,11 @@ function App() {
   return (
     <div className="App">
       <Tweet />
+      {
+        tweetsArray.map((tweet, i) => (
+          <Tweet tweet={tweet} key={i} />
+        ))
+      }
     </div>
   );
 }
