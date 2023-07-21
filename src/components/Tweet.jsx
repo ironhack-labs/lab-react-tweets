@@ -4,24 +4,27 @@ import Timestamp from "./Timestamp"
 import Message from "./Message"
 import Actions from "./Actions"
 
-function Tweet(props) {
-  const { tweet } = props
-  
+function Tweet(props) {  
+  const {
+    tweet: { user, timestamp, message },
+  } = props
+  const { image } = user
+
   return (
     <div className="tweet">
-      <ProfileImage image={tweet.user.image} />
+      <ProfileImage image={image} />
 
       <div className="body">
         <div className="top">
-          <User userData={tweet.user} />
-          <Timestamp time={tweet.timestamp} />
+          <User userData={user} />
+          <Timestamp time={timestamp} />
         </div>
 
-        <Message message={tweet.message} />
+        <Message message={message} />
         
         <Actions />
       </div>
-      
+
       <i className="fas fa-ellipsis-h"></i>
     </div>
   )
