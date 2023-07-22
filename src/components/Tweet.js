@@ -1,39 +1,24 @@
 import React from "react";
+import ProfileImage from "./ProfileImage";
+import User from "./User";
+import Timestamp from "./Timestamp";
+import Message from "./Message";
+import Actions from "./Actions";
 
 function Tweet({tweet}) {
-  const { name, handle, image } = tweet.user;
-  const { timestamp, message } = tweet;
   return (
     <div className="tweet">
-      <img
-        src={image}
-        className="profile"
-        alt="profile"
-      />
-
+      <ProfileImage image={tweet.user.image} />
       <div className="body">
         <div className="top">
-          <span className="user">
-            <span className="name">{name}</span>
-            <span className="handle">{handle}</span>
-          </span>
-
-          <span className="timestamp">{timestamp}</span>
+        <User userData={tweet.user} />
+        <Timestamp time={tweet.timestamp} />
         </div>
 
-        <p className="message">
-          {message}
-        </p>
-
-        <div className="actions">
-          {/* Font Awesome icons */}
-          <i className="far fa-comment"></i>
-          <i className="fas fa-retweet"></i>
-          <i className="far fa-heart"></i>
-          <i className="fas fa-share"></i>
-        </div>
+        <Message message={tweet.message} />
+        <Actions actions={tweet.actions} />
       </div>
-
+        
       <i className="fas fa-ellipsis-h"></i>
     </div>
   );
