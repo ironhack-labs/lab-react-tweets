@@ -395,14 +395,14 @@ When done, import the `Message` component and render it in the `Tweet.jsx` in th
 
 **Extract HTML**
 
-Extract the existing message `div.actions` tag and render it through the `Actions` component:
+Extract the existing `div.actions` tag and its content and render it through the `Actions` component:
 
 ```jsx
 <div className="actions">
-  <i class="far fa-comment"></i>
-  <i class="fas fa-retweet"></i>
-  <i class="far fa-heart"></i>
-  <i class="fas fa-share"></i>
+  <i class="far fa-comment" data-testid="comment-icon"></i>
+  <i class="fas fa-retweet" data-testid="retweet-icon"></i>
+  <i class="far fa-heart" data-testid="heart-icon"></i>
+  <i class="fas fa-share" data-testid="share-icon"></i>
 </div>
 ```
 
