@@ -1,11 +1,13 @@
 import "./App.css";
 import Tweet from "./components/Tweet";
 
+
 const tweetsArray = [
   {
     user: {
       name: "Thoughts of Dog®",
-      image: "https://i.imgur.com/b0EdHVV.jpg",
+      image:
+        "https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/m3/tweet-user-photo.png",
       handle: "dog_feelings",
     },
     timestamp: "1h ago",
@@ -15,7 +17,8 @@ const tweetsArray = [
   {
     user: {
       name: "Thoughts of Dog®",
-      image: "https://i.imgur.com/b0EdHVV.jpg",
+      image:
+        "https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/m3/tweet-user-photo.png",
       handle: "dog_feelings",
     },
     timestamp: "2h ago",
@@ -25,7 +28,8 @@ const tweetsArray = [
   {
     user: {
       name: "Thoughts of Dog®",
-      image: "https://i.imgur.com/b0EdHVV.jpg",
+      image:
+        "https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/m3/tweet-user-photo.png",
       handle: "dog_feelings",
     },
     timestamp: "3h ago",
@@ -35,11 +39,15 @@ const tweetsArray = [
 ];
 
 function App() {
-  return (
+  return(
     <div className="App">
-      <Tweet />
-    </div>
-  );
+  
+    {tweetsArray.map((tweet) => {
+      return (<div> 
+        <Tweet tweet={tweet} />
+      </div>)
+    })}
+    </div>)
 }
 
 export default App;
