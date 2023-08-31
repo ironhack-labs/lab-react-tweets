@@ -34,12 +34,24 @@ const tweetsArray = [
   },
 ];
 
+
+
+
 function App() {
   return (
     <div className="App">
-      <Tweet />
-    </div>
-  );
-}
+    {tweetsArray.map ((tweet) => {
+      return <Tweet tweet={tweet} key={tweet.timestamp}/>
+    })}
 
+
+
+
+  </div>
+);
+}
+        
+        Expand Down
 export default App;
+
+
