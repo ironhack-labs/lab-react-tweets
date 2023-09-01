@@ -14,7 +14,7 @@ describe("Timestamp component", () => {
   // };
 
   test("renders timestamp correctly", () => {
-    render(<Timestamp time="1h ago" />);
+    render(<Timestamp timestamp="1h ago" />);
     const timestamp = screen.getByText("1h ago");
 
     expect(timestamp).toBeInTheDocument();
