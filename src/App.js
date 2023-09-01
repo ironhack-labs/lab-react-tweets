@@ -1,5 +1,9 @@
 import './App.css';
-import Tweet from './components/Tweet';
+import Actions from './components/Actions';
+import Message from './components/Message';
+import ProfileImage from './components/ProfileImage';
+import Timestamp from './components/Timestamp';
+import User from './components/User';
 
 const tweetsArray = [
   {
@@ -36,7 +40,30 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet tweet={tweetsArray[0]} />
+      {tweetsArray.map(function (tweet) {
+        return (
+          <div key={tweet.id}>
+            <div className="tweet">
+              <ProfileImage image={tweet.user.image} />
+
+              <div className="body">
+                <div className="top">
+                  <User userData={tweet.user} />
+                  <Timestamp time={tweet.timestamp} />
+                </div>
+
+                <Message message={tweet.message} />
+
+                <div className="actions">
+                  <Actions />
+                </div>
+              </div>
+
+              <i className="fas fa-ellipsis-h"></i>
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }
