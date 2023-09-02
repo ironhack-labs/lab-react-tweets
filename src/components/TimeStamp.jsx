@@ -1,10 +1,10 @@
 function TimeStamp (props) {
 
-    const { timestamp } = props;
+    const { time } = props;
 
     return (
         <>
-            <span className="timestamp"> { timestamp } </span>
+            <span className="timestamp"> { time } </span>
         </>
     )
 }

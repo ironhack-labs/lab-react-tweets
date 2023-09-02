@@ -1,10 +1,10 @@
 function Message (props) {
 
-    const { message_content } = props;
+    const { message } = props;
 
     return (
         <>
-            <p className="message"> { message_content } </p>
+            <p className="message"> { message } </p>
         </>
     )
 }
