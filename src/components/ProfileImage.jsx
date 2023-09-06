@@ -1,6 +1,6 @@
 function ProfileImage (props){
     return ( 
-    <img src={props.profileImage} className="profile" alt="profile" />
+    <img src={props.image} className="profile" alt="profile" />
 )
 }
 export default ProfileImage;
