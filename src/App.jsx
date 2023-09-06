@@ -1,11 +1,13 @@
 import "./App.css";
 import Tweet from "./components/Tweet";
 
+
 const tweetsArray = [
   {
     user: {
       name: "Thoughts of Dog®",
-      image: "https://i.imgur.com/b0EdHVV.jpg",
+      image:
+        "https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/m3/tweet-user-photo.png",
       handle: "dog_feelings",
     },
     timestamp: "1h ago",
@@ -15,7 +17,8 @@ const tweetsArray = [
   {
     user: {
       name: "Thoughts of Dog®",
-      image: "https://i.imgur.com/b0EdHVV.jpg",
+      image:
+        "https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/m3/tweet-user-photo.png",
       handle: "dog_feelings",
     },
     timestamp: "2h ago",
@@ -25,7 +28,8 @@ const tweetsArray = [
   {
     user: {
       name: "Thoughts of Dog®",
-      image: "https://i.imgur.com/b0EdHVV.jpg",
+      image:
+        "https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/m3/tweet-user-photo.png",
       handle: "dog_feelings",
     },
     timestamp: "3h ago",
@@ -37,7 +41,9 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+     <Tweet user={tweetsArray[0].user} timestamp={tweetsArray[0].timestamp} message={tweetsArray[0].message}/>
+     <Tweet user={tweetsArray[1].user} timestamp={tweetsArray[1].timestamp} message={tweetsArray[1].message}/>
+     <Tweet user={tweetsArray[2].user} timestamp={tweetsArray[2].timestamp} message={tweetsArray[2].message}/>
     </div>
   );
 }
