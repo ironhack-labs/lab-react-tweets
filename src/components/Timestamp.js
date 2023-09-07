@@ -1,6 +1,10 @@
 function Timestamp(props){
+
+    console.log("=========Profile Image==============")
+    console.log(props)
+    console.log("=========Profile Image==============")
     return (
-        <span className="timestamp"> TWEET_TIMESTAMP </span>
+        <span className="timestamp"> {props.time} </span>
     )
 }
 
