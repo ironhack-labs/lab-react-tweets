@@ -28,6 +28,5 @@ function Tweet({ tweet }) {
 }
 
 
-
 export default Tweet; //Export
 
