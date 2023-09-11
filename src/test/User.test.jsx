@@ -15,7 +15,7 @@ describe("User component", () => {
 
   test("renders user's name and handle correctly", () => {
     render(
-      <User name={"Thoughts of Dog®"} handle={"dog_feelings"} />
+      <User name={tweet.user.name} handle={tweet.user.handle}  />
     );
     const nameText = screen.getByText("Thoughts of Dog®");
     const handleText = screen.getByText("@dog_feelings");
