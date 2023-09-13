@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import Tweet from "./components/Tweet";
 
@@ -7,10 +8,10 @@ const tweetsArray = [
       name: "Thoughts of Dog®",
       image: "https://i.imgur.com/b0EdHVV.jpg",
       handle: "dog_feelings",
+      timestamp: "1h ago",
+      message:
+        "the human likes to say. that i live here rent free. but i would argue. this housing accommodation. is my payment. for a lifetime of love. and excellent company",
     },
-    timestamp: "1h ago",
-    message:
-      "the human likes to say. that i live here rent free. but i would argue. this housing accommodation. is my payment. for a lifetime of love. and excellent company",
   },
   {
     user: {
@@ -37,7 +38,9 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      {tweetsArray.map((tweet, index) => (
+        <Tweet key={index} tweet={tweet} />
+      ))}
     </div>
   );
 }
