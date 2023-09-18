@@ -40,3 +40,26 @@
 .read-the-docs {
   color: #888;
 }
+
+.btn {
+  color:blue;
+  
+  }
+
+  .blog-preview {
+    padding: 10px 16px;
+    margin: 20px 0;
+    border-bottom: 1px solid black;
+  }
+
+
+  .blog-preview:hover {
+  box-shadow: 1px 3px 5px black
+  }
+
+  .blog-preview h2 {
+font-size:20px;
+color:red;
+margin-bottom:8px;
+
+  }

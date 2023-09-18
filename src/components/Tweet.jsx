@@ -3,8 +3,9 @@ import User from "./User";
 import Timestamp from "./Timestamp";
 import Message from "./Message";
 import Actions from "./Actions";
-
-
+import Button from "./Button";
+import Home from "./State";
+import OutputtingList from "./OutputtingList"
 
 function Tweet(props) {
   console.log(props);
@@ -20,9 +21,15 @@ function Tweet(props) {
         <Message message={props.tweet.message} />
 
         <Actions/>
+
+        <Button/>
+        <Home/>
+        <OutputtingList/>
       </div>
 
+
       <i className="fas fa-ellipsis-h"></i>
+      <OutputtingList/>
     </div>
   );
 }
