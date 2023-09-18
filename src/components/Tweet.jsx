@@ -3,12 +3,12 @@ import User from "./User";
 import Timestamp from "./Timestamp";
 import Message from "./Message";
 import Actions from "./Actions";
-import Button from "./Button";
-import Home from "./State";
-import OutputtingList from "./OutputtingList"
+// import Button from "./Button";
+// import Home from "./State";
+// import OutputtingList from "./OutputtingList"
 
 function Tweet(props) {
-  console.log(props);
+  console.log("Tweet", props);
   return (
     <div className="tweet">
        <ProfileImage image= {props.tweet.user.image}/>
@@ -22,14 +22,14 @@ function Tweet(props) {
 
         <Actions/>
 
-        <Button/>
+        {/* <Button/>
         <Home/>
-        <OutputtingList/>
+        <OutputtingList/> */}
       </div>
 
 
       <i className="fas fa-ellipsis-h"></i>
-      <OutputtingList/>
+  
     </div>
   );
 }

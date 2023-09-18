@@ -1,4 +1,5 @@
 const ProfileImage = (props) => {
+  console.log("ProfileImage", props)
   return (
     
       <img src={props.image} className="profile" alt="profile" />

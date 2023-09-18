@@ -1,4 +1,5 @@
 const User = (props) => {
+  console.log("User", props)
   return (
     <div>
       <span className="user">
