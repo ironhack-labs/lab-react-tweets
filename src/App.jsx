@@ -42,11 +42,19 @@ const tweetsArray = [
 
 function App() {
   return (
+
     <div className="App">
-      <Tweet  tweet={ tweetsArray[0] } />
-      <Tweet  tweet={ tweetsArray[1] } />
-      <Tweet  tweet={ tweetsArray[2] } />
-    </div>
+    {/* <Tweet image={tweetsArray[0].user.image} tweet={tweetsArray[0]} /> */}
+
+    {tweetsArray.map((eachTweet, i) => {
+      return <Tweet tweet={eachTweet} key={i + eachTweet.user.name} />;
+    })}
+  </div>
+    // <div className="App">
+    //   <Tweet  tweet={ tweetsArray[0] } />
+    //   <Tweet  tweet={ tweetsArray[1] } />
+    //   <Tweet  tweet={ tweetsArray[2] } />
+    // </div>
   );
 }
 
