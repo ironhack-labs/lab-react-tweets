@@ -1,12 +1,10 @@
-function User({ name, handle }) {
-    return (
-        <>
-            <span className="user">
-                <span className="name">{name}</span>
-                <span className="handle">@{handle}</span>
-            </span>
-        </>
-    )
+function User({ props }) {
+  return (
+    <span className="user">
+      <span className="name">{props.name}</span>
+      <span className="handle">@{props.handle}</span>
+    </span>
+  );
 }
 
 export default User;

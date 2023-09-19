@@ -1,24 +1,24 @@
 // src/Tweet.jsx
 
 import React from "react";
-import ProfileImage from "./ProfileImage/"; 
+import ProfileImage from "./ProfileImage/";
 import User from "./User";
 import Timestamp from "./Timestamp";
-import Message from "./Message"; 
+import Message from "./Message";
 import Actions from "./Actions";
 
-function Tweet({ tweet }) {
+function Tweet({ props }) {
   return (
     <div className="tweet">
       <div className="user-info">
-      <ProfileImage image={IMAGE_URL} />
+        <ProfileImage image={IMAGE_URL} />
         <div className="user-details">
-          <p className="user-name">{tweet.user.name}</p>
-          <p className="user-handle">{tweet.user.handle}</p>
+          <p className="user-name">{props.user.name}</p>
+          <p className="user-handle">{props.user.handle}</p>
         </div>
       </div>
-      <Message message={tweet.message} />
-      <Timestamp time={tweet.timestamp} />
+      <Message message={props.tweet.message} />
+      <Timestamp time={props.tweet.timestamp} />
       <Actions />
     </div>
   );
