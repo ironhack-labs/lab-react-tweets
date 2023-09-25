@@ -1,6 +1,6 @@
-function Timestamp({timestamp}) {
+function Timestamp({time}) {
     return (
-        <span className="timestamp">{timestamp}</span>
+        <span className="timestamp">{time}</span>
     )
 }
 
