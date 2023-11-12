@@ -1,6 +1,11 @@
+/* eslint-disable no-unused-vars */
 import "./App.css";
+import Actions from "./components/Actions"
+import Message from "./components/Message"
+import ProfileImage from "./components/ProfileImage"
+import Timestamp from "./components/Timestamp"
 import Tweet from "./components/Tweet";
-
+import User from "./components/User"
 const tweetsArray = [
   {
     user: {
