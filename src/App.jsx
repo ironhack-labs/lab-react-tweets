@@ -1,11 +1,17 @@
+/* eslint-disable no-unused-vars */
 import "./App.css";
+import Actions from "./components/Actions"
+import Message from "./components/Message"
+import ProfileImage from "./components/ProfileImage"
+import Timestamp from "./components/Timestamp"
 import Tweet from "./components/Tweet";
-
+import User from "./components/User"
 const tweetsArray = [
   {
     user: {
       name: "Thoughts of Dog®",
-      image: "https://i.imgur.com/b0EdHVV.jpg",
+      image:
+        "https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/m3/tweet-user-photo.png",
       handle: "dog_feelings",
     },
     timestamp: "1h ago",
@@ -15,7 +21,8 @@ const tweetsArray = [
   {
     user: {
       name: "Thoughts of Dog®",
-      image: "https://i.imgur.com/b0EdHVV.jpg",
+      image:
+        "https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/m3/tweet-user-photo.png",
       handle: "dog_feelings",
     },
     timestamp: "2h ago",
@@ -25,7 +32,8 @@ const tweetsArray = [
   {
     user: {
       name: "Thoughts of Dog®",
-      image: "https://i.imgur.com/b0EdHVV.jpg",
+      image:
+        "https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/m3/tweet-user-photo.png",
       handle: "dog_feelings",
     },
     timestamp: "3h ago",
