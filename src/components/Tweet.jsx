@@ -1,29 +1,25 @@
-function Tweet() {
+import ProfileImage from "./ProfileImage";
+import User from "./User";
+import Timestamp from "./Timestamp";
+
+function Tweet({ tweet }) {
+  const IMAGE_URL = tweet.user.image
+  const USER_NAME = tweet.user.name
+  const USER_HANDLE = tweet.user.handle
+  const TWEET_TIMESTAMP = tweet.timestamp
   return (
     <div className="tweet">
-      <img
-        src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/ih_logo.jpeg"
-        className="profile"
-        alt="profile"
-      />
-
+      <ProfileImage image={IMAGE_URL} />
       <div className="body">
         <div className="top">
-          <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
-          </span>
-
-          <span className="timestamp">Nov 30, 2020</span>
+          <User name={USER_NAME} handle={USER_HANDLE} />
+          <Timestamp time={TWEET_TIMESTAMP} />
+          {/* <span className="timestamp">{tweet.timestamp}</span> */}
         </div>
 
-        <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
-        </p>
+        <p className="message">{tweet.message}</p>
 
         <div className="actions">
-          {/* Font Awesome icons */}
           <i className="far fa-comment" data-testid="comment-icon"></i>
           <i className="fas fa-retweet" data-testid="retweet-icon"></i>
           <i className="far fa-heart" data-testid="heart-icon"></i>
