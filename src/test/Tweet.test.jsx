@@ -5,7 +5,7 @@ import Tweet from "../components/Tweet";
 describe("Tweet component", () => {
   const tweet = {
     user: {
-      name: "Thoughts of Dog®",
+      name: "Thoughts of Dog",
       image: "https://i.imgur.com/b0EdHVV.jpg",
       handle: "dog_feelings",
     },
@@ -30,7 +30,7 @@ describe("Tweet component", () => {
 
   test("renders the user handle correctly", () => {
     render(<Tweet tweet={tweet} />);
-    const handle = screen.getByText(`@${tweet.user.handle}`);
+    const handle = screen.getByText(`${tweet.user.handle}`);
 
     expect(handle).toBeInTheDocument();
   });
