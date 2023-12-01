@@ -19,6 +19,7 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -47,9 +48,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -59,79 +62,6 @@ button:focus-visible {
   padding: 20px;
 }
 
-.tweet {
-  margin: 0 auto;
-  min-width: 480px;
-  max-width: 640px;
-  min-height: 80px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  display: flex;
-  font-size: 1.1rem;
-  line-height: 18px;
-}
-
-.body {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.top {
-  display: flex;
-  line-height: 1.4rem;
-}
-
 .more {
   margin-left: 20px;
-}
-
-.profile {
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-  margin-right: 10px;
-  border: 1px solid #ccc;
-}
-
-.name {
-  font-weight: bold;
-  margin-bottom: 0.5em;
-  margin-right: 0.3em;
-}
-
-.handle {
-  color: #536471;
-  margin-left: 3px;
-  margin-right: 3px;
-}
-
-.timestamp {
-  color: #536471;
-  font-size: 1.1rem;
-}
-
-.timestamp::before {
-  content: "·";
-  padding-right: 0.3em;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-
-.message {
-  text-align: left;
-  font-stretch: 100%;
-  font-weight: 400;
-  line-height: 1.6rem;
-  overflow-wrap: break-word;
-  white-space: pre-wrap;
-}
-
-.actions {
-  padding: 5px 5px;
-  width: 360px;
-  display: flex;
-  justify-content: space-between;
-  color: #536471;
-  margin: 0 auto;
 }
