@@ -1,0 +1,22 @@
+.tweet {
+    margin: 0 auto;
+    min-width: 480px;
+    max-width: 640px;
+    min-height: 80px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: flex;
+    font-size: 1.1rem;
+    line-height: 18px;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.top {
+    display: flex;
+    line-height: 1.4rem;
+}
