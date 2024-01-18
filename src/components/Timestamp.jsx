@@ -3,5 +3,3 @@ const Timestamp = (props) => {
 };
 
 export default Timestamp;
-
-//wqowkqok asmdamsda
