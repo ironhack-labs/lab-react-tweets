@@ -16,12 +16,14 @@ function Tweet(props) {
       <div className="body">
         <div className="top">
           <User
-            userName={props.tweet.user.name}
-            userHandle={props.tweet.user.handle}
+            name={props.tweet.user.name}
+            handle={props.tweet.user.handle}
           ></User>
-          <Timestamp timeStamp={props.tweet.timestamp}></Timestamp>
+          <Timestamp time={props.tweet.timestamp}></Timestamp>
         </div>
+
         <Message message={props.tweet.message}></Message>
+
         <Actions></Actions>
       </div>
       <i className="fas fa-ellipsis-h"></i>
