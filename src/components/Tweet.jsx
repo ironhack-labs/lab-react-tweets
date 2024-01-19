@@ -7,6 +7,8 @@ import User from "./User";
 function Tweet(props) {
   //console.log("tweetlog");
   console.log(props.tweet.user.name);
+  console.log(typeof props);
+  // { tweet.user.image,  } = props;
 
   return (
     <div className="tweet">
