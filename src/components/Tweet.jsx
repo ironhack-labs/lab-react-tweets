@@ -1,34 +1,25 @@
-function Tweet() {
+import ProfileImage from "../components/ProfileImage"
+import Actions from "../components/Actions"
+import Message from "../components/Message"
+import Timestramps from "../components/Timestramp"
+import User from "../components/User"
+
+function Tweet({ tweet }) {
   return (
     <div className="tweet">
-      <img
-        src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/ih_logo.jpeg"
-        className="profile"
-        alt="profile"
-      />
+      <ProfileImage image={tweet.user.image} />
 
       <div className="body">
         <div className="top">
-          <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
-          </span>
+     {/* AQUI SE TIENE UN EJEMPLO DE PASAR DOS VALORES A TRAVES DE UNA MISMA ETIQUETA USER      */}
+          <User name={tweet.user.name} handle={tweet.user.handle} />
 
-          <span className="timestamp">Nov 30, 2020</span>
+          <Timestramps timestramps={tweet.timestamp} />
         </div>
 
-        <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
-        </p>
-
-        <div className="actions">
-          {/* Font Awesome icons */}
-          <i className="far fa-comment" data-testid="comment-icon"></i>
-          <i className="fas fa-retweet" data-testid="retweet-icon"></i>
-          <i className="far fa-heart" data-testid="heart-icon"></i>
-          <i className="fas fa-share" data-testid="share-icon"></i>
-        </div>
+        <Message message={tweet.message} />
+{/* EN EL CASO DEL ACTIONS NO TOCARIA DESTRUCTURARLO EN EL ACTIONS.JSX */}
+        <Actions />
       </div>
 
       <i className="fas fa-ellipsis-h"></i>
