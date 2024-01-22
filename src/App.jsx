@@ -1,5 +1,8 @@
 import "./App.css";
-import Tweet from "./components/Tweet";
+import Tweet from "./components/Tweet.jsx";
+
+//npm create react first command on terminal
+
 
 const tweetsArray = [
   {
@@ -40,9 +43,30 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      <Tweet tweet={tweetsArray[0]}/>
+      <Tweet tweet={tweetsArray[1]}></Tweet>
+      <Tweet tweet={tweetsArray[2]}></Tweet>
+
+      
     </div>
   );
 }
 
+// <Tweet tweet={tweetsArray[0]}/>  we create props { tweet: tweetsArray[0]}!!!
+/* so props { tweet: {
+    user: {
+      name: "Thoughts of Dog®",
+      image:
+        "https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/m3/tweet-user-photo.png",
+      handle: "dog_feelings",
+    },
+    timestamp: "1h ago",
+    message:
+      "the human likes to say. that i live here rent free. but i would argue. this housing accommodation. is my payment. for a lifetime of love. and excellent company",
+  }} */
+
+
+// we pass banana={tweetsArray[0]} so that the console.log(props.banana)
+// on the Tweet component with the props works and see the object on the browser.
+// see about 2:12:30 on the video for banana and tweet and console.log()
 export default App;
