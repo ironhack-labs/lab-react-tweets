@@ -1,8 +1,10 @@
-import "./App.css";
+import { v4 as uuidv4 } from 'uuid';
 import Tweet from "./components/Tweet";
+import "./App.css";
 
 const tweetsArray = [
   {
+
     user: {
       name: "Thoughts of Dog®",
       image:
@@ -13,7 +15,8 @@ const tweetsArray = [
     message:
       "the human likes to say. that i live here rent free. but i would argue. this housing accommodation. is my payment. for a lifetime of love. and excellent company",
   },
-  {
+  { 
+    
     user: {
       name: "Thoughts of Dog®",
       image:
@@ -25,6 +28,7 @@ const tweetsArray = [
       "sometimes. the human presses their noggin against mine. to figure out what i’m thinking. so i just think really hard. about how much i love them. and hope they figure it out",
   },
   {
+  
     user: {
       name: "Thoughts of Dog®",
       image:
@@ -40,7 +44,21 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      {/* <Tweet
+       tweet={tweetsArray[0]}
+      />
+      <Tweet
+       tweet={tweetsArray[1]}
+      />
+      <Tweet
+       tweet={tweetsArray[2]}
+      /> */}
+
+      {
+        tweetsArray.map((tweet)=>{
+          return <Tweet key={uuidv4()} tweet={tweet} />
+        })      
+      }
     </div>
   );
 }
