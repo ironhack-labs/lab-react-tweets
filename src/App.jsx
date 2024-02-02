@@ -1,5 +1,5 @@
-import "./App.css";
 import Tweet from "./components/Tweet";
+import "./App.css";
 
 const tweetsArray = [
   {
