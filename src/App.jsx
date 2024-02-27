@@ -1,6 +1,5 @@
 import "./App.css";
 import Tweet from "./components/Tweet";
-import ReactPlayer from "react-player";
 
 const tweetsArray = [
   {
@@ -41,11 +40,12 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+    {
+      tweetsArray.map((tweet) => {
+        return <Tweet key= {tweet.message} tweet={tweet} />
+      })
 
-      <Tweet tweet={ tweetsArray[0] }></Tweet>
-      <Tweet tweet={ tweetsArray[1] }></Tweet>
-      <Tweet tweet={ tweetsArray[2] }></Tweet>
+    }
 
     </div>
   );

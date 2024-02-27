@@ -1,33 +1,22 @@
-import tweetsArray from "../App";
+import ProfileImage from "./ProfileImage";
+import User from "./User";
+import Timestamp from "./Timestamp";
+import Message from "./Message";
+import Actions from "./Actions";
 
-function Tweet(props) {
+function Tweet({ tweet }) {
   return (
     <div className="tweet">
-      <img
-        src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/ih_logo.jpeg"
-        className="profile"
-        alt="profile"
-      />
+      <ProfileImage image={tweet.user.image} />
 
       <div className="body">
         <div className="top">
-          <span className="user">
-            <span className="name"> { props.user.name } </span> 
-            <span className="handle"> { props.user.handle } </span>
-          </span>
-
-          <span className="timestamp"> { props.timestamp } </span>
+          <User name={tweet.user.name} handle={tweet.user.handle} />
+          <Timestamp timestamp={tweet.timestamp} />
         </div>
 
-        <p className="message"> { props.message }</p>
-
-        <div className="actions">
-          {/* Font Awesome icons */}
-          <i className="far fa-comment" data-testid="comment-icon"></i>
-          <i className="fas fa-retweet" data-testid="retweet-icon"></i>
-          <i className="far fa-heart" data-testid="heart-icon"></i>
-          <i className="fas fa-share" data-testid="share-icon"></i>
-        </div>
+        <Message message={tweet.message} />
+        <Actions />
       </div>
 
       <i className="fas fa-ellipsis-h"></i>
