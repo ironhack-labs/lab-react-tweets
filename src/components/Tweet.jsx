@@ -14,7 +14,7 @@ function Tweet(props) {
         <div className="top">
           <span className="user">
             <span className="name">{name}</span>
-            <span className="handle">{handle}</span>
+            <span className="handle">@{handle}</span>
           </span>
 
           <span className="timestamp">{timestamp}</span>
