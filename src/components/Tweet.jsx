@@ -1,14 +1,11 @@
+import ProfileImage from "./ProfileImage";
+
 function Tweet(props) {
-  
-  const {user, timestamp, message} = props.tweet
-  const {name, image, handle} = user
+  const { user, timestamp, message } = props.tweet;
+  const { name, image, handle } = user;
   return (
     <div className="tweet">
-      <img
-        src={image}
-        className="profile"
-        alt="profile"
-      />
+      <ProfileImage image={image} />
 
       <div className="body">
         <div className="top">
@@ -20,9 +17,7 @@ function Tweet(props) {
           <span className="timestamp">{timestamp}</span>
         </div>
 
-        <p className="message">
-          {message}
-        </p>
+        <p className="message">{message}</p>
 
         <div className="actions">
           {/* Font Awesome icons */}
