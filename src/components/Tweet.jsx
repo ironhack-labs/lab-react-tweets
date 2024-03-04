@@ -1,13 +1,13 @@
-import ProfileImage from "./src/Components/ProfileImage";
-import User from "./src/Components/User";
-import Timestamp from "./src/Components/Timestamp";
-import Message from "./src/Components/Message";
-import Actions from "./src/Components/Actions";
+import ProfileImage from "./ProfileImage";
+import User from "./User";
+import Timestamp from "./Timestamp";
+import Message from "./Message";
+import Actions from "./Actions";
 
 
 
 function Tweet(props) {
-
+  /*const { User, Message, Timestamp } = Tweet*/
   return (
     <div className="tweet">
       <ProfileImage profileImage = {props.tweet.user.image}/>
@@ -26,9 +26,7 @@ function Tweet(props) {
 
       <div className="actions">
   <Actions className="far fa-comment" data-testid="comment-icon" />
-  <Actions className="fas fa-retweet" data-testid="retweet-icon" />
-  <Actions className="far fa-heart" data-testid="heart-icon" />
-  <Actions className="fas fa-share" data-testid="share-icon" />
+  
 </div>
     </div>
   

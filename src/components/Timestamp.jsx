@@ -1,7 +1,7 @@
 function Timestamp (props) {
     // console.log(props)
     return (
-        <span className="timestamp"> {props.time} </span>
+        <span className="time-stamp"> {props.time} </span>
     )
 }
 
