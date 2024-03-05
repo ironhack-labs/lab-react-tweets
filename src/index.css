@@ -67,6 +67,7 @@ button:focus-visible {
   padding: 10px;
   border: 1px solid #ccc;
   display: flex;
+  flex-direction: column;
   font-size: 1.1rem;
   line-height: 18px;
 }
