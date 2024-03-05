@@ -1,8 +1,10 @@
 function ProfileImage (props) {
     
     return (
-        <img src={props.profileImage} className="profile" alt="profile" />
+        <div>
+        <img src={props.image} className="profile" alt="profile" />
+        </div>
     )
 }
 
-export default ProfileImage
+export default ProfileImage;
