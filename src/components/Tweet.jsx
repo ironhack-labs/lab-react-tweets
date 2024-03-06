@@ -11,23 +11,25 @@ function Tweet(props) {
   return (
     <div className="tweet">
       <ProfileImage image = {props.tweet.user.image}/>
+    {/* add an extra div to make sure css displays correctly */}
+      <div>
+            <div className="body">
+              <div className="top">
+              <User name={props.tweet.user.name} handle={props.tweet.user.handle} />
 
-      <div className="body">
-        <div className="top">
-        <User name={props.tweet.user.name} handle={props.tweet.user.handle} />
+                <Timestamp time = {props.tweet.timestamp}/>
+              </div>
 
-          <Timestamp time = {props.tweet.timestamp}/>
-        </div>
+              <Message message = {props.tweet.message}/>
 
-        <Message message = {props.tweet.message}/>
+              
+            </div>
 
-        
-      </div>
-
-      <div className="Actions">
-  <Actions className="far fa-comment" data-testid="comment-icon" />
+            <div className="Actions">
+              <Actions className="far fa-comment" data-testid="comment-icon" />
+            </div>
   
-</div>
+      </div>
     </div>
   
   );
