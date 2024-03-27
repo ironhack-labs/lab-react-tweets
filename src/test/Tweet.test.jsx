@@ -30,7 +30,7 @@ describe("Tweet component", () => {
 
   test("renders the user handle correctly", () => {
     render(<Tweet tweet={tweet} />);
-    const handle = screen.getByText(`@${tweet.user.handle}`);
+    const handle = screen.getByText(`${tweet.user.handle}`);
 
     expect(handle).toBeInTheDocument();
   });

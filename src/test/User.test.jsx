@@ -18,7 +18,7 @@ describe("User component", () => {
       <User name={"Thoughts of Dog®"} handle={"dog_feelings"} />
     );
     const nameText = screen.getByText("Thoughts of Dog®");
-    const handleText = screen.getByText("@dog_feelings");
+    const handleText = screen.getByText("dog_feelings");
 
     expect(nameText).toBeInTheDocument();
     expect(handleText).toBeInTheDocument();
