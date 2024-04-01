@@ -5,7 +5,8 @@ const tweetsArray = [
   {
     user: {
       name: "Thoughts of Dog®",
-      image: "https://i.imgur.com/b0EdHVV.jpg",
+      image:
+        "https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/m3/tweet-user-photo.png",
       handle: "dog_feelings",
     },
     timestamp: "1h ago",
@@ -15,7 +16,8 @@ const tweetsArray = [
   {
     user: {
       name: "Thoughts of Dog®",
-      image: "https://i.imgur.com/b0EdHVV.jpg",
+      image:
+        "https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/m3/tweet-user-photo.png",
       handle: "dog_feelings",
     },
     timestamp: "2h ago",
@@ -25,7 +27,8 @@ const tweetsArray = [
   {
     user: {
       name: "Thoughts of Dog®",
-      image: "https://i.imgur.com/b0EdHVV.jpg",
+      image:
+        "https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/m3/tweet-user-photo.png",
       handle: "dog_feelings",
     },
     timestamp: "3h ago",
@@ -37,7 +40,17 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      {tweetsArray.map((tweet, index) => (
+        // NOTES FOR SELF !
+        // In cases where the list is static and won't change. Using the array index as the key is an acceptable approach 
+        // when the list doesn't have a dynamic nature—meaning items won't be added, removed, or reordered. If the list is
+        // interactive, though, it's best to use a unique and stable identifier like an ID that's tied to the content,
+        // not the position, which is what the timestamp might represent.
+        
+        // Use the index as a key if you're sure the list will not change
+        // If your tweets have unique ids, it's better to use those
+        <Tweet key={index} tweet={tweet} />
+      ))}
     </div>
   );
 }
