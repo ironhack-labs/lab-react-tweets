@@ -1,11 +1,13 @@
 import "./App.css";
-import Tweet from "./components/Tweet";
+import Tweet from "./components/tweet/Tweet";
 
+// eslint-disable-next-line no-unused-vars
 const tweetsArray = [
   {
     user: {
       name: "Thoughts of Dog®",
-      image: "https://i.imgur.com/b0EdHVV.jpg",
+      image:
+        "https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/m3/tweet-user-photo.png",
       handle: "dog_feelings",
     },
     timestamp: "1h ago",
@@ -15,7 +17,8 @@ const tweetsArray = [
   {
     user: {
       name: "Thoughts of Dog®",
-      image: "https://i.imgur.com/b0EdHVV.jpg",
+      image:
+        "https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/m3/tweet-user-photo.png",
       handle: "dog_feelings",
     },
     timestamp: "2h ago",
@@ -25,7 +28,8 @@ const tweetsArray = [
   {
     user: {
       name: "Thoughts of Dog®",
-      image: "https://i.imgur.com/b0EdHVV.jpg",
+      image:
+        "https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/m3/tweet-user-photo.png",
       handle: "dog_feelings",
     },
     timestamp: "3h ago",
@@ -35,9 +39,21 @@ const tweetsArray = [
 ];
 
 function App() {
+  
+  let tweets = tweetsArray.map((tweet, index) => (
+    <Tweet
+      key={index}  
+      name={tweet.user.name}
+      image={tweet.user.image}
+      handle={tweet.user.handle}
+      timestamp={tweet.timestamp}
+      message={tweet.message}
+    />
+  ));
+
   return (
     <div className="App">
-      <Tweet />
+      {tweets} 
     </div>
   );
 }
