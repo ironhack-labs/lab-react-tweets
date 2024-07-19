@@ -1,34 +1,27 @@
-function Tweet() {
-  return (
-    <div className="tweet">
-      <img
-        src="https://i.imgur.com/9yw1Fyw.jpg"
-        className="profile"
-        alt="profile"
-      />
+import Action from "./Action";
+import Handle from "./Handle";
+import Message from "./Message";
+import ProfileImage from "./ProfileImage";
+import Timestamp from "./Timestamp";
+import User from "./User";
 
+
+function Tweet(props) {
+  console.log(props.tweets)
+  return (
+      <div className="tweet">
+      <ProfileImage image = {props.tweets.user.image}/>
       <div className="body">
         <div className="top">
-          <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
-          </span>
-
-          <span className="timestamp">Nov 30, 2020</span>
+          
+          <User user={props.tweets.user.name}/>         
+          <Handle handle ={props.tweets.user.handle}/>
+          <Timestamp timestamp={props.tweets.timestamp}/>
         </div>
 
-        <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
-        </p>
+        <Message message = {props.tweets.message}/>
 
-        <div className="actions">
-          {/* Font Awesome icons */}
-          <i className="far fa-comment"></i>
-          <i className="fas fa-retweet"></i>
-          <i className="far fa-heart"></i>
-          <i className="fas fa-share"></i>
-        </div>
+   <Action/>
       </div>
 
       <i className="fas fa-ellipsis-h"></i>

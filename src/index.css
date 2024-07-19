@@ -43,6 +43,7 @@ body {
   height: 50px;
   border-radius: 50px;
   margin-right: 10px;
+  margin-top: 15px;
 }
 
 .name {
@@ -53,18 +54,20 @@ body {
 
 .handle {
   color: #536471;
-  margin-left: 3px;
+  margin-top: 3px;
+  margin-left: 10px;
   margin-right: 3px;
 }
 
 .timestamp {
   color: #536471;
   font-size: 1.1rem;
+  margin-top: 3px;
+  margin-left: 10px;
 }
 
 .timestamp::before {
-  content: "·";
-  padding-right: 0.3em;
+  padding-right: 0.4em;
   font-size: 1.1rem;
   font-weight: 600;
 }
@@ -76,6 +79,7 @@ body {
   line-height: 1.6rem;
   overflow-wrap: break-word;
   white-space: pre-wrap;
+  margin-bottom: 20px;
 }
 
 .actions {
