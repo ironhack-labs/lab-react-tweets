@@ -4,40 +4,45 @@ import Tweet from "./components/Tweet";
 const tweetsArray = [
   {
     user: {
-      name: "Thoughts of Dog®",
-      image: "https://i.imgur.com/b0EdHVV.jpg",
-      handle: "dog_feelings",
+      name: "Ironhack",
+      image: "https://i.imgur.com/9yw1Fyw.jpg",
+      handle: "@ironhack",
     },
-    timestamp: "1h ago",
+    timestamp: "Nov 30, 2020",
     message:
-      "the human likes to say. that i live here rent free. but i would argue. this housing accommodation. is my payment. for a lifetime of love. and excellent company",
+      "On December 7th, we will be hosting a #webinar that will introduce you to #SQL! Are you ready? 🚀",
   },
+
   {
     user: {
-      name: "Thoughts of Dog®",
-      image: "https://i.imgur.com/b0EdHVV.jpg",
-      handle: "dog_feelings",
+      name: "Lemmy",
+      image:
+        "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRGlp1doyb8hzKrN5Yowns7xp7IIRX2Kw4YFAMmDP3onHNzd29a",
+      handle: "@lemmykilmeister",
     },
-    timestamp: "2h ago",
+    timestamp: "Nov 11, 2024",
     message:
-      "sometimes. the human presses their noggin against mine. to figure out what i’m thinking. so i just think really hard. about how much i love them. and hope they figure it out",
+      "I love X. Just discovered it. Better than alcohol combined with speed",
   },
+
   {
     user: {
-      name: "Thoughts of Dog®",
-      image: "https://i.imgur.com/b0EdHVV.jpg",
-      handle: "dog_feelings",
+      name: "Lee",
+      image:
+        "https://imgproxy.ra.co/_/quality:66/w:1442/rt:fill/aHR0cHM6Ly9zdGF0aWMucmEuY28vaW1hZ2VzL3Byb2ZpbGVzL2xnL2xlZWJ1cnRvbi5qcGc_ZGF0ZVVwZGF0ZWQ9MTQ5NTcwOTY3ODkzMA==",
+      handle: "@leeburtonmusic",
     },
-    timestamp: "3h ago",
-    message:
-      "here is what. i plan to accomplish today: \n\n2. bark loudly. but at nothing \n7. lose my ball under the couch\n7b. politely ask the human. to get my ball\n3. immediately lose it again. under the same couch\n4. big nap. you have worked hard\n2. repeat",
+    timestamp: "Nov 13, 2024",
+    message: "Glad to see @lemmykilmeister joining X. I thought he was dead",
   },
 ];
 
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      {tweetsArray.map((tweet, index) => (
+        <Tweet key={index} tweet={tweet} />
+      ))}
     </div>
   );
 }
