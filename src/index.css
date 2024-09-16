@@ -7,10 +7,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.App {
-  padding: 20px;
-}
-
 .tweet {
   margin: 0 auto;
   min-width: 480px;
@@ -23,9 +19,10 @@ body {
   line-height: 18px;
 }
 
-.body {
+body {
   display: flex;
   flex-direction: column;
+  padding: 20px;
   width: 100%;
 }
 
