@@ -1,0 +1,10 @@
+import Tweet from "./Tweet"
+import App from "../App";
+
+function Message({message}){
+    return (
+        <p className="message"> {message} </p>
+    )
+}
+
+export default Message;
