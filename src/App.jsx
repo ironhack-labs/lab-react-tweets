@@ -1,3 +1,4 @@
+// src/App.jsx
 import "./App.css";
 import Tweet from "./components/Tweet";
 
@@ -22,7 +23,7 @@ const tweetsArray = [
     },
     timestamp: "2h ago",
     message:
-      "sometimes. the human presses their noggin against mine. to figure out what i’m thinking. so i just think really hard. about how much i love them. and hope they figure it out",
+      "sometimes. the human presses their noggin against mine. to figure out what i'm thinking. so i just think really hard. about how much i love them. and hope they figure it out",
   },
   {
     user: {
@@ -40,7 +41,12 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      {/* Iteration 2: Pass first tweet as prop */}
+      <Tweet tweet={tweetsArray[0]} />
+      
+      {/* Iteration 9: Render multiple tweets */}
+      <Tweet tweet={tweetsArray[1]} />
+      <Tweet tweet={tweetsArray[2]} />
     </div>
   );
 }
