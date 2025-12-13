@@ -1,8 +1,9 @@
-function Tweet() {
+function Tweet({ tweet }) {
+  console.log(tweet)
   return (
     <div className="tweet">
       <img
-        src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/ih_logo.jpeg"
+        src={tweet.user.image}
         className="profile"
         alt="profile"
       />
@@ -10,16 +11,15 @@ function Tweet() {
       <div className="body">
         <div className="top">
           <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
+            <span className="name">{tweet.user.name}</span>
+            <span className="handle">@{tweet.user.handle}</span>
           </span>
 
-          <span className="timestamp">Nov 30, 2020</span>
+          <span className="timestamp">{tweet.timestamp}</span>
         </div>
 
         <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
+         {tweet.message}
         </p>
 
         <div className="actions">
@@ -37,3 +37,18 @@ function Tweet() {
 }
 
 export default Tweet;
+
+
+// function Tweet ({tweet}){
+//   return (
+//     <div className="App">
+//       <ProfileImage tweet={tweet.tweetsArray[0]}/>
+//       <User tweet={tweet.tweetsArray[0]}/>
+//       <Timestamp tweet={tweet.tweetsArray[0]}/>
+//       <Message tweet={tweet.tweetsArray[0]}/>
+//       <Actions tweet={tweet.tweetsArray[0]}/>
+//     </div>
+//   );
+// } 
+
+// export default Tweet; 

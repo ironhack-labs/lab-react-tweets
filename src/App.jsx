@@ -1,5 +1,10 @@
-import "./App.css";
+import "./App.css"; 
 import Tweet from "./components/Tweet";
+import ProfileImage from "./components/ProfileImage"
+import User from "./components/User"
+import Timestamp from "./components/Timestamp";
+import Message from "./components/Message";
+import Actions from "./components/Actions";
 
 const tweetsArray = [
   {
@@ -40,7 +45,23 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+    <Tweet tweet={tweetsArray[0]}/>
+  
+    {/* TWEET THROUGH COMPONENTS */}
+    <div className="tweet">
+<ProfileImage tweet={tweetsArray[1]}/>
+      <div className="body">
+        <div className="top">
+      <User tweet={tweetsArray[1]}/>
+      <Timestamp tweet={tweetsArray[1]}/>
+        </div>
+      <Message tweet={tweetsArray[1]}/>
+
+      <Actions tweet={tweetsArray[1]}/>
+    </div>
+      <i className="fas fa-ellipsis-h"></i>
+    </div>
+    {/* END TWEET THROUGH COMPONENT */}
     </div>
   );
 }
