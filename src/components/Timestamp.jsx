@@ -1,8 +1,8 @@
-function Timestamp ({tweet}){
+function Timestamp ({time}){
     
     return (
         <>
-            <span className = "timestamp">{tweet.timestamp}</span>
+          <span className="timestamp">{time}</span>
         </>
     )
 }

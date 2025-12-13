@@ -1,10 +1,10 @@
-function User ({tweet}){
+function User ({name, handle}){
     
     return (
-        <span className ="user">
-           <span className="name">{tweet.user.name}</span>
-           <span className="handle">@{tweet.user.handle}</span>
-        </span>
+        <span className="user">
+            <span className="name">{name}</span>
+            <span className="handle">@{handle}</span>
+          </span>
     )
 }
 

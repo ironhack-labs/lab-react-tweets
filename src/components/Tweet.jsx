@@ -1,33 +1,28 @@
+import ProfileImage from "../components/ProfileImage"
+import User from "../components/User"
+import Timestamp from "../components/Timestamp"
+import Message from "../components/Message";
+import Actions from "../components/Actions";
+
 function Tweet({ tweet }) {
   console.log(tweet)
   return (
     <div className="tweet">
-      <img
-        src={tweet.user.image}
-        className="profile"
-        alt="profile"
-      />
+    <ProfileImage image={tweet.user.image}/>
+
 
       <div className="body">
         <div className="top">
-          <span className="user">
-            <span className="name">{tweet.user.name}</span>
-            <span className="handle">@{tweet.user.handle}</span>
-          </span>
+          <User name={tweet.user.name} handle={tweet.user.handle}/>
 
-          <span className="timestamp">{tweet.timestamp}</span>
+
+<Timestamp time={tweet.timestamp}/>
         </div>
-
-        <p className="message">
-         {tweet.message}
-        </p>
+       <Message message={tweet.message}/>
 
         <div className="actions">
           {/* Font Awesome icons */}
-          <i className="far fa-comment" data-testid="comment-icon"></i>
-          <i className="fas fa-retweet" data-testid="retweet-icon"></i>
-          <i className="far fa-heart" data-testid="heart-icon"></i>
-          <i className="fas fa-share" data-testid="share-icon"></i>
+          <Actions />
         </div>
       </div>
 
@@ -37,18 +32,3 @@ function Tweet({ tweet }) {
 }
 
 export default Tweet;
-
-
-// function Tweet ({tweet}){
-//   return (
-//     <div className="App">
-//       <ProfileImage tweet={tweet.tweetsArray[0]}/>
-//       <User tweet={tweet.tweetsArray[0]}/>
-//       <Timestamp tweet={tweet.tweetsArray[0]}/>
-//       <Message tweet={tweet.tweetsArray[0]}/>
-//       <Actions tweet={tweet.tweetsArray[0]}/>
-//     </div>
-//   );
-// } 
-
-// export default Tweet; 
