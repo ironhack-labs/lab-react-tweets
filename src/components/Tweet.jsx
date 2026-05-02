@@ -1,26 +1,20 @@
-function Tweet() {
+import ProfileImage from './ProfileImage.jsx'
+import User from './User.jsx'
+import Timestamp from './Timestamp.jsx'
+import Message from './Message.jsx'
+
+function Tweet(props) {
   return (
     <div className="tweet">
-      <img
-        src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/ih_logo.jpeg"
-        className="profile"
-        alt="profile"
-      />
+      <ProfileImage image={props.image} />
 
       <div className="body">
         <div className="top">
-          <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
-          </span>
-
-          <span className="timestamp">Nov 30, 2020</span>
+          <User name={props.name} handle={props.handle} />
+          <Timestamp time={props.timestamp} />
         </div>
 
-        <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
-        </p>
+        <Message message={props.message} />
 
         <div className="actions">
           {/* Font Awesome icons */}
