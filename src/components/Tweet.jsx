@@ -1,26 +1,21 @@
-function Tweet() {
+import ProfileImage from "./ProfileImage";
+import User from "./User";
+import Timestamp from "./Timestamps";
+import Message from "./Message";
+
+function Tweet({ tweet}) {
   return (
     <div className="tweet">
-      <img
-        src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/ih_logo.jpeg"
-        className="profile"
-        alt="profile"
-      />
+        <ProfileImage image={tweet.user.image} />
 
       <div className="body">
         <div className="top">
-          <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
-          </span>
+          <User name={tweet.user.name} handle={tweet.user.handle} />
 
-          <span className="timestamp">Nov 30, 2020</span>
+          <Timestamp time={tweet.timestamp} />
         </div>
 
-        <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
-        </p>
+        <Message text={tweet.message} />
 
         <div className="actions">
           {/* Font Awesome icons */}
@@ -35,5 +30,7 @@ function Tweet() {
     </div>
   );
 }
+  
+
 
 export default Tweet;
